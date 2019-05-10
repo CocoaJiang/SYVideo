@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SYEXPCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="91" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-fZ-I4G">
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftQ-fR-aBc">
+                        <rect key="frame" x="0.0" y="56" width="91" height="56"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Vqe-fZ-I4G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="09U-rZ-Q1Z"/>
+                <constraint firstAttribute="bottom" secondItem="ftQ-fR-aBc" secondAttribute="bottom" id="Iae-pE-mAf"/>
+                <constraint firstAttribute="trailing" secondItem="ftQ-fR-aBc" secondAttribute="trailing" id="LRf-Ak-809"/>
+                <constraint firstItem="ftQ-fR-aBc" firstAttribute="top" secondItem="Vqe-fZ-I4G" secondAttribute="bottom" id="MPm-d3-tGH"/>
+                <constraint firstItem="Vqe-fZ-I4G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SEz-66-ImG"/>
+                <constraint firstAttribute="trailing" secondItem="Vqe-fZ-I4G" secondAttribute="trailing" id="VDY-E8-y9G"/>
+                <constraint firstItem="ftQ-fR-aBc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vQB-tG-n01"/>
+                <constraint firstItem="ftQ-fR-aBc" firstAttribute="height" secondItem="Vqe-fZ-I4G" secondAttribute="height" id="ylu-pM-0VW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="91" height="112"/>
+            <connections>
+                <outlet property="bottomLabel" destination="ftQ-fR-aBc" id="nWZ-gh-voS"/>
+                <outlet property="topLanel" destination="Vqe-fZ-I4G" id="49Z-WU-MGA"/>
+            </connections>
+            <point key="canvasLocation" x="170.40000000000001" y="181.70914542728636"/>
+        </collectionViewCell>
+    </objects>
+</document>

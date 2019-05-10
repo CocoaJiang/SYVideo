@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="78" id="KGk-i7-Jjw" customClass="testCell">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missionTask16" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-PD-u19">
+                        <rect key="frame" x="16" y="11" width="37" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="Nt0-sK-SIb"/>
+                            <constraint firstAttribute="width" constant="37" id="neK-SL-a5a"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每日签到" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-WF-bLI">
+                        <rect key="frame" x="67" y="11" width="58" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-sc-A5Z">
+                        <rect key="frame" x="0.0" y="77" width="381" height="0.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.29999999999999999" id="5bo-aZ-anJ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="每日点击签到获得10个麻花币。每日点击签到获得10个麻花币。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0n-CY-9Xf">
+                        <rect key="frame" x="67" y="47" width="202" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="kYR-jp-miM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="+10个麻花币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-ev-5Y3">
+                        <rect key="frame" x="67" y="31" width="65" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.96499760048038463" green="0.77102662708155156" blue="0.17703587423404346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  已完成  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-LZ-xdg">
+                        <rect key="frame" x="130" y="14" width="38.5" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-Ur-x1U">
+                        <rect key="frame" x="277" y="27" width="88" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="3VC-Ah-Lw3"/>
+                            <constraint firstAttribute="height" constant="30" id="fqq-2z-arp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="去观看"/>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gdj-Va-TEg"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PoX-PD-u19" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6os-bj-5NQ"/>
+                    <constraint firstItem="IdT-LZ-xdg" firstAttribute="centerY" secondItem="rsd-WF-bLI" secondAttribute="centerY" id="Hro-DF-o5L"/>
+                    <constraint firstItem="rsd-WF-bLI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="67" id="M7U-1h-RWa"/>
+                    <constraint firstItem="rsd-WF-bLI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Okg-kI-tvh"/>
+                    <constraint firstItem="Khk-sc-A5Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Oki-6s-ggA"/>
+                    <constraint firstAttribute="bottom" secondItem="Khk-sc-A5Z" secondAttribute="bottom" id="V2g-27-cwv"/>
+                    <constraint firstAttribute="trailing" secondItem="c0n-CY-9Xf" secondAttribute="trailing" constant="112" id="VDO-jy-Zxq"/>
+                    <constraint firstItem="Kz8-Ur-x1U" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="3.25" id="aGp-rA-1OR"/>
+                    <constraint firstItem="c0n-CY-9Xf" firstAttribute="top" secondItem="fUI-ev-5Y3" secondAttribute="bottom" constant="2" id="cUc-wN-hYw"/>
+                    <constraint firstAttribute="trailing" secondItem="Khk-sc-A5Z" secondAttribute="trailing" id="hMc-w2-kqS"/>
+                    <constraint firstItem="c0n-CY-9Xf" firstAttribute="leading" secondItem="fUI-ev-5Y3" secondAttribute="leading" id="iml-pW-Me4"/>
+                    <constraint firstItem="fUI-ev-5Y3" firstAttribute="leading" secondItem="rsd-WF-bLI" secondAttribute="leading" id="j6o-mX-Uf1"/>
+                    <constraint firstItem="IdT-LZ-xdg" firstAttribute="leading" secondItem="rsd-WF-bLI" secondAttribute="trailing" constant="5" id="oIr-bo-wlC"/>
+                    <constraint firstItem="PoX-PD-u19" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-9.25" id="vOp-uo-Co6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Kz8-Ur-x1U" secondAttribute="trailing" id="xRH-lc-huh"/>
+                    <constraint firstItem="fUI-ev-5Y3" firstAttribute="top" secondItem="rsd-WF-bLI" secondAttribute="bottom" constant="3" id="zfk-VW-xBR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="button" destination="Kz8-Ur-x1U" id="wLu-RQ-3my"/>
+                <outlet property="dislabel" destination="c0n-CY-9Xf" id="tKx-Zg-s6i"/>
+                <outlet property="finshLabel" destination="IdT-LZ-xdg" id="ssI-e8-yVS"/>
+                <outlet property="icon" destination="PoX-PD-u19" id="IkE-37-wmM"/>
+                <outlet property="maflowerlabel" destination="fUI-ev-5Y3" id="245-Kb-GJs"/>
+                <outlet property="title" destination="rsd-WF-bLI" id="poT-O2-RIF"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="147.52623688155924"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="missionTask16" width="37" height="37"/>
+    </resources>
+</document>

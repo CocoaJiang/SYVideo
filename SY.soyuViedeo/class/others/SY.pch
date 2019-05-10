@@ -1,0 +1,59 @@
+//
+//  SY.pch
+//  S.SouyunVideo
+//
+//  Created by 搜云 on 2019/3/7.
+//  Copyright © 2019年 搜云. All rights reserved.
+//
+
+#ifndef SY_pch
+#define SY_pch
+
+#define RGBA(R,G,B,A) [UIColor colorWithRed:(R/255.0) green:(G/255.0) blue:(B/255.0) alpha:A]
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height //if X = 40
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define KappBlue RGBA(180, 39, 62, 1)
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREENH_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ((NSInteger)(([[UIScreen mainScreen] currentMode].size.height/[[UIScreen mainScreen] currentMode].size.width)*100) == 216) : NO)
+#define REFUSHARRAY @[@"a7i",@"a7j",@"a7k",@"a7l",@"a7m",@"a7n",@"a7o",@"a7p",@"a7q",@"a7r",@"a7s",@"a7t",@"a7u",@"a7v",@"a7w",@"a7x",@"a7y",@"a7z"]
+#define SHAREARRAY @[@"朋友圈",@"微信",@"QQ",@"QQ空间",@"微博",@"赋值链接"]
+#define KUSER_NAME @"name_login"
+#define KUSER_CODE  @"user_code"
+#define KDefaultImage [UIImage imageNamed:@"nodata"]
+//存取值
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+#define USERDEFAULT_SET_value(_value_,_key_) [[NSUserDefaults standardUserDefaults] setValue:_value_ forKey:_key_];\
+[[NSUserDefaults standardUserDefaults] synchronize]
+#define USERREAD_object(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "UITableView+ZXJTableviewCategory.h"
+#import "TZImagePickerController.h"
+#import "SVProgressHUD.h"
+#import "Tools.h"
+#import "UIButton+button_Rect.h"
+#import "UIImageView+MakeYUAN.h"
+#import "UIButton+ChangBackgroundColor.h"
+#import "UIView+Toast.h"
+#import "UIView+Layout.h"
+#import "UIView+SDAutoLayout.h"
+#import "HttpTool.h"
+#import "urlHeader.h"
+#import "NSString+Categrogy.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "SYUSERINFO.h"
+#import "UIImageView+ZXJ_SD_SETIMAGE.h"
+#import "SYGifHeader.h"
+#import "SYGifFoot.h"
+#import "UIView+extension.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "SYCacheOperationHabit.h" ///缓存
+#import "NSString+MD5String.h"
+#endif /* SY_pch */

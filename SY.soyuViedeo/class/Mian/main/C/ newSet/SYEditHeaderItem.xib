@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SYEditHeaderItem">
+            <rect key="frame" x="0.0" y="0.0" width="154" height="136"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="154" height="136"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="FTT-3U-bUO">
+                        <rect key="frame" x="5" y="5" width="144" height="126"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xn-ki-jfU">
+                        <rect key="frame" x="5" y="5" width="144" height="126"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duihao" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-U9-rlb">
+                                <rect key="frame" x="40" y="31" width="64" height="64"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q8f-U9-rlb" firstAttribute="centerX" secondItem="3Xn-ki-jfU" secondAttribute="centerX" id="A5m-gR-c7L"/>
+                            <constraint firstItem="Q8f-U9-rlb" firstAttribute="centerY" secondItem="3Xn-ki-jfU" secondAttribute="centerY" id="wJp-un-cR3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="3Xn-ki-jfU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="0aw-tA-pKd"/>
+                <constraint firstItem="FTT-3U-bUO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="1Ib-Cm-3jZ"/>
+                <constraint firstAttribute="bottom" secondItem="3Xn-ki-jfU" secondAttribute="bottom" constant="5" id="SUR-rk-t45"/>
+                <constraint firstAttribute="bottom" secondItem="FTT-3U-bUO" secondAttribute="bottom" constant="5" id="UXE-jb-qnT"/>
+                <constraint firstAttribute="trailing" secondItem="FTT-3U-bUO" secondAttribute="trailing" constant="5" id="WTZ-t1-TqB"/>
+                <constraint firstItem="3Xn-ki-jfU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="WZo-YW-WAl"/>
+                <constraint firstItem="FTT-3U-bUO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Yed-a8-BPh"/>
+                <constraint firstAttribute="trailing" secondItem="3Xn-ki-jfU" secondAttribute="trailing" constant="5" id="ZaZ-p0-KTI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="154" height="136"/>
+            <connections>
+                <outlet property="bgView" destination="3Xn-ki-jfU" id="HwO-H5-hzN"/>
+                <outlet property="iconImageView" destination="FTT-3U-bUO" id="B8f-Mw-w5g"/>
+                <outlet property="seletedImageView" destination="Q8f-U9-rlb" id="B3Y-Y7-r4u"/>
+            </connections>
+            <point key="canvasLocation" x="-228.80000000000001" y="-4.497751124437781"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="duihao" width="64" height="64"/>
+        <image name="touxiang" width="51" height="51"/>
+    </resources>
+</document>

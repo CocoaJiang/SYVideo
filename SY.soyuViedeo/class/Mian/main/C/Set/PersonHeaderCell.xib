@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="PersonHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="Ex2-ZW-n38">
+                        <rect key="frame" x="20" y="7.5" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="27d-Rd-Mv0"/>
+                            <constraint firstAttribute="width" constant="65" id="Ofi-0k-N4A"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-tK-La1">
+                        <rect key="frame" x="294" y="33.5" width="6" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="71q-ie-d6d"/>
+                            <constraint firstAttribute="width" constant="6" id="ReT-Bn-hZq"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xV3-PG-ijZ">
+                        <rect key="frame" x="0.0" y="79" width="320" height="0.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.40000000000000002" id="3zO-LZ-sRi"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-4s-Z6E">
+                        <rect key="frame" x="232" y="32" width="54" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ex2-ZW-n38" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="3Mk-B3-46D"/>
+                    <constraint firstItem="pZp-4s-Z6E" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="K1W-c0-hGI"/>
+                    <constraint firstItem="TpF-tK-La1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TUj-d2-7Rf"/>
+                    <constraint firstItem="Ex2-ZW-n38" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Umn-mY-HtZ"/>
+                    <constraint firstAttribute="trailing" secondItem="xV3-PG-ijZ" secondAttribute="trailing" id="Z0a-KF-Rjf"/>
+                    <constraint firstItem="xV3-PG-ijZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aLf-cj-aUD"/>
+                    <constraint firstItem="TpF-tK-La1" firstAttribute="leading" secondItem="pZp-4s-Z6E" secondAttribute="trailing" constant="8" id="i7k-nQ-7RX"/>
+                    <constraint firstAttribute="trailing" secondItem="TpF-tK-La1" secondAttribute="trailing" constant="20" id="iu9-fY-GqX"/>
+                    <constraint firstAttribute="bottom" secondItem="xV3-PG-ijZ" secondAttribute="bottom" id="zNB-mQ-wVB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="icon" destination="Ex2-ZW-n38" id="p74-1r-khc"/>
+                <outlet property="jiantouImage" destination="TpF-tK-La1" id="G67-0g-Mjw"/>
+                <outlet property="title" destination="pZp-4s-Z6E" id="l03-a2-JY5"/>
+            </connections>
+            <point key="canvasLocation" x="1340.8" y="178.11094452773614"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="touxiang" width="51" height="51"/>
+        <image name="右箭头" width="6" height="13.5"/>
+    </resources>
+</document>

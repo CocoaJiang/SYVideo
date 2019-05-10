@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYInputQuestionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="311"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详细描述(必填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-PY-RkK">
+                    <rect key="frame" x="10" y="10" width="97" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-6e-RJZ">
+                    <rect key="frame" x="10" y="37" width="355" height="150"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="uDQ-ia-9lc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请您输入您的QQ(必填)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Rm-i4-0a6">
+                    <rect key="frame" x="10" y="224" width="355" height="35"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="5na-9s-dxB"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请您输入您的邮箱(选填)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cod-Ap-K20">
+                    <rect key="frame" x="10" y="269" width="355" height="35"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="sNA-gA-Lem"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入联系方式,方便我们与您取得联系(选填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-ob-Nk9">
+                    <rect key="frame" x="10" y="197" width="286" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cod-Ap-K20" secondAttribute="trailing" constant="10" id="2o8-5h-tf6"/>
+                <constraint firstItem="6m4-ob-Nk9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="40Y-FR-961"/>
+                <constraint firstItem="iPd-PY-RkK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="5AL-ud-cxq"/>
+                <constraint firstItem="iPd-PY-RkK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="6Rm-nK-3LN"/>
+                <constraint firstItem="cod-Ap-K20" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="6gz-lT-0Di"/>
+                <constraint firstItem="1Rm-i4-0a6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="MpY-Ul-jBZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cef-6e-RJZ" secondAttribute="trailing" constant="10" id="NfD-C5-B2H"/>
+                <constraint firstItem="1Rm-i4-0a6" firstAttribute="top" secondItem="6m4-ob-Nk9" secondAttribute="bottom" constant="10" id="V9h-8a-9cF"/>
+                <constraint firstItem="Cef-6e-RJZ" firstAttribute="top" secondItem="iPd-PY-RkK" secondAttribute="bottom" constant="10" id="WHk-mJ-Ld3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Rm-i4-0a6" secondAttribute="trailing" constant="10" id="XVU-wj-tS9"/>
+                <constraint firstItem="6m4-ob-Nk9" firstAttribute="top" secondItem="Cef-6e-RJZ" secondAttribute="bottom" constant="10" id="am1-2k-sGx"/>
+                <constraint firstItem="Cef-6e-RJZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="fTL-fG-6nB"/>
+                <constraint firstItem="cod-Ap-K20" firstAttribute="top" secondItem="1Rm-i4-0a6" secondAttribute="bottom" constant="10" id="vmh-cn-K2T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="QQtextField" destination="1Rm-i4-0a6" id="oiN-Ur-jsP"/>
+                <outlet property="emailTextField" destination="cod-Ap-K20" id="xwL-cX-qxM"/>
+                <outlet property="textView" destination="Cef-6e-RJZ" id="PAv-GF-gCY"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-6.746626686656672"/>
+        </view>
+    </objects>
+</document>

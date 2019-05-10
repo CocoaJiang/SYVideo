@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYKeyBordInPutView">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-Bm-1gy">
+                    <rect key="frame" x="314" y="7.5" width="70" height="35"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="RPv-T7-s9Y"/>
+                        <constraint firstAttribute="width" constant="70" id="TqF-0d-crR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="评论" image="noSendComment"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="rTW-QE-MXp"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="写下您的感想吧" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-t0-r5v">
+                    <rect key="frame" x="15" y="7.5" width="284" height="35"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="L0d-je-IQV"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1sc-Bm-1gy" secondAttribute="trailing" constant="10" id="Ac3-2I-FOC"/>
+                <constraint firstItem="1sc-Bm-1gy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="C4Y-YO-hRZ"/>
+                <constraint firstItem="2Ug-t0-r5v" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JFc-eo-jUs"/>
+                <constraint firstItem="1sc-Bm-1gy" firstAttribute="leading" secondItem="2Ug-t0-r5v" secondAttribute="trailing" constant="15" id="eY3-tQ-ivb"/>
+                <constraint firstItem="2Ug-t0-r5v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="mSK-Ku-XBU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ehX-mV-hIB"/>
+            <connections>
+                <outlet property="PJButton" destination="1sc-Bm-1gy" id="k6x-fd-v8B"/>
+                <outlet property="textField" destination="2Ug-t0-r5v" id="Ruz-Wk-vKy"/>
+            </connections>
+            <point key="canvasLocation" x="33.600000000000001" y="-123.23838080959521"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noSendComment" width="15" height="15"/>
+    </resources>
+</document>

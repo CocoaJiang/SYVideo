@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYNOLoginedView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="Y3J-8c-iZR">
+                    <rect key="frame" x="20" y="21" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="1to-UY-JfX"/>
+                        <constraint firstAttribute="width" constant="60" id="VWC-yl-lwb"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z79-Ey-Y6Q">
+                    <rect key="frame" x="100" y="26" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CPV-T6-JAV"/>
+                        <constraint firstAttribute="width" constant="50" id="nPS-25-86h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonCliick:" destination="iN0-l3-epB" eventType="touchUpInside" id="3JY-OT-eFs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghi-id-jcc">
+                    <rect key="frame" x="155" y="26" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="edx-pA-IXK"/>
+                        <constraint firstAttribute="height" constant="50" id="nN4-PI-5vB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonCliick:" destination="iN0-l3-epB" eventType="touchUpInside" id="RM0-9f-87N"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZH6-MQ-Ipv">
+                    <rect key="frame" x="152" y="41" width="1" height="20"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="18s-V1-LQH"/>
+                        <constraint firstAttribute="width" constant="1" id="Fnk-tJ-v0O"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evm-Vs-Xpe">
+                    <rect key="frame" x="0.0" y="101.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="HoM-ek-upT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZH6-MQ-Ipv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="71o-tk-vU1"/>
+                <constraint firstItem="evm-Vs-Xpe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8yv-BC-ApD"/>
+                <constraint firstItem="ghi-id-jcc" firstAttribute="leading" secondItem="ZH6-MQ-Ipv" secondAttribute="trailing" constant="2" id="HU3-XH-lVd"/>
+                <constraint firstItem="evm-Vs-Xpe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K3d-Y4-NgP"/>
+                <constraint firstItem="Y3J-8c-iZR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N7m-jN-74i"/>
+                <constraint firstItem="ghi-id-jcc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Sme-On-krD"/>
+                <constraint firstItem="evm-Vs-Xpe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Suw-wb-xta"/>
+                <constraint firstItem="Z79-Ey-Y6Q" firstAttribute="leading" secondItem="Y3J-8c-iZR" secondAttribute="trailing" constant="20" id="T8C-Go-XPT"/>
+                <constraint firstItem="ZH6-MQ-Ipv" firstAttribute="leading" secondItem="Z79-Ey-Y6Q" secondAttribute="trailing" constant="2" id="g9S-bl-bze"/>
+                <constraint firstItem="Z79-Ey-Y6Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n5X-0Y-wLc"/>
+                <constraint firstItem="Y3J-8c-iZR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tqg-Qe-vJO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="icon" destination="Y3J-8c-iZR" id="INn-Yp-VP6"/>
+                <outlet property="loginButton" destination="Z79-Ey-Y6Q" id="vDp-bL-X6f"/>
+                <outlet property="resgstButton" destination="ghi-id-jcc" id="W05-bL-ItM"/>
+            </connections>
+            <point key="canvasLocation" x="-130.40000000000001" y="-5.3973013493253381"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="touxiang" width="51" height="51"/>
+    </resources>
+</document>

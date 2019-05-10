@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYLoginPhoneInputView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKJ-OY-KVf">
+                    <rect key="frame" x="20" y="1.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Qaf-5a-J7o"/>
+                        <constraint firstAttribute="height" constant="50" id="ZXg-Cw-30V"/>
+                    </constraints>
+                    <state key="normal" title="+86" backgroundImage="login_add_ct_num">
+                        <color key="titleColor" red="1" green="0.174478367" blue="0.091005537710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKt-rg-kIf">
+                    <rect key="frame" x="70" y="1.5" width="285" height="0.5"/>
+                    <color key="backgroundColor" red="0.75679981708526611" green="0.76055532693862915" blue="0.77645117044448853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="SRR-DF-Y15"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNE-iP-A3U">
+                    <rect key="frame" x="70" y="51" width="285" height="0.5"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="lGS-Fg-c2z"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqK-yV-967">
+                    <rect key="frame" x="90" y="3" width="265" height="47"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qqK-yV-967" firstAttribute="leading" secondItem="oKJ-OY-KVf" secondAttribute="trailing" constant="20" id="4yB-WJ-Irn"/>
+                <constraint firstItem="lNE-iP-A3U" firstAttribute="top" secondItem="qqK-yV-967" secondAttribute="bottom" constant="1" id="73r-BP-0Iu"/>
+                <constraint firstItem="qqK-yV-967" firstAttribute="top" secondItem="TKt-rg-kIf" secondAttribute="bottom" constant="1" id="ENe-aI-rXk"/>
+                <constraint firstItem="oKJ-OY-KVf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FAX-Mn-WXn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qqK-yV-967" secondAttribute="trailing" constant="20" id="YPo-sC-z3M"/>
+                <constraint firstItem="lNE-iP-A3U" firstAttribute="leading" secondItem="oKJ-OY-KVf" secondAttribute="trailing" id="qxp-lZ-Gwb"/>
+                <constraint firstItem="TKt-rg-kIf" firstAttribute="leading" secondItem="oKJ-OY-KVf" secondAttribute="trailing" id="sEy-SW-o8V"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lNE-iP-A3U" secondAttribute="trailing" constant="20" id="sGC-LY-oDw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TKt-rg-kIf" secondAttribute="trailing" constant="20" id="sME-Ac-lML"/>
+                <constraint firstItem="oKJ-OY-KVf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="u7T-il-Wlj"/>
+                <constraint firstItem="TKt-rg-kIf" firstAttribute="top" secondItem="oKJ-OY-KVf" secondAttribute="top" id="wBz-Bv-wcW"/>
+                <constraint firstItem="lNE-iP-A3U" firstAttribute="bottom" secondItem="oKJ-OY-KVf" secondAttribute="bottom" id="xCX-iY-q9f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="textField" destination="qqK-yV-967" id="583-XG-rJZ"/>
+            </connections>
+            <point key="canvasLocation" x="79.200000000000003" y="-86.806596701649184"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_add_ct_num" width="124" height="115"/>
+    </resources>
+</document>

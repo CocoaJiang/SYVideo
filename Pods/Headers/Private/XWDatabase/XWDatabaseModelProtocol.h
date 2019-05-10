@@ -1,0 +1,1 @@
+../../../XWDatabase/XWDatabase/Classes/XWDatabaseModelProtocol.h

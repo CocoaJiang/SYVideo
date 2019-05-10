@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYNewPassWorldORVerCodeInPutView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgq-Qb-sYP">
+                    <rect key="frame" x="0.0" y="62.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.75679981709999999" green="0.76055532690000005" blue="0.7764511704" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="9Ed-hN-7f3"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mima" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-bt-j0X">
+                    <rect key="frame" x="20" y="23.5" width="13" height="16"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-Fh-7hN">
+                    <rect key="frame" x="50" y="0.0" width="295" height="62.5"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-ES-601">
+                    <rect key="frame" x="325" y="6.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Nd3-aE-tz7"/>
+                        <constraint firstAttribute="width" constant="50" id="om5-iJ-TM4"/>
+                    </constraints>
+                    <state key="normal" image="biyan"/>
+                    <state key="selected" image="yanjing"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="a6n-ET-k8H"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-cj-N9a">
+                    <rect key="frame" x="266" y="11.5" width="99" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="NI2-Z4-Jfm"/>
+                        <constraint firstAttribute="height" constant="40" id="a20-Ny-Ham"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="获取验证码"/>
+                    <connections>
+                        <action selector="sendCode:" destination="iN0-l3-epB" eventType="touchUpInside" id="a7a-O1-hRL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ooQ-ES-601" secondAttribute="trailing" id="2i1-rL-dwy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1pf-Fh-7hN" secondAttribute="trailing" constant="30" id="Eoy-yf-nW1"/>
+                <constraint firstItem="pgq-Qb-sYP" firstAttribute="top" secondItem="1pf-Fh-7hN" secondAttribute="bottom" id="Grg-JY-ZUq"/>
+                <constraint firstItem="pgq-Qb-sYP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="J2S-cP-5LD"/>
+                <constraint firstItem="pgq-Qb-sYP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="MVp-HB-Gvy"/>
+                <constraint firstItem="VoI-bt-j0X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q8r-wI-H0c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GlZ-cj-N9a" secondAttribute="trailing" constant="10" id="SUh-hJ-vcy"/>
+                <constraint firstItem="GlZ-cj-N9a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ScO-f7-coz"/>
+                <constraint firstItem="pgq-Qb-sYP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cpj-WE-7gz"/>
+                <constraint firstItem="1pf-Fh-7hN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kwT-NJ-1Su"/>
+                <constraint firstItem="VoI-bt-j0X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="oEy-DW-L85"/>
+                <constraint firstItem="1pf-Fh-7hN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="t8U-G3-u7M"/>
+                <constraint firstItem="ooQ-ES-601" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yNA-xe-CkM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="iconImageView" destination="VoI-bt-j0X" id="13G-QQ-2zW"/>
+                <outlet property="isShowButton" destination="ooQ-ES-601" id="crf-oE-1bI"/>
+                <outlet property="textField" destination="1pf-Fh-7hN" id="iY7-8a-CrX"/>
+                <outlet property="vercodeButton" destination="GlZ-cj-N9a" id="OTN-Ce-VNv"/>
+            </connections>
+            <point key="canvasLocation" x="133.59999999999999" y="-103.89805097451276"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="biyan" width="32" height="32"/>
+        <image name="mima" width="13" height="16"/>
+        <image name="yanjing" width="32" height="19"/>
+    </resources>
+</document>

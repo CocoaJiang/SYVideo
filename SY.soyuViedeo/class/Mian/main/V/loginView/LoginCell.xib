@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="206" id="KGk-i7-Jjw" customClass="LoginCell">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="205.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-TL-Vma">
+                        <rect key="frame" x="36" y="21" width="304" height="35"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xf7-Wl-Muj">
+                                <rect key="frame" x="50" y="0.0" width="254" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9p8-Ml-GCc">
+                                <rect key="frame" x="44" y="10" width="2" height="15"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="U10-em-V1A"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mr-he-3j3">
+                                <rect key="frame" x="18" y="9" width="18" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xf7-Wl-Muj" firstAttribute="leading" secondItem="9p8-Ml-GCc" secondAttribute="trailing" constant="4" id="4BP-hI-drv"/>
+                            <constraint firstAttribute="trailing" secondItem="Xf7-Wl-Muj" secondAttribute="trailing" id="4Xf-jK-EIg"/>
+                            <constraint firstItem="1Mr-he-3j3" firstAttribute="centerY" secondItem="LdE-TL-Vma" secondAttribute="centerY" id="7cH-Id-SRe"/>
+                            <constraint firstAttribute="height" constant="35" id="9S5-D6-dX7"/>
+                            <constraint firstItem="Xf7-Wl-Muj" firstAttribute="top" secondItem="LdE-TL-Vma" secondAttribute="top" id="G6n-kW-WhN"/>
+                            <constraint firstItem="1Mr-he-3j3" firstAttribute="centerY" secondItem="LdE-TL-Vma" secondAttribute="centerY" id="HUc-eE-Rrm"/>
+                            <constraint firstItem="9p8-Ml-GCc" firstAttribute="leading" secondItem="1Mr-he-3j3" secondAttribute="trailing" constant="8" id="JFO-CH-uvB"/>
+                            <constraint firstItem="Xf7-Wl-Muj" firstAttribute="leading" secondItem="LdE-TL-Vma" secondAttribute="leading" constant="50" id="Qkc-0K-DLF"/>
+                            <constraint firstAttribute="bottom" secondItem="9p8-Ml-GCc" secondAttribute="bottom" constant="10" id="Ywd-fF-aAE"/>
+                            <constraint firstItem="9p8-Ml-GCc" firstAttribute="top" secondItem="LdE-TL-Vma" secondAttribute="top" constant="10" id="f2q-0N-slx"/>
+                            <constraint firstAttribute="bottom" secondItem="Xf7-Wl-Muj" secondAttribute="bottom" id="nic-J3-VRR"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNh-Ft-K2i">
+                        <rect key="frame" x="36" y="76" width="304" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="cxH-BE-JHG"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-4B-Xa6">
+                        <rect key="frame" x="283" y="116" width="57" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="忘记密码？"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcA-dj-adS">
+                        <rect key="frame" x="36" y="158" width="304" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="01L-gX-E5c"/>
+                        </constraints>
+                        <state key="normal" title="登录"/>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xhT-jj-zjK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XM7-4B-Xa6" firstAttribute="top" secondItem="jNh-Ft-K2i" secondAttribute="bottom" constant="5" id="0rW-CZ-uxD"/>
+                    <constraint firstItem="bcA-dj-adS" firstAttribute="leading" secondItem="jNh-Ft-K2i" secondAttribute="leading" id="9lj-jC-1p1"/>
+                    <constraint firstItem="jNh-Ft-K2i" firstAttribute="top" secondItem="LdE-TL-Vma" secondAttribute="bottom" constant="20" id="Duc-he-PAD"/>
+                    <constraint firstItem="jNh-Ft-K2i" firstAttribute="trailing" secondItem="LdE-TL-Vma" secondAttribute="trailing" id="HTj-wH-fx6"/>
+                    <constraint firstItem="bcA-dj-adS" firstAttribute="trailing" secondItem="jNh-Ft-K2i" secondAttribute="trailing" id="YbV-Pj-eJh"/>
+                    <constraint firstItem="XM7-4B-Xa6" firstAttribute="trailing" secondItem="jNh-Ft-K2i" secondAttribute="trailing" id="ZSg-D0-f9J"/>
+                    <constraint firstItem="LdE-TL-Vma" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="bN8-2d-s9g"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="LdE-TL-Vma" secondAttribute="trailing" constant="20" id="fUi-0L-gvw"/>
+                    <constraint firstItem="bcA-dj-adS" firstAttribute="top" secondItem="XM7-4B-Xa6" secondAttribute="bottom" constant="16" id="gW7-TS-FgA"/>
+                    <constraint firstItem="jNh-Ft-K2i" firstAttribute="leading" secondItem="LdE-TL-Vma" secondAttribute="leading" id="hhW-RV-q6c"/>
+                    <constraint firstItem="LdE-TL-Vma" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="kcE-oI-SKh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bgView" destination="LdE-TL-Vma" id="ExF-UR-S0g"/>
+                <outlet property="eightSixLabel" destination="1Mr-he-3j3" id="b9K-BB-UIh"/>
+                <outlet property="forgetButton" destination="XM7-4B-Xa6" id="vnS-ex-yZS"/>
+                <outlet property="loginButton" destination="bcA-dj-adS" id="tyY-2U-9uW"/>
+                <outlet property="passWord" destination="jNh-Ft-K2i" id="mNP-Lw-cYV"/>
+                <outlet property="phoneText" destination="Xf7-Wl-Muj" id="YUE-eC-uCw"/>
+            </connections>
+            <point key="canvasLocation" x="182.40000000000001" y="226.6866566716642"/>
+        </tableViewCell>
+    </objects>
+</document>

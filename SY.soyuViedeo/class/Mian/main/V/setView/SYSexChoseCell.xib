@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="KGk-i7-Jjw" customClass="SYSexChoseCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U1-8U-0BB">
+                        <rect key="frame" x="16" y="15" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKW-ZX-gbv">
+                        <rect key="frame" x="169" y="8" width="48" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="男" image="未选中">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <state key="selected" image="选中"/>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fE2-XH-Npp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqC-rd-9Wz">
+                        <rect key="frame" x="246" y="8" width="48" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="女" image="未选中">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <state key="selected" image="选中"/>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RsZ-IL-i2n"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opc-MT-BYl">
+                        <rect key="frame" x="0.0" y="47" width="320" height="0.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.29999999999999999" id="qi6-fZ-dvf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="opc-MT-BYl" secondAttribute="trailing" id="5tO-6s-2Rz"/>
+                    <constraint firstAttribute="trailing" secondItem="aqC-rd-9Wz" secondAttribute="trailing" constant="26" id="FCA-zh-mq1"/>
+                    <constraint firstItem="aqC-rd-9Wz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TGd-EW-sHd"/>
+                    <constraint firstAttribute="bottom" secondItem="opc-MT-BYl" secondAttribute="bottom" id="Vcl-5V-SeY"/>
+                    <constraint firstItem="7U1-8U-0BB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eqU-hf-wg4"/>
+                    <constraint firstItem="aqC-rd-9Wz" firstAttribute="leading" secondItem="FKW-ZX-gbv" secondAttribute="trailing" constant="29" id="g7S-Py-3xf"/>
+                    <constraint firstItem="7U1-8U-0BB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hXu-AF-aeh"/>
+                    <constraint firstItem="opc-MT-BYl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oeA-bJ-PRl"/>
+                    <constraint firstItem="FKW-ZX-gbv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xxe-SA-0zB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="boysButton" destination="FKW-ZX-gbv" id="eMA-b4-xgA"/>
+                <outlet property="girlButton" destination="aqC-rd-9Wz" id="YHb-WY-Z2x"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="155.62218890554723"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="未选中" width="32" height="32"/>
+        <image name="选中" width="32" height="32"/>
+    </resources>
+</document>

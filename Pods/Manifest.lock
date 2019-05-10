@@ -1,0 +1,57 @@
+PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - HMSegmentedControl (1.5.5)
+  - JhtMarquee (1.0.4)
+  - MRDLNA (0.1.1):
+    - CocoaAsyncSocket
+    - MRDLNA/MRC (= 0.1.1)
+  - MRDLNA/MRC (0.1.1):
+    - CocoaAsyncSocket
+  - TZScrollViewPopGesture (1.0.6)
+  - XWDatabase (1.1.0):
+    - FMDB
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - ZFPlayer (3.2.6):
+    - ZFPlayer/Core (= 3.2.6)
+  - ZFPlayer/Core (3.2.6)
+
+DEPENDENCIES:
+  - HMSegmentedControl
+  - JhtMarquee (~> 1.0.4)
+  - MRDLNA
+  - TZScrollViewPopGesture
+  - XWDatabase
+  - YYImage (~> 1.0.4)
+  - ZFPlayer (~> 3.2.6)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - FMDB
+    - HMSegmentedControl
+    - JhtMarquee
+    - MRDLNA
+    - TZScrollViewPopGesture
+    - XWDatabase
+    - YYImage
+    - ZFPlayer
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+  JhtMarquee: 9bb285968b3122acdcd11c64d82f68f79889163e
+  MRDLNA: 3fe35c6ac57c946413d07896faeb9101c4d8853d
+  TZScrollViewPopGesture: d36355038259e89372a1f4a2db7e9ca675de2278
+  XWDatabase: 49b6b7e80a589caa3334a944891a5bb3c0b5a57b
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  ZFPlayer: 66c58fe815b21e309d11f8c03114e9028a2212f4
+
+PODFILE CHECKSUM: dc9055d2a256605d570420d884c6aeebbe2d8ce1
+
+COCOAPODS: 1.6.1

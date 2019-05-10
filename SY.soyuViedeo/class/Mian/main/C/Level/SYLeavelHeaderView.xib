@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SYLeavelHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="gbD-W9-4IW">
+                    <rect key="frame" x="20" y="20" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="4oj-3m-ziy"/>
+                        <constraint firstAttribute="height" constant="50" id="in6-qV-4xd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" LV100 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6r-qb-jHN">
+                    <rect key="frame" x="23" y="75" width="44.5" height="16"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="渣渣江" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWn-5o-PGl">
+                    <rect key="frame" x="80" y="34.5" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LV4  距离下一等级还差360经验  LV5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-P4-lmc">
+                    <rect key="frame" x="80" y="65.5" width="218" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VyV-0C-8KP">
+                    <rect key="frame" x="80" y="85.5" width="218" height="4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="keN-rq-QeQ"/>
+                    </constraints>
+                </progressView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0K-dw-ofm">
+                    <rect key="frame" x="0.0" y="105" width="375" height="5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="tx5-Ze-aOC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="g0K-dw-ofm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="02y-ey-Xm8"/>
+                <constraint firstItem="KWn-5o-PGl" firstAttribute="leading" secondItem="gbD-W9-4IW" secondAttribute="trailing" constant="10" id="16P-Dv-zE7"/>
+                <constraint firstItem="m6r-qb-jHN" firstAttribute="top" secondItem="gbD-W9-4IW" secondAttribute="bottom" constant="5" id="3yT-1m-sOU"/>
+                <constraint firstItem="m6r-qb-jHN" firstAttribute="centerX" secondItem="gbD-W9-4IW" secondAttribute="centerX" id="CLL-nV-iPX"/>
+                <constraint firstItem="VyV-0C-8KP" firstAttribute="trailing" secondItem="KL7-P4-lmc" secondAttribute="trailing" id="CuG-Je-aGu"/>
+                <constraint firstItem="gbD-W9-4IW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="OPw-iq-u3E"/>
+                <constraint firstItem="KL7-P4-lmc" firstAttribute="top" secondItem="KWn-5o-PGl" secondAttribute="bottom" constant="10" id="VZR-s6-hAs"/>
+                <constraint firstItem="VyV-0C-8KP" firstAttribute="top" secondItem="KL7-P4-lmc" secondAttribute="bottom" constant="4" id="cXR-SF-CRZ"/>
+                <constraint firstItem="g0K-dw-ofm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ebV-wP-DT7"/>
+                <constraint firstItem="gbD-W9-4IW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="gch-sP-sbR"/>
+                <constraint firstItem="KL7-P4-lmc" firstAttribute="leading" secondItem="gbD-W9-4IW" secondAttribute="trailing" constant="10" id="iNC-cI-jCi"/>
+                <constraint firstItem="VyV-0C-8KP" firstAttribute="leading" secondItem="KL7-P4-lmc" secondAttribute="leading" id="lbr-aD-lvP"/>
+                <constraint firstItem="g0K-dw-ofm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rwa-DN-yZn"/>
+                <constraint firstItem="KWn-5o-PGl" firstAttribute="centerY" secondItem="gbD-W9-4IW" secondAttribute="centerY" id="t5R-0W-gjs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bootomView" destination="g0K-dw-ofm" id="kGp-3s-pTQ"/>
+                <outlet property="disLabel" destination="KL7-P4-lmc" id="7M8-Zj-sZR"/>
+                <outlet property="icon" destination="gbD-W9-4IW" id="FiN-sR-Shu"/>
+                <outlet property="level" destination="m6r-qb-jHN" id="4yG-lM-r5B"/>
+                <outlet property="nickName" destination="KWn-5o-PGl" id="Atx-2t-kRV"/>
+                <outlet property="progress" destination="VyV-0C-8KP" id="FXd-v4-QYb"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-98.050974512743636"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="touxiang" width="51" height="51"/>
+    </resources>
+</document>

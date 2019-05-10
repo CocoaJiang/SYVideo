@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SY.soyuViedeo' do
+pod 'TZScrollViewPopGesture'
+pod 'ZFPlayer', '~> 3.2.6'
+pod 'HMSegmentedControl'
+pod 'YYImage', '~> 1.0.4'
+pod 'JhtMarquee', '~> 1.0.4'
+#pod 'JQFMDB'
+pod 'MRDLNA'
+pod 'XWDatabase'
+  target 'SY.soyuViedeoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SY.soyuViedeoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="SYCoin_log">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每日签到" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qe-2J-qtU">
+                        <rect key="frame" x="10" y="15" width="58" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10金币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O35-oq-cib">
+                        <rect key="frame" x="237.5" y="23" width="56.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-Ku-uso">
+                        <rect key="frame" x="10" y="63" width="310" height="0.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.40000000000000002" id="Xtg-zO-f7X"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeLanel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igT-oV-3ot">
+                        <rect key="frame" x="10" y="37" width="51" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="igT-oV-3ot" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2Vr-cF-D2m"/>
+                    <constraint firstItem="igT-oV-3ot" firstAttribute="top" secondItem="4Qe-2J-qtU" secondAttribute="bottom" constant="5" id="6aI-sQ-Nqn"/>
+                    <constraint firstAttribute="trailing" secondItem="vDl-Ku-uso" secondAttribute="trailing" id="Cpq-jA-yT4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="O35-oq-cib" secondAttribute="trailing" constant="10" id="Eh1-TZ-mIP"/>
+                    <constraint firstItem="4Qe-2J-qtU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Res-5z-Z6Y"/>
+                    <constraint firstItem="O35-oq-cib" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="f32-nJ-jgf"/>
+                    <constraint firstAttribute="bottom" secondItem="vDl-Ku-uso" secondAttribute="bottom" id="ir2-UW-Uoe"/>
+                    <constraint firstItem="vDl-Ku-uso" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qBq-Wu-Xzj"/>
+                    <constraint firstItem="4Qe-2J-qtU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="t8L-hS-iIq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="coinLabel" destination="O35-oq-cib" id="VZh-Vf-Kxk"/>
+                <outlet property="timeLabel" destination="igT-oV-3ot" id="RFc-Ol-Vem"/>
+                <outlet property="titleLanel" destination="4Qe-2J-qtU" id="dUC-eH-pIn"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="57.571214392803604"/>
+        </tableViewCell>
+    </objects>
+</document>

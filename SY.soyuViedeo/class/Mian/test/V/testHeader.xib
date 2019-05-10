@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="testHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-ex-Aqh">
+                    <rect key="frame" x="25" y="35" width="85" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="8nt-n5-ic5"/>
+                        <constraint firstAttribute="height" constant="20" id="a6q-hR-grK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="我的邀请" image="exchangeCenter">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avv-jN-BLi">
+                    <rect key="frame" x="271" y="35" width="79" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Bj7-tt-RFz"/>
+                        <constraint firstAttribute="width" constant="79" id="eDF-SI-6cK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="兑换中心" image="myInvation">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-d8-hmG">
+                    <rect key="frame" x="173.5" y="10" width="28" height="25.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总麻花币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-D2-Rss">
+                    <rect key="frame" x="162.5" y="37.5" width="50" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Leb-kW-0B6">
+                    <rect key="frame" x="164.5" y="54.5" width="46" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXp-jA-di0">
+                    <rect key="frame" x="0.0" y="85" width="375" height="5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="vUv-ow-rKI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Leb-kW-0B6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DhK-gh-1yg"/>
+                <constraint firstItem="fIc-d8-hmG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EQD-z2-Vrt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avv-jN-BLi" secondAttribute="trailing" constant="25" id="Ftr-K3-U8o"/>
+                <constraint firstItem="cXp-jA-di0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NGu-9n-Olp"/>
+                <constraint firstItem="cXp-jA-di0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Rtx-3D-f8Z"/>
+                <constraint firstItem="PEa-ex-Aqh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="TBS-t8-pTZ"/>
+                <constraint firstItem="PEa-ex-Aqh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UeJ-C9-56h"/>
+                <constraint firstItem="avv-jN-BLi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="V5t-hD-Bcm"/>
+                <constraint firstItem="D6B-D2-Rss" firstAttribute="top" secondItem="fIc-d8-hmG" secondAttribute="bottom" constant="2" id="VMu-cs-Nro"/>
+                <constraint firstItem="fIc-d8-hmG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="cyc-YR-IAc"/>
+                <constraint firstItem="Leb-kW-0B6" firstAttribute="top" secondItem="D6B-D2-Rss" secondAttribute="bottom" constant="2" id="dAa-q0-ajx"/>
+                <constraint firstItem="D6B-D2-Rss" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gM1-ui-eTe"/>
+                <constraint firstItem="cXp-jA-di0" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vZ7-wx-ZSN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="exchange" destination="avv-jN-BLi" id="6L5-V8-nrm"/>
+                <outlet property="invitation" destination="PEa-ex-Aqh" id="SsA-jN-fE8"/>
+                <outlet property="lineView" destination="cXp-jA-di0" id="2pv-mM-roC"/>
+                <outlet property="mahuabi" destination="fIc-d8-hmG" id="5hv-3M-dBk"/>
+                <outlet property="today" destination="Leb-kW-0B6" id="kM4-oN-25M"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-119.64017991004499"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="exchangeCenter" width="14" height="13.5"/>
+        <image name="myInvation" width="13" height="13"/>
+    </resources>
+</document>
