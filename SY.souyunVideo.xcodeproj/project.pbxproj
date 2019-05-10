@@ -1129,16 +1129,16 @@
 		D46D46F222321BDF00BC8357 /* SYSexChoseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSexChoseCell.h; sourceTree = "<group>"; };
 		D46D46F322321BDF00BC8357 /* SYSexChoseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSexChoseCell.m; sourceTree = "<group>"; };
 		D46D46F422321BDF00BC8357 /* SYSexChoseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYSexChoseCell.xib; sourceTree = "<group>"; };
-		D475DA352230BC0A002695E7 /* SY.soyuViedeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SY.soyuViedeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D475DA352230BC0A002695E7 /* SY.souyunVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SY.souyunVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D475DA3F2230BC0A002695E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D475DA412230BC0A002695E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D475DA442230BC0A002695E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D475DA462230BC0A002695E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D475DA472230BC0A002695E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D475DA4D2230BC0A002695E7 /* SY.soyuViedeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SY.soyuViedeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D475DA4D2230BC0A002695E7 /* SY.souyunVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SY.souyunVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D475DA512230BC0A002695E7 /* SY_soyuViedeoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SY_soyuViedeoTests.m; sourceTree = "<group>"; };
 		D475DA532230BC0A002695E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D475DA582230BC0A002695E7 /* SY.soyuViedeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SY.soyuViedeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D475DA582230BC0A002695E7 /* SY.souyunVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SY.souyunVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D475DA5C2230BC0A002695E7 /* SY_soyuViedeoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SY_soyuViedeoUITests.m; sourceTree = "<group>"; };
 		D475DA5E2230BC0A002695E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D475DA6C2230BC46002695E7 /* SYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationController.h; sourceTree = "<group>"; };
@@ -2645,9 +2645,9 @@
 		D475DA362230BC0A002695E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D475DA352230BC0A002695E7 /* SY.soyuViedeo.app */,
-				D475DA4D2230BC0A002695E7 /* SY.soyuViedeoTests.xctest */,
-				D475DA582230BC0A002695E7 /* SY.soyuViedeoUITests.xctest */,
+				D475DA352230BC0A002695E7 /* SY.souyunVideo.app */,
+				D475DA4D2230BC0A002695E7 /* SY.souyunVideoTests.xctest */,
+				D475DA582230BC0A002695E7 /* SY.souyunVideoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3813,9 +3813,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D475DA342230BC0A002695E7 /* SY.soyuViedeo */ = {
+		D475DA342230BC0A002695E7 /* SY.souyunVideo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D475DA612230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeo" */;
+			buildConfigurationList = D475DA612230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideo" */;
 			buildPhases = (
 				A18B18DDA8B0F2478D109276 /* [CP] Check Pods Manifest.lock */,
 				D475DA312230BC0A002695E7 /* Sources */,
@@ -3826,14 +3826,14 @@
 			);
 			dependencies = (
 			);
-			name = SY.soyuViedeo;
+			name = SY.souyunVideo;
 			productName = SY.soyuViedeo;
-			productReference = D475DA352230BC0A002695E7 /* SY.soyuViedeo.app */;
+			productReference = D475DA352230BC0A002695E7 /* SY.souyunVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D475DA4C2230BC0A002695E7 /* SY.soyuViedeoTests */ = {
+		D475DA4C2230BC0A002695E7 /* SY.souyunVideoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D475DA642230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeoTests" */;
+			buildConfigurationList = D475DA642230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideoTests" */;
 			buildPhases = (
 				C36251D8D0DC5A50A44C6434 /* [CP] Check Pods Manifest.lock */,
 				D475DA492230BC0A002695E7 /* Sources */,
@@ -3845,14 +3845,14 @@
 			dependencies = (
 				D475DA4F2230BC0A002695E7 /* PBXTargetDependency */,
 			);
-			name = SY.soyuViedeoTests;
+			name = SY.souyunVideoTests;
 			productName = SY.soyuViedeoTests;
-			productReference = D475DA4D2230BC0A002695E7 /* SY.soyuViedeoTests.xctest */;
+			productReference = D475DA4D2230BC0A002695E7 /* SY.souyunVideoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D475DA572230BC0A002695E7 /* SY.soyuViedeoUITests */ = {
+		D475DA572230BC0A002695E7 /* SY.souyunVideoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D475DA672230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeoUITests" */;
+			buildConfigurationList = D475DA672230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideoUITests" */;
 			buildPhases = (
 				D4D57C9A4BD2D10BB2F1C38A /* [CP] Check Pods Manifest.lock */,
 				D475DA542230BC0A002695E7 /* Sources */,
@@ -3864,9 +3864,9 @@
 			dependencies = (
 				D475DA5A2230BC0A002695E7 /* PBXTargetDependency */,
 			);
-			name = SY.soyuViedeoUITests;
+			name = SY.souyunVideoUITests;
 			productName = SY.soyuViedeoUITests;
-			productReference = D475DA582230BC0A002695E7 /* SY.soyuViedeoUITests.xctest */;
+			productReference = D475DA582230BC0A002695E7 /* SY.souyunVideoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -3896,7 +3896,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D475DA302230BC0A002695E7 /* Build configuration list for PBXProject "SY.soyuViedeo" */;
+			buildConfigurationList = D475DA302230BC0A002695E7 /* Build configuration list for PBXProject "SY.souyunVideo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -3909,9 +3909,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D475DA342230BC0A002695E7 /* SY.soyuViedeo */,
-				D475DA4C2230BC0A002695E7 /* SY.soyuViedeoTests */,
-				D475DA572230BC0A002695E7 /* SY.soyuViedeoUITests */,
+				D475DA342230BC0A002695E7 /* SY.souyunVideo */,
+				D475DA4C2230BC0A002695E7 /* SY.souyunVideoTests */,
+				D475DA572230BC0A002695E7 /* SY.souyunVideoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -4540,12 +4540,12 @@
 /* Begin PBXTargetDependency section */
 		D475DA4F2230BC0A002695E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D475DA342230BC0A002695E7 /* SY.soyuViedeo */;
+			target = D475DA342230BC0A002695E7 /* SY.souyunVideo */;
 			targetProxy = D475DA4E2230BC0A002695E7 /* PBXContainerItemProxy */;
 		};
 		D475DA5A2230BC0A002695E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D475DA342230BC0A002695E7 /* SY.soyuViedeo */;
+			target = D475DA342230BC0A002695E7 /* SY.souyunVideo */;
 			targetProxy = D475DA592230BC0A002695E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -4711,7 +4711,7 @@
 					"$(PROJECT_DIR)/SY.soyuViedeo/class/Thired/iOS/share/share_ios_6.9.5/SocialLibraries/QQ/QQSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/souyun/Desktop/SY.soyuViedeo/SY.soyuViedeo/class/others/SY.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SY.soyuViedeo/class/others/SY.pch";
 				INFOPLIST_FILE = SY.soyuViedeo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4770,7 +4770,7 @@
 					"$(PROJECT_DIR)/SY.soyuViedeo/class/Thired/iOS/share/share_ios_6.9.5/SocialLibraries/QQ/QQSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/souyun/Desktop/SY.soyuViedeo/SY.soyuViedeo/class/others/SY.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SY.soyuViedeo/class/others/SY.pch";
 				INFOPLIST_FILE = SY.soyuViedeo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4817,7 +4817,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "souyunhulian.SY-soyuViedeoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SY.soyuViedeo.app/SY.soyuViedeo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SY.souyunVideo.app/SY.souyunVideo";
 			};
 			name = Debug;
 		};
@@ -4836,7 +4836,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "souyunhulian.SY-soyuViedeoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SY.soyuViedeo.app/SY.soyuViedeo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SY.souyunVideo.app/SY.souyunVideo";
 			};
 			name = Release;
 		};
@@ -4879,7 +4879,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D475DA302230BC0A002695E7 /* Build configuration list for PBXProject "SY.soyuViedeo" */ = {
+		D475DA302230BC0A002695E7 /* Build configuration list for PBXProject "SY.souyunVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D475DA5F2230BC0A002695E7 /* Debug */,
@@ -4888,7 +4888,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D475DA612230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeo" */ = {
+		D475DA612230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D475DA622230BC0A002695E7 /* Debug */,
@@ -4897,7 +4897,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D475DA642230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeoTests" */ = {
+		D475DA642230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D475DA652230BC0A002695E7 /* Debug */,
@@ -4906,7 +4906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D475DA672230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.soyuViedeoUITests" */ = {
+		D475DA672230BC0A002695E7 /* Build configuration list for PBXNativeTarget "SY.souyunVideoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D475DA682230BC0A002695E7 /* Debug */,
