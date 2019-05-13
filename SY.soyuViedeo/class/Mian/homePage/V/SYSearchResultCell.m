@@ -51,7 +51,7 @@
     NSRange range = [orangString rangeOfString:self.model.keyWords];
     NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:orangString];
     //添加高亮为红色
-    [attribute addAttribute:NSForegroundColorAttributeName value:KappBlue range:range];
+    [attribute addAttribute:NSForegroundColorAttributeName value:KAPPMAINCOLOR range:range];
     _title.attributedText = attribute;
     
     

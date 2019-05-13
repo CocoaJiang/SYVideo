@@ -15,7 +15,7 @@
 #define kNavBarHeight 44.0
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 #define kTopHeight (kStatusBarHeight + kNavBarHeight)
-#define KappBlue RGBA(180, 39, 62, 1)
+#define KAPPMAINCOLOR RGBA(180, 39, 62, 1)
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREENH_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ((NSInteger)(([[UIScreen mainScreen] currentMode].size.height/[[UIScreen mainScreen] currentMode].size.width)*100) == 216) : NO)

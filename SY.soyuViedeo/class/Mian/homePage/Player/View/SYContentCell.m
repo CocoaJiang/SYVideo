@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    _douban_sources.backgroundColor = KappBlue;
+    _douban_sources.backgroundColor = KAPPMAINCOLOR;
     _douban_sources.layer.cornerRadius=2;
     _douban_sources.layer.masksToBounds=YES;
 }

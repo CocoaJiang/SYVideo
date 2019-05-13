@@ -84,7 +84,7 @@
             _tipLanel.backgroundColor = [UIColor redColor];
             break;
         default:_tipLanel.text = @"1080P";
-            _tipLanel.backgroundColor = KappBlue;
+            _tipLanel.backgroundColor = KAPPMAINCOLOR;
             break;
     }
     

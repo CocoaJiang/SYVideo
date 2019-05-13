@@ -53,9 +53,9 @@
     
     self.showNow.layer.masksToBounds = YES;
     self.showNow.layer.cornerRadius=2;
-    self.showNow.layer.borderColor = KappBlue.CGColor;
+    self.showNow.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.showNow.layer.borderWidth = 1.0f;
-    [self.showNow setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.showNow setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
 
 }
 

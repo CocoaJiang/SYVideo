@@ -15,9 +15,9 @@
     self.textField.userInteractionEnabled=NO;
     self.textField.layer.masksToBounds=YES;
     self.textField.layer.cornerRadius=25/2;
-    self.textField.layer.borderColor = KappBlue.CGColor;
+    self.textField.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.textField.layer.borderWidth = 1.0f;
-    self.textField.textColor = KappBlue;
+    self.textField.textColor = KAPPMAINCOLOR;
     self.textField.textAlignment = NSTextAlignmentCenter;
 }
 

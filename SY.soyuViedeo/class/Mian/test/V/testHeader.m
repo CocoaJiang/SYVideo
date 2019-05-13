@@ -19,7 +19,7 @@
 -(void)makeButtonToBeautiful:(UIButton *)button{
     button.layer.cornerRadius=10;
     button.layer.masksToBounds=YES;
-    button.layer.borderColor = KappBlue.CGColor;
+    button.layer.borderColor = KAPPMAINCOLOR.CGColor;
     button.layer.borderWidth =0.4f;
 }
 

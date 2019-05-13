@@ -34,7 +34,7 @@
     if (!_leftButton) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_leftButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [_leftButton setTitleColor:KappBlue forState:UIControlStateSelected];
+        [_leftButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateSelected];
         [_leftButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         _leftButton.titleLabel.font = [UIFont systemFontOfSize:15];
         [_leftButton sizeToFit];
@@ -46,7 +46,7 @@
     if (!_rightButton) {
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_rightButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [_rightButton setTitleColor:KappBlue forState:UIControlStateSelected];
+        [_rightButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateSelected];
         [_rightButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         _rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
 
@@ -58,7 +58,7 @@
 -(UIView *)lineView_Her{
     if (!_lineView_Her) {
         _lineView_Her = [[UIView alloc]init];
-        _lineView_Her.backgroundColor = KappBlue;
+        _lineView_Her.backgroundColor = KAPPMAINCOLOR;
     }
     return _lineView_Her;
 }

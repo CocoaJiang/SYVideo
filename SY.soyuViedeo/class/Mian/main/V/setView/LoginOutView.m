@@ -27,7 +27,7 @@
     if (!_button) {
         _button = [[UIButton alloc]init];
         _button.layer.cornerRadius=5;
-        _button.backgroundColor = KappBlue;
+        _button.backgroundColor = KAPPMAINCOLOR;
         _button.layer.masksToBounds=YES;
         [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_button setTitle:@"退出登录" forState:UIControlStateNormal];

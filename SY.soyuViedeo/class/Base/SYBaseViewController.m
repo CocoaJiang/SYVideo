@@ -136,7 +136,7 @@
 }
 -(NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state{
     if (self.status==0 || self.status == -1) return nil;
-    return [Tools ReturnWithString:@"请刷新重试" andWithColor:KappBlue andWithFont:13 andWithString:@"" andWithColor:KappBlue andWithFont:13];
+    return [Tools ReturnWithString:@"请刷新重试" andWithColor:KAPPMAINCOLOR andWithFont:13 andWithString:@"" andWithColor:KAPPMAINCOLOR andWithFont:13];
 }
 -(void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button{
     [self reload];

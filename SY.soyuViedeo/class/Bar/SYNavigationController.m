@@ -18,7 +18,7 @@
     [super viewDidLoad];
     //设置导航栏的颜色
     [UINavigationBar appearance].shadowImage = [UIImage new];
-    [[UINavigationBar appearance] setBarTintColor:KappBlue];
+    [[UINavigationBar appearance] setBarTintColor:KAPPMAINCOLOR];
     [UINavigationBar appearance].translucent = NO;
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];

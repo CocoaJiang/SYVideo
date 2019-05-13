@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @class app_version;
 
 NS_ASSUME_NONNULL_BEGIN

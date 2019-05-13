@@ -32,7 +32,7 @@
         _cycleScrollView.showPageControl=YES;
         _cycleScrollView.pageControlAliment=SDCycleScrollViewPageContolAlimentRight;
         _cycleScrollView.pageControlStyle  = SDCycleScrollViewPageContolStyleClassic;
-        _cycleScrollView.currentPageDotColor =KappBlue;
+        _cycleScrollView.currentPageDotColor =KAPPMAINCOLOR;
         _cycleScrollView.clipsToBounds = YES;
     }
     return _cycleScrollView;

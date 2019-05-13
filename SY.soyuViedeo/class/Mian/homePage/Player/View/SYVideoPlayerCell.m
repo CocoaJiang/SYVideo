@@ -75,7 +75,7 @@
     cell.number.font = [UIFont systemFontOfSize:14];
     cell.number.text = model.title;
     if (model.isSetseleted) {
-        cell.number.textColor = KappBlue;
+        cell.number.textColor = KAPPMAINCOLOR;
     }else{
         cell.number.textColor = [UIColor darkGrayColor];
     }

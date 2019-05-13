@@ -15,11 +15,7 @@
 @property(strong,nonatomic)SYHotRankTitle *hotRanktitle;
 @property(strong,nonatomic)SYhotDayView *dayView;
 @property(assign,nonatomic)NSInteger index;
-//定义指针
 @property(strong,nonatomic)UIView *sectionFootView;
-
-
-
 @end
 
 @implementation SYRankingViewController
@@ -150,7 +146,6 @@
     } error:^(NSString *error) {
     }];
 }
-
 -(void)addData{
     if ([self.dataSorces count]>0) {
         FindModel *model = self.dataSorces[0];
@@ -186,8 +181,6 @@
     
     
 }
-
-
 
 
 

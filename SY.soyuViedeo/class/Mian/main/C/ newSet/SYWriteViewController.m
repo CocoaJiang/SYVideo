@@ -92,7 +92,7 @@
     
     [submitButton setTitle:@"提交" forState:UIControlStateNormal];
     
-    [submitButton setBackgroundColor:KappBlue];
+    [submitButton setBackgroundColor:KAPPMAINCOLOR];
     
     [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     

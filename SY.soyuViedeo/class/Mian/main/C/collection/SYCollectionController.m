@@ -88,9 +88,9 @@
     }];
     segmentedControl.selectionIndicatorHeight = 4.0f;
     segmentedControl.backgroundColor = [UIColor clearColor];
-    segmentedControl.selectionIndicatorColor = KappBlue;
-    segmentedControl.selectionIndicatorBoxColor = KappBlue;
-    segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName:KappBlue,NSFontAttributeName:[UIFont boldSystemFontOfSize:15]};
+    segmentedControl.selectionIndicatorColor = KAPPMAINCOLOR;
+    segmentedControl.selectionIndicatorBoxColor = KAPPMAINCOLOR;
+    segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName:KAPPMAINCOLOR,NSFontAttributeName:[UIFont boldSystemFontOfSize:15]};
     segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor darkGrayColor],NSFontAttributeName:[UIFont systemFontOfSize:14]};
     segmentedControl.selectionIndicatorBoxOpacity = 1;
     segmentedControl.verticalDividerWidth=0.5f;

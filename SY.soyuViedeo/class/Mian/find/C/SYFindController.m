@@ -25,19 +25,15 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.translucent = YES;
-    
-    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
-    [self.navigationController.navigationBar setBarTintColor:KappBlue];
+    [self.navigationController.navigationBar setBarTintColor:KAPPMAINCOLOR];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    [self.navigationController.navigationBar setTintColor:KappBlue];
+    [self.navigationController.navigationBar setTintColor:KAPPMAINCOLOR];
     self.navigationController.navigationBar.translucent = YES;
 }
-
-
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self setNAV];
@@ -65,7 +61,7 @@
     segmentedControl.selectionIndicatorHeight = 4.0f;
     segmentedControl.backgroundColor = [UIColor clearColor];
     segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor lightGrayColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:16]};
-    segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : KappBlue,NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
+    segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : KAPPMAINCOLOR,NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
     segmentedControl.selectionIndicatorColor = [UIColor clearColor];
     segmentedControl.selectionIndicatorBoxColor = [UIColor clearColor];
     segmentedControl.selectionIndicatorBoxOpacity = 1;

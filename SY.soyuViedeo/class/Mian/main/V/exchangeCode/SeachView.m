@@ -12,7 +12,7 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    [self.button setBackgroundColor:KappBlue];
+    [self.button setBackgroundColor:KAPPMAINCOLOR];
     self.button.layer.cornerRadius=5;
     self.button.layer.masksToBounds=YES;
     [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

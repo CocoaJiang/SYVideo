@@ -18,16 +18,16 @@
     [self.button setBackgroundColor:RGBA(230, 230, 230, 1) forState:UIControlStateSelected];//选中过以后
     [self.button setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];//选中过以后
     [self.button setTitleColor:RGBA(200, 200, 200, 1) forState:UIControlStateSelected];//选中后的颜色
-    [self.button setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.button setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.button.layer.cornerRadius=30/2;
     self.button.layer.masksToBounds=YES;
     self.button.layer.borderWidth=0.4f;
-    self.button.layer.borderColor = KappBlue.CGColor;
+    self.button.layer.borderColor = KAPPMAINCOLOR.CGColor;
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     [self.button setTitle:@"已完成" forState:UIControlStateSelected];
     [self.button addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
     [self.finshLabel setHidden:YES];
-    self.finshLabel.backgroundColor = KappBlue;
+    self.finshLabel.backgroundColor = KAPPMAINCOLOR;
     self.finshLabel.layer.masksToBounds = YES;
     self.finshLabel.layer.cornerRadius =5;
 }
@@ -41,7 +41,7 @@
         }else{
             [self.finshLabel setHidden:YES];
             self.button.userInteractionEnabled = YES;
-            self.button.layer.borderColor = KappBlue.CGColor;
+            self.button.layer.borderColor = KAPPMAINCOLOR.CGColor;
         }
     };
 }}

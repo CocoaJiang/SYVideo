@@ -57,7 +57,7 @@
     
 //RGBA(171, 21, 26, 1)
 
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:KappBlue,NSFontAttributeName:[UIFont systemFontOfSize:12.0f]} forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:KAPPMAINCOLOR,NSFontAttributeName:[UIFont systemFontOfSize:12.0f]} forState:UIControlStateSelected];
 }
 
 -(NSMutableArray *)VCarray{

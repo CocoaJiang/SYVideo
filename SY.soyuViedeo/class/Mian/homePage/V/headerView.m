@@ -24,7 +24,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = KappBlue;
+        self.backgroundColor = KAPPMAINCOLOR;
         [self addSubview:self.historyButton];
         [self addSubview:self.loadButton];
         [self addSubview:self.searchView];

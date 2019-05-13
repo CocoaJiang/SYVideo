@@ -41,8 +41,8 @@
     self.playSizeSetCollectionView.dataSource = self;
      [self.playSizeSetCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
      [self.tinmerCloseCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
-    self.deleteHeaderAndFoot.onTintColor = KappBlue;
-    self.goonPlayerback.onTintColor = KappBlue;
+    self.deleteHeaderAndFoot.onTintColor = KAPPMAINCOLOR;
+    self.goonPlayerback.onTintColor = KAPPMAINCOLOR;
     [self.deleteHeaderAndFoot addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
     [self.goonPlayerback addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
     BOOL autoPlay = [[SYUSERINFO info].userInfo.setting.autoPlay boolValue];

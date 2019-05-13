@@ -36,7 +36,7 @@
  
     UIButton *button  = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"我要反馈" forState:UIControlStateNormal];
-    [button setBackgroundColor:KappBlue];
+    [button setBackgroundColor:KAPPMAINCOLOR];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {

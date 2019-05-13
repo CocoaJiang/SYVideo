@@ -22,7 +22,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = KappBlue;
+        self.backgroundColor = KAPPMAINCOLOR;
         [self addSubview:self.huview];
         [self addSubview:self.leftButton];
         [self addSubview:self.rightButton];
@@ -33,7 +33,7 @@
 -(SYHUView *)huview{
     if (!_huview) {
         _huview = [[SYHUView alloc]init];
-        _huview.backgroundColor = KappBlue;
+        _huview.backgroundColor = KAPPMAINCOLOR;
     }
     return _huview;
 }

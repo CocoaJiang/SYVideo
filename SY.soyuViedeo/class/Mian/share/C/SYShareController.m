@@ -69,7 +69,7 @@
     
     
     UILabel *label  = [[UILabel alloc]init];
-    label.attributedText = [Tools ReturnWithString:@"邀请码:" andWithColor:RGBA(204, 204, 204, 1) andWithFont:14 andWithString:[Tools isNeedLogin]?[SYUSERINFO info].systemModel.inviteCode:USERREAD_object(KUSER_CODE) andWithColor:KappBlue andWithFont:28];
+    label.attributedText = [Tools ReturnWithString:@"邀请码:" andWithColor:RGBA(204, 204, 204, 1) andWithFont:14 andWithString:[Tools isNeedLogin]?[SYUSERINFO info].systemModel.inviteCode:USERREAD_object(KUSER_CODE) andWithColor:KAPPMAINCOLOR andWithFont:28];
     label.origin = CGPointMake(60, 150);
     [label sizeToFit];
     self.label = label;
@@ -141,7 +141,7 @@
     invitationButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [invitationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [invitationButton makeYuanWithScle:15];
-    invitationButton.backgroundColor = KappBlue;
+    invitationButton.backgroundColor = KAPPMAINCOLOR;
     [invitationButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:invitationButton];
     
@@ -173,7 +173,7 @@
 
 ///通知这里发生改变。。。
 -(void)inteverCodeChange{
-     _label.attributedText = [Tools ReturnWithString:@"邀请码:" andWithColor:RGBA(204, 204, 204, 1) andWithFont:14 andWithString:[Tools isNeedLogin]?[SYUSERINFO info].systemModel.inviteCode:USERREAD_object(KUSER_CODE) andWithColor:KappBlue andWithFont:28];
+     _label.attributedText = [Tools ReturnWithString:@"邀请码:" andWithColor:RGBA(204, 204, 204, 1) andWithFont:14 andWithString:[Tools isNeedLogin]?[SYUSERINFO info].systemModel.inviteCode:USERREAD_object(KUSER_CODE) andWithColor:KAPPMAINCOLOR andWithFont:28];
 }
 
 

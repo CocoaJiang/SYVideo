@@ -20,7 +20,7 @@
     _title.text =title;
     if (isseleted) {
         self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        self.title.textColor = KappBlue;
+        self.title.textColor = KAPPMAINCOLOR;
     }else{
         self.contentView.backgroundColor = [UIColor whiteColor];
         self.title.textColor = [UIColor darkGrayColor];

@@ -56,7 +56,7 @@
     self.loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.loginButton setTitle:@"下一步" forState:UIControlStateNormal];
     [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.loginButton setBackgroundColor:KappBlue];
+    [self.loginButton setBackgroundColor:KAPPMAINCOLOR];
     self.loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.loginButton sizeToFit];
     self.loginButton.layer.masksToBounds = YES;
@@ -85,7 +85,7 @@
     
     self.redButton  = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.redButton setTitle:@"《用户注册协议》" forState:UIControlStateNormal];
-    [self.redButton setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.redButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.redButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [self.redButton sizeToFit];
     [self.view addSubview:self.redButton];

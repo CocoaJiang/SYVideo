@@ -99,7 +99,7 @@
 }
 -(NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
     if (self.isLoading) return [Tools returnWithString:@"正在搜索中..."];
-    return [Tools returnWithString:@"搜索失败"];
+    return [Tools returnWithString:@"没有找到设备"];
     
 }
 -(CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView{
@@ -111,3 +111,11 @@
 }
 
 @end
+
+
+/*
+ 
+ 
+ 
+ 
+ */

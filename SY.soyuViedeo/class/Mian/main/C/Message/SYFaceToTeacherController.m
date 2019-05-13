@@ -69,7 +69,7 @@
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
         [_button setTitle:@"提 交" forState:UIControlStateNormal];
         _button.titleLabel.font = [UIFont systemFontOfSize:14];
-        [_button setBackgroundColor:KappBlue];
+        [_button setBackgroundColor:KAPPMAINCOLOR];
         [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
         _button.layer.cornerRadius = 10;
         _button.layer.masksToBounds = YES;

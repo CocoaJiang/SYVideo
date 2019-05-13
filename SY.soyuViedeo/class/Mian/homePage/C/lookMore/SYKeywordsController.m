@@ -33,7 +33,7 @@
     NSRange range = [orangString rangeOfString:self.keyWordString];
     NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:orangString];
     //添加高亮为红色
-    [attribute addAttribute:NSForegroundColorAttributeName value:KappBlue range:range];
+    [attribute addAttribute:NSForegroundColorAttributeName value:KAPPMAINCOLOR range:range];
     cell.textLabel.attributedText = attribute;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     return cell;

@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    self.lineView.backgroundColor = KappBlue;
+    self.lineView.backgroundColor = KAPPMAINCOLOR;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -132,7 +132,7 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setBarTintColor:KappBlue];
+    [self.navigationController.navigationBar setBarTintColor:KAPPMAINCOLOR];
     [self.quee marqueeOfSettingWithState:MarqueeShutDown_H];
     [IQKeyboardManager sharedManager].enable = YES;
 

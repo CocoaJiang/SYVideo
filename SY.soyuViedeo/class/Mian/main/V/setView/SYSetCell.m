@@ -17,7 +17,7 @@
     [self.SYswitch setHidden:YES];
     [self.text setHidden:YES];
     [self.redPoint setHidden:YES];
-    [self.SYswitch setOnTintColor:KappBlue];
+    [self.SYswitch setOnTintColor:KAPPMAINCOLOR];
     [self.SYswitch addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
 
     

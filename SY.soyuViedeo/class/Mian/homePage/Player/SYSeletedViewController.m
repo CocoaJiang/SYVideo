@@ -60,7 +60,7 @@
     }
     NSString *string = self.dataSorces[indexPath.row];
     if (string.isSeleted) {
-        cell.textLabel.textColor = KappBlue;
+        cell.textLabel.textColor = KAPPMAINCOLOR;
     }else{
         cell.textLabel.textColor = [UIColor darkTextColor];
     }

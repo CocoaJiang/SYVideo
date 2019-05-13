@@ -29,9 +29,9 @@
     _text = text;
     if (text.isSeleted) {
         if (self.type==hasBorldColor) {
-             self.contentView.layer.borderColor = KappBlue.CGColor;
+             self.contentView.layer.borderColor = KAPPMAINCOLOR.CGColor;
         }
-        self.title.textColor = KappBlue;
+        self.title.textColor = KAPPMAINCOLOR;
         self.title.text = text;
     }else{
         if (self.type==hasBorldColor) {

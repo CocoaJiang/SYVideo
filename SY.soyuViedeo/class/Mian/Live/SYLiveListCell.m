@@ -89,7 +89,7 @@
         [self.contentView addGestureRecognizer:zer];
         zer.delegate = self;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundColor:KappBlue];
+        [button setBackgroundColor:KAPPMAINCOLOR];
         [button setTitle:@"删除" forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonDelete) forControlEvents:UIControlEventTouchUpInside];
         self.contentView.frame = CGRectMake(0, 0, SCREEN_WIDTH+100, self.contentView.height);

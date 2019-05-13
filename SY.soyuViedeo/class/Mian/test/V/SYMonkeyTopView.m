@@ -12,7 +12,7 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    self.backgroundColor = KappBlue;
+    self.backgroundColor = KAPPMAINCOLOR;
     self.disLanel.text = [NSString stringWithFormat:@"%@余额",[SYUSERINFO info].systemModel.coin_name];
     
     NSTextAttachment *attachment = [[NSTextAttachment alloc]init];

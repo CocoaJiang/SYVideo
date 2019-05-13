@@ -13,7 +13,7 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     [self.PJButton makeYuanWithScle:4];
-    [self.PJButton setBackgroundColor:KappBlue];
+    [self.PJButton setBackgroundColor:KAPPMAINCOLOR];
    self.autoresizingMask = UIViewAutoresizingNone;
     
     

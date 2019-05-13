@@ -43,13 +43,13 @@
 -(void)setSystem{
     NSString *numberString =self.type==2?[Tools returnBankCard:self.phone]:[Tools returnBankCard:USERREAD_object(KUSER_NAME)];
     self.number.text = [NSString stringWithFormat:@"+86  %@",numberString];
-    self.sendVarButton.layer.borderColor = KappBlue.CGColor;
+    self.sendVarButton.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.sendVarButton.layer.borderWidth = 0.4f;
-    self.nextButtom.backgroundColor = KappBlue;
+    self.nextButtom.backgroundColor = KAPPMAINCOLOR;
     self.nextButtom.layer.cornerRadius = 5;
     self.nextButtom.layer.masksToBounds = YES;
     self.passWordTextField.secureTextEntry = YES;
-    [self.sendVarButton setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.sendVarButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     
     if (self.type==changPhone) {
         self.tipLabel.text = @"新手机号码";

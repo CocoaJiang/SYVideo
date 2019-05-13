@@ -132,7 +132,7 @@
         cell.textLabel.text = model.name;
         cell.detailTextLabel.hidden = YES;
         if (model.isSeted) {
-            cell.textLabel.textColor  = KappBlue;
+            cell.textLabel.textColor  = KAPPMAINCOLOR;
         }else{
             cell.textLabel.textColor = [UIColor whiteColor];
         }
@@ -142,7 +142,7 @@
         cell.detailTextLabel.hidden = NO;
         LiveListModel *model = self.array_choseIndex[indexPath.row];
         if (model.isSeleted) {
-            cell.textLabel.textColor = cell.detailTextLabel.textColor = KappBlue;
+            cell.textLabel.textColor = cell.detailTextLabel.textColor = KAPPMAINCOLOR;
         }else{
             cell.textLabel.textColor = cell.detailTextLabel.textColor = [UIColor whiteColor];
         }

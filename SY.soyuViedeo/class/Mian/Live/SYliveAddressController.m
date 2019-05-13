@@ -105,7 +105,7 @@
         LiveModel *model = self.leftArray[indexPath.row];
         cell.textLabel.text =model.name;
         if (model.isSeted) {
-            cell.textLabel.textColor = KappBlue;
+            cell.textLabel.textColor = KAPPMAINCOLOR;
             cell.contentView.backgroundColor = [UIColor whiteColor];
         }else{
             cell.textLabel.textColor = [UIColor darkTextColor];

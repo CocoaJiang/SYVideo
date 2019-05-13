@@ -15,9 +15,9 @@
 }
 
 -(void)setsystem{
-    self.vercodeButton.layer.borderColor = KappBlue.CGColor;
+    self.vercodeButton.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.vercodeButton.layer.borderWidth = 0.5f;
-    [self.vercodeButton setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.vercodeButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.textField.secureTextEntry=YES;
 }
 

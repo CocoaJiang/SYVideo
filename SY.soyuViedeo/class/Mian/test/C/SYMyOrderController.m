@@ -53,7 +53,7 @@
                             
                             UIButton *button = (UIButton *)buttonView;
                             
-                            [button setBackgroundColor:KappBlue];
+                            [button setBackgroundColor:KAPPMAINCOLOR];
                             
                             button.height = 40;
                             

@@ -20,7 +20,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [self.regisButton setBackgroundColor:KappBlue];
+    [self.regisButton setBackgroundColor:KAPPMAINCOLOR];
     [self.regisButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.bgView.layer.masksToBounds=YES;
     self.bgView.layer.cornerRadius=5;
@@ -30,11 +30,11 @@
     self.regisButton.layer.cornerRadius=5;
     self.sendVerCodeButton.layer.masksToBounds=YES;
     self.sendVerCodeButton.layer.cornerRadius=3;
-    [self.sendVerCodeButton setBackgroundColor:KappBlue];
+    [self.sendVerCodeButton setBackgroundColor:KAPPMAINCOLOR];
     [self.sendVerCodeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.readbutton setImage:[UIImage imageNamed:@"多选_未选中"] forState:UIControlStateNormal];
     [self.readbutton setImage:[UIImage imageNamed:@"多选_选中"] forState:UIControlStateSelected];
-    [self.xieyibutton setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.xieyibutton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.regisButton.userInteractionEnabled=NO;
     self.regisButton.alpha=0.4;
     self.sendVerCodeButton.enabled=NO;

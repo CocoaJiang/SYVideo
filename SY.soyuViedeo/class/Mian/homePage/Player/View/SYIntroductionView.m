@@ -69,7 +69,7 @@
     urlInfo *model = self.info.url[self.index];
     cell.number.text = model.list[indexPath.row].title;
     if (model.list[indexPath.row].isSetseleted) {
-        cell.number.textColor = KappBlue;
+        cell.number.textColor = KAPPMAINCOLOR;
     }else{
          cell.number.font = [UIFont systemFontOfSize:14];
     }

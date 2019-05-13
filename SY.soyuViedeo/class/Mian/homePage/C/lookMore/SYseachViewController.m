@@ -99,7 +99,7 @@
         _searBar = [[UISearchBar alloc]init];
         _searBar.placeholder = @"请输入您要输入的内容";
         _searBar.searchBarStyle =UISearchBarStyleProminent;
-        _searBar.backgroundColor = KappBlue;
+        _searBar.backgroundColor = KAPPMAINCOLOR;
         _searBar.delegate = self;
         if (@available(iOS 11.0, *)) {
             [[_searBar.heightAnchor constraintEqualToConstant:44.0] setActive:YES];
@@ -232,9 +232,9 @@
         style.gradualChangeTitleColor = YES;
         style.scaleTitle = YES;
         style.normalTitleColor = RGBA(155,155, 155, 1);
-        style.selectedTitleColor = KappBlue;
+        style.selectedTitleColor = KAPPMAINCOLOR;
         style.titleBigScale = 1.2;
-        style.scrollLineColor =KappBlue;
+        style.scrollLineColor =KAPPMAINCOLOR;
         _scrollPageView = [[ZJScrollPageView alloc]initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREENH_HEIGHT-40-kStatusBarHeight) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
         [self.scrollPageView setSelectedIndex:0 animated:NO];
     }

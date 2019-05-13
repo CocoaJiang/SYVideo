@@ -16,7 +16,7 @@
     self.orderButton.layer.cornerRadius = 15;
     self.orderButton.layer.masksToBounds = YES;
     [self.orderButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.orderButton setBackgroundColor:KappBlue];
+    [self.orderButton setBackgroundColor:KAPPMAINCOLOR];
 }
 
 @end

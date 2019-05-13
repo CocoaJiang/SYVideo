@@ -24,19 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getMessage];
+    self.scrollPageView.contentView.collectionView.emptyDataSetSource = self;
+    self.scrollPageView.contentView.collectionView.emptyDataSetDelegate  = self;
     
 }
-
-
-/*
- 
- [UINavigationBar appearance].shadowImage = [UIImage new];
- [[UINavigationBar appearance] setBarTintColor:KappBlue];
- [UINavigationBar appearance].translucent = NO;
- [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
- [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
- 
- */
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -51,9 +42,9 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
-    [self.navigationController.navigationBar setBarTintColor:KappBlue];
+    [self.navigationController.navigationBar setBarTintColor:KAPPMAINCOLOR];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    [self.navigationController.navigationBar setTintColor:KappBlue];
+    [self.navigationController.navigationBar setTintColor:KAPPMAINCOLOR];
     self.navigationController.navigationBar.translucent = YES;
 }
 
@@ -62,36 +53,29 @@
     ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
     //显示遮盖
     style.showCover = NO;
-    
     style.showLine = YES;
-    
     style.contentViewBounces = NO;
-    
-    style.scrollLineColor = KappBlue;
-    
+    style.scrollLineColor = KAPPMAINCOLOR;
     style.gradualChangeTitleColor = YES;
-        
     style.adjustCoverOrLineWidth = YES;
-    
     style.scrollTitle = NO;
-    
     style.segmentHeight = 35;
-
-    
     // 颜色渐变
     style.gradualChangeTitleColor = YES;
     style.scaleTitle = YES;
     style.normalTitleColor = RGBA(10, 10, 10, 1);
-    style.selectedTitleColor = KappBlue;
+    style.selectedTitleColor = KAPPMAINCOLOR;
     style.titleBigScale = 1.2;
     style.titleFont = [UIFont systemFontOfSize:14];
-    style.scrollLineColor =KappBlue;
+    style.scrollLineColor =KAPPMAINCOLOR;
     ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 35, self.view.frame.size.width,self.view.bounds.size.height) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
     self.scrollPageView = scrollPageView;
     [self.view addSubview:scrollPageView];
     [self.scrollPageView setSelectedIndex:1 animated:NO];
     self.scrollPageView.segmentView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 35);
     [self.view addSubview:self.scrollPageView.segmentView];
+    
+    
 
     
 }
@@ -153,6 +137,7 @@
 }
 
 -(void)addData{
+    
     NSMutableArray *array = [[NSMutableArray alloc]init];
     for (LiveModel *model in self.dataSorces) {
         [array addObject:model.name];
@@ -168,5 +153,11 @@
     }
     return _titles;
 }
+
+-(void)reload{
+    [self.dataSorces removeAllObjects];
+    [self getMessage];
+}
+
 
 @end

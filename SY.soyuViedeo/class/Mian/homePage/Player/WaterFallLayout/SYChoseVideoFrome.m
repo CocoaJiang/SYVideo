@@ -58,7 +58,7 @@
     cell.layer.masksToBounds=YES;
     cell.layer.cornerRadius=10;
     if (self.info.url[indexPath.row].isseleted) {
-        cell.layer.borderColor = KappBlue.CGColor;
+        cell.layer.borderColor = KAPPMAINCOLOR.CGColor;
     }else{
         cell.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
     }

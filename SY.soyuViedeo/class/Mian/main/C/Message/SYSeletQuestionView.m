@@ -28,7 +28,7 @@
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setBackgroundColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor ] forState:UIControlStateSelected];
-        [button setBackgroundColor:KappBlue forState:UIControlStateSelected];
+        [button setBackgroundColor:KAPPMAINCOLOR forState:UIControlStateSelected];
         button.layer.masksToBounds = YES;
         button.layer.cornerRadius = 15;
         button.layer.borderColor =[UIColor grayColor].CGColor;
@@ -45,7 +45,7 @@
         button.layer.borderColor = [UIColor grayColor].CGColor;
         button.layer.borderWidth = 0.4f;
     }else{
-        button.layer.borderColor =KappBlue.CGColor;
+        button.layer.borderColor =KAPPMAINCOLOR.CGColor;
         button.layer.borderWidth = 0.4f;
     }
     if (button.selected) {

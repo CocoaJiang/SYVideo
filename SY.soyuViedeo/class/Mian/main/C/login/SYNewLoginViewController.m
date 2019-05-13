@@ -68,7 +68,7 @@
     
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.button setTitle:@"忘记密码?" forState:UIControlStateNormal];
-    [self.button setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.button setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.button.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.button sizeToFit];
     [self.view addSubview:self.button];
@@ -81,7 +81,7 @@
     self.loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.loginButton setBackgroundColor:KappBlue];
+    [self.loginButton setBackgroundColor:KAPPMAINCOLOR];
     self.loginButton.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.loginButton sizeToFit];
     self.loginButton.layer.masksToBounds = YES;
@@ -96,7 +96,7 @@
     self.quickLogin = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.quickLogin setTitle:@"快速登录" forState:UIControlStateNormal];
     [self.quickLogin setTitle:@"密码登录" forState:UIControlStateSelected];
-    [self.quickLogin setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.quickLogin setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.quickLogin.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.quickLogin sizeToFit];
     [self.view addSubview:self.quickLogin];

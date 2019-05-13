@@ -15,15 +15,15 @@
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.faceOn.layer.cornerRadius=14;
     self.faceOn.layer.masksToBounds=YES;
-    self.faceOn.layer.borderColor = KappBlue.CGColor;
+    self.faceOn.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.faceOn.layer.borderWidth=0.4f;
     [self.icon MakeYuanWithScle:20.0f];
     [self.faceOn setTitle:@"关注" forState:UIControlStateNormal];
     [self.faceOn setTitle:@"已关注" forState:UIControlStateSelected];
-    [self.faceOn setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.faceOn setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     [self.faceOn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
  
-    [self.faceOn setBackgroundColor:KappBlue forState:UIControlStateSelected];
+    [self.faceOn setBackgroundColor:KAPPMAINCOLOR forState:UIControlStateSelected];
     [self.faceOn setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
 }

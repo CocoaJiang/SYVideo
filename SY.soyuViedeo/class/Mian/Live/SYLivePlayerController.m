@@ -229,7 +229,7 @@
         if ([model.status integerValue]==0) {
             cell.textLabel.textColor = [UIColor lightGrayColor];
         }else if ([model.status integerValue]==1){
-            cell.textLabel.textColor = KappBlue;
+            cell.textLabel.textColor = KAPPMAINCOLOR;
         }else{
             cell.textLabel.textColor = [UIColor  darkTextColor];
         }

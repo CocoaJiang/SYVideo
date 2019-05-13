@@ -17,9 +17,9 @@
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.exchangeButton.layer.cornerRadius=15;
     self.exchangeButton.layer.masksToBounds=YES;
-    self.exchangeButton.layer.borderColor=KappBlue.CGColor;
+    self.exchangeButton.layer.borderColor=KAPPMAINCOLOR.CGColor;
     self.exchangeButton.layer.borderWidth = 0.4f;
-    [self.exchangeButton setTitleColor:KappBlue forState:UIControlStateNormal];
+    [self.exchangeButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     [self.exchangeButton setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.exchangeButton setBackgroundColor:seletedColor forState:UIControlStateSelected];
     [self.exchangeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
@@ -47,7 +47,7 @@
         self.exchangeButton.selected =  YES;
         [self.exchangeButton setTitle: [NSString stringWithFormat:@"%@天后到期",item.expiration] forState:UIControlStateSelected];
         self.exchangeButton.layer.borderColor = seletedColor.CGColor;
-        [self.exchangeButton setTitleColor:KappBlue forState:UIControlStateSelected];
+        [self.exchangeButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateSelected];
         [_timeLanel setHidden:YES];
         [_monkeyLbal setHidden:YES];
     }else{
@@ -60,7 +60,7 @@
             self.exchangeButton.layer.borderColor = seletedColor.CGColor;
         }else{
             [self.exchangeButton setTitle:@"立即兑换" forState:UIControlStateSelected];
-            self.exchangeButton.layer.borderColor = KappBlue.CGColor;
+            self.exchangeButton.layer.borderColor = KAPPMAINCOLOR.CGColor;
         }
     }
     

@@ -56,7 +56,7 @@
     self.loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.loginButton setTitle:@"注册" forState:UIControlStateNormal];
     [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.loginButton setBackgroundColor:KappBlue];
+    [self.loginButton setBackgroundColor:KAPPMAINCOLOR];
     self.loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.loginButton sizeToFit];
     self.loginButton.layer.masksToBounds = YES;

@@ -49,7 +49,8 @@
         SYUSERINFO *system = [SYUSERINFO info];
         system.systemModel = [systemModel mj_objectWithKeyValues:[responseObject objectForKey:@"data"]];
     } error:^(NSString *error) {
-        
+         SYUSERINFO *system = [SYUSERINFO info];
+        system.systemModel.coin_name = @"金币";
     }];
     
 }
@@ -57,13 +58,9 @@
 
 - (void)confitUShareSettings
 {
-  
-    
     [[UMSocialManager defaultManager] setUmSocialAppkey:@"5bab731ab465f50f16000115"];
     [[UMSocialManager defaultManager] openLog:YES];
-    
     [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
-    
     [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
 }
 - (void)configUSharePlatforms

@@ -83,7 +83,7 @@
 -(SYHUView *)huView{
     if (!_huView) {
         _huView = [[SYHUView alloc]init];
-        _huView.backgroundColor = KappBlue;
+        _huView.backgroundColor = KAPPMAINCOLOR;
     }
     return _huView;
 }

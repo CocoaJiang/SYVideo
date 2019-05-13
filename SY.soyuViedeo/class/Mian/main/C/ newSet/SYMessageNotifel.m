@@ -94,7 +94,7 @@
     
     button.titleLabel.font = [UIFont systemFontOfSize:13];
     
-    [button setTitleColor:KappBlue forState:UIControlStateNormal];
+    [button setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     
     [self.view addSubview:button];
     

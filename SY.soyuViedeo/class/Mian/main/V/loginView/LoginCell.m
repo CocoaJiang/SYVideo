@@ -14,8 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [self.forgetButton setTitleColor:KappBlue forState:UIControlStateNormal];
-    [self.loginButton setBackgroundColor:KappBlue];
+    [self.forgetButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
+    [self.loginButton setBackgroundColor:KAPPMAINCOLOR];
     [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.bgView.layer.masksToBounds=YES;
     self.bgView.layer.cornerRadius=5;
