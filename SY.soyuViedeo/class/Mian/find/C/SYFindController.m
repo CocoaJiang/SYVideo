@@ -30,11 +30,11 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [UINavigationBar appearance].shadowImage = [UIImage new];
-    [[UINavigationBar appearance] setBarTintColor:KappBlue];
-    [UINavigationBar appearance].translucent = NO;
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    [self.navigationController.navigationBar setBarTintColor:KappBlue];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTintColor:KappBlue];
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 
