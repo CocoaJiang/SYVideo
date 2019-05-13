@@ -10,6 +10,11 @@
 #import "UIScrollView+EmptyDataSet.h"
 @interface SYSearchDevicesCell()<UITableViewDataSource,UITableViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 @property(strong,nonatomic)UITableView *tableView;
+@property(strong,nonatomic)UIImage *image_show;
+///是否失败
+@property(assign,nonatomic)BOOL isLoading;
+
+
 @end
 
 
@@ -33,6 +38,12 @@
         [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self.contentView);
         }];
+        self.isLoading=YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.isLoading = NO;
+            [self.tableView reloadEmptyDataSet];
+        });
+        
     }
     return self;
 }
@@ -73,17 +84,23 @@
 
 
 -(UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
-    NSMutableArray *images = [[NSMutableArray alloc]init];
-    NSArray *array = @[@"a7i",@"a7j",@"a7k",@"a7l",@"a7m",@"a7n",@"a7o",@"a7p",@"a7q",@"a7r",@"a7s",@"a7t",@"a7u",@"a7v",@"a7w",@"a7x",@"a7y",@"a7z"];
-    for (NSString *string in array) {
-        UIImage *image  = [UIImage imageNamed:string];
-        [images addObject:image];
+    if (self.isLoading) {
+        NSMutableArray *images = [[NSMutableArray alloc]init];
+        NSArray *array = @[@"a7i",@"a7j",@"a7k",@"a7l",@"a7m",@"a7n",@"a7o",@"a7p",@"a7q",@"a7r",@"a7s",@"a7t",@"a7u",@"a7v",@"a7w",@"a7x",@"a7y",@"a7z"];
+        for (NSString *string in array) {
+            UIImage *image  = [UIImage imageNamed:string];
+            [images addObject:image];
+        }
+        UIImage *image = [UIImage animatedImageWithImages:images duration:0.3];
+        return image;
+    }else{
+        return [Tools EmptyImage];
     }
-    UIImage *image = [UIImage animatedImageWithImages:images duration:0.3];
-    return image;
 }
 -(NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
-    return [Tools returnWithString:@"正在搜索中..."];
+    if (self.isLoading) return [Tools returnWithString:@"正在搜索中..."];
+    return [Tools returnWithString:@"搜索失败"];
+    
 }
 -(CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView{
     return 100;

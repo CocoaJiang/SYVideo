@@ -105,8 +105,8 @@
                                                      name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                    object:nil];
         self.isChange = YES;
-        
-        self.failBtn;
+        ////不要介意就是为了提前加载
+        self.failBtn.userInteractionEnabled=YES;
         
       
         

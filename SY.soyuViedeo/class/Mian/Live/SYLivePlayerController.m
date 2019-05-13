@@ -15,7 +15,8 @@
 #import "PlayList.h"
 #import "ZFAVPlayerManager.h"
 #import <XWDatabase.h>
-
+#import "SYSearchTVController.h"
+#import "IQKeyboardManager.h"
 
 
 @interface SYLivePlayerController ()
@@ -26,19 +27,26 @@
 @property(strong,nonatomic)UITableView *leftTableView;
 @property(strong,nonatomic)UITableView *rightTableView;
 @property(strong,nonatomic)SYlivePlayer *model;
+@property(strong,nonatomic)UIButton *backButton;
+@property(strong,nonatomic)NSString *url;
+
 
 @end
 
 @implementation SYLivePlayerController
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
+    [[IQKeyboardManager sharedManager] setEnable:NO];
+    self.player.viewControllerDisappear = NO;
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden =NO;
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    self.player.viewControllerDisappear = YES;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addView];
@@ -52,6 +60,16 @@
         make.left.right.top.mas_equalTo(self.view);
         make.height.mas_equalTo(SCREEN_WIDTH*9/16);
     }];
+    [self.view addSubview:self.backButton];
+    [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        if (iPhoneX) {
+            make.top.mas_equalTo(self.view.mas_top).offset(40);
+        }else{
+            make.top.mas_equalTo(self.view.mas_top).offset(25);
+        }
+    }];
+    
     [self.view addSubview:self.headerView];
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.bgView);
@@ -76,6 +94,7 @@
     ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
     self.player = [[ZFPlayerController alloc] initWithPlayerManager:playerManager containerView:self.bgView]; //
     self.player.controlView = self.controlView;
+    self.player.pauseWhenAppResignActive = NO;
         __weak typeof(self)weakSelf = self;
     self.player.orientationWillChange = ^(ZFPlayerController * _Nonnull player, BOOL isFullScreen) {
         weakSelf.view.backgroundColor = isFullScreen ? [UIColor blackColor] : [UIColor whiteColor];
@@ -138,6 +157,7 @@
             [self getURlToPlay:param andWithAddress:address];
         }
         NSString *URLString = [self.model.routes[0].url  stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        self.url = URLString;
         self.player.assetURL = [NSURL URLWithString:URLString];
 
     }
@@ -151,6 +171,7 @@
     [HttpTool NOACtionPOST:address param:dict success:^(id responseObject) {
         NSString *string = [[responseObject objectForKey:@"data"] objectForKey:@"url"];
         NSString *URLString = [string  stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        self.url = URLString;
         self.player.assetURL = [NSURL URLWithString:URLString];
     } error:^(NSString *error) {
         
@@ -291,6 +312,14 @@
 - (ZFPlayerControlView *)controlView {
     if (!_controlView) {
         _controlView = [[ZFPlayerControlView alloc]initWithFrame:CGRectZero andWithType:ControllerLive];
+        __weak typeof(self)weakSelf = self;
+        
+        _controlView.landScapeControlView.forsecreen = ^{
+            [weakSelf searchTVWithModel:nil andWithURL:weakSelf.url];
+        };
+        _controlView.portraitControlView.forScreen = ^{
+            [weakSelf searchTVWithModel:nil andWithURL:weakSelf.url];
+        };
     }
     return _controlView;
 }
@@ -318,11 +347,6 @@
     return self.player.shouldAutorotate;
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [self.player.currentPlayerManager stop];
-    [self.player.orientationObserver XJdelloc];
-}
-
 -(void)savae{
     self.savemodel.time = (long)[[Tools getCurrentTimes] integerValue];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -331,6 +355,26 @@
         }];
     });
 }
+-(UIButton *)backButton{
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backButton setImage:[UIImage imageNamed:@"白色右边箭头"] forState:UIControlStateNormal];
+        _backButton.size  = CGSizeMake(50, 50);
+        __weak typeof(self)weakSelf = self;
+        _backButton.clickAction = ^(UIButton *button) {
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        };
+    }
+    return _backButton;
+}
 
+-(void)searchTVWithModel:(PlayModel *)model andWithURL:(NSString *)urlString{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        SYSearchTVController *controller = [[SYSearchTVController alloc]init];
+        controller.model = model;
+        controller.url = urlString;
+        [self.navigationController pushViewController:controller animated:YES];
+    });
+}
 
 @end

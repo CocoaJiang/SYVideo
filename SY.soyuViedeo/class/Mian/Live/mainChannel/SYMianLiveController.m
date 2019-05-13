@@ -12,6 +12,7 @@
 #import "SYCollectionModel.h"
 #import "LiveListModel.h"
 #import <XWDatabase.h>
+#import "SYLivePlayerController.h"
 @interface SYMianLiveController ()
 @property(strong,nonatomic)NSArray *sectionArray;
 @property(strong,nonatomic)NSArray *array_history;
@@ -169,5 +170,29 @@
     }];
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section==0) {
+        SYCollectionModel *model = self.dataSorces[indexPath.row];
+        SYLivePlayerController *controller = [[SYLivePlayerController alloc]init];
+        controller.idString  = model.id;
+        LiveListModel *livelist = [[LiveListModel alloc]init];
+        livelist.ID = model.id;
+        livelist.name = model.name;
+        livelist.program = model.program;
+        livelist.pic   = model.pic;
+        controller.savemodel = livelist;
+        [self.navigationController pushViewController:controller animated:YES];
+    }else{
+        LiveListModel *model = self.array_history[indexPath.row];
+        SYLivePlayerController *controller = [[SYLivePlayerController alloc]init];
+        controller.idString  = model.ID;
+        controller.savemodel = model;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
+
+}
 
 @end

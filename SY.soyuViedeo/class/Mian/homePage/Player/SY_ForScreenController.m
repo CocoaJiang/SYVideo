@@ -52,30 +52,34 @@
     [self.dlnaManager addObserver:self forKeyPath:@"currTime" options:NSKeyValueObservingOptionNew context:nil];
     self.videoPlayer = [[VideoPlayInfo alloc] init];
     self.videoPlayer.FLDBID = self.video_id;
-    [XWDatabase getModel:self.videoPlayer identifier:self.video_id completion:^(id  _Nullable obj) {
-        self.videoPlayer = obj;
-        NSString *string = [NSString string];
-        switch (self.videoPlayer.playClear) {
-            case 1:
-                string = @"标清";
-                break;
-            case 2:
-                string = @"高清";
-                break;
-            case 3:
-                string = @"超清";
-                break;
-            case 4:
-                string  = @"1080P";
-                break;
-            default:string = @"标清";
-                break;
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.controllerView.clearButton setTitle:string forState:UIControlStateNormal];
-        });
-    }];
-    
+    if (self.video_id) {
+        [XWDatabase getModel:self.videoPlayer identifier:self.video_id completion:^(id  _Nullable obj) {
+            self.videoPlayer = obj;
+            NSString *string = [NSString string];
+            switch (self.videoPlayer.playClear) {
+                    case 1:
+                    string = @"标清";
+                    break;
+                    case 2:
+                    string = @"高清";
+                    break;
+                    case 3:
+                    string = @"超清";
+                    break;
+                    case 4:
+                    string  = @"1080P";
+                    break;
+                default:string = @"标清";
+                    break;
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.controllerView.clearButton setTitle:string forState:UIControlStateNormal];
+            });
+        }];
+    }else{
+        self.bootView.hidden = YES;
+        self.controllerView.hidden = YES;
+    }
     
 }
 -(void)getInfoWithCurrTime:(CGFloat)currtime andWithTotalTime:(CGFloat)totoaTime{

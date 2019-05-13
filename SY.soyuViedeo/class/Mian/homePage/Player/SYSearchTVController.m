@@ -40,12 +40,15 @@
 }
 - (void)viewDidLoad {
     self.title = @"选择设备投屏";
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
     self.dlnaManager = [MRDLNA sharedMRDLNAManager];
     self.dlnaManager.delegate = self;
+    
+    
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
