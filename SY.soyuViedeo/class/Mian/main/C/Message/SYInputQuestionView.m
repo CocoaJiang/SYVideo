@@ -12,6 +12,8 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.textView.placeholder = @"请描述下您出现问题的详细场景,时间点,便于我们更好的为您解决问题!";
+    self.induceOne.font = self.induceTwo.font =self.textView.font = self.QQtextField.font = self.emailTextField.font =[UIFont systemFontOfSize:14];
+    
 }
 
 @end

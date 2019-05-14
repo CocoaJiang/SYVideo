@@ -16,4 +16,10 @@
     }
 }
 
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.titleLabel.font = [UIFont systemFontOfSize:14];
+    _rightButton.titleLabel.font  = [UIFont systemFontOfSize:12];
+}
+
 @end

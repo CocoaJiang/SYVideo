@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SYSeletQuestionView : UIView
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property(strong,nonatomic)NSMutableArray *seleArray;
+@property (weak, nonatomic) IBOutlet UILabel *induce;
 
 
 @end

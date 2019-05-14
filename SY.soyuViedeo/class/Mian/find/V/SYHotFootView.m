@@ -16,6 +16,9 @@
     [super awakeFromNib];
     [_collectbutton makeYuanWithScle:3 andWithToplef:YES andWithTopRight:YES andWithBootomLeft:YES andWithBootomRight:YES];
     self.backgroundColor = [UIColor clearColor];
+    _title.font  = [UIFont boldSystemFontOfSize:20];
+    _content.font = _doctor.font = _actor.font = _SYClass.font = _collectbutton.titleLabel.font = [UIFont systemFontOfSize:12];
+    _lookDetail.titleLabel.font = [UIFont systemFontOfSize:11];
 }
 
 

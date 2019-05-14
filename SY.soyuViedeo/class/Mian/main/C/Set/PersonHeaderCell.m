@@ -16,6 +16,7 @@
     self.icon.layer.masksToBounds = YES;
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     [_icon XJ_setImageWithURLString:[SYUSERINFO info].userInfo.user_portrait andWithImageName:@"touxiang"];
+    self.title.font = [UIFont systemFontOfSize:14];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

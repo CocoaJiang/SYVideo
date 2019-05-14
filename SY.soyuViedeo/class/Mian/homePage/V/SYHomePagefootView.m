@@ -16,7 +16,8 @@
     [self.lookMore makeYuanWithScle:5];
     [self.Change makeYuanWithScle:5];
     [self.lookMore setLeftTitleAndRightImageWithSpace:5];
-    [self.Change setLeftTitleAndRightImageWithSpace:5];
+    [self.Change setLeftTitleAndRightImageWithSpace:6];
+    self.lookMore.titleLabel.font = self.Change.titleLabel.font = [UIFont systemFontOfSize:12];
 }
 -(void)setData:(data *)data{
     _data = data;
@@ -39,14 +40,11 @@
     [dictionary setObject:self.type_id forKey:@"id"];
     [dictionary setObject:@(6) forKey:@"pageSize"];
     [HttpTool POST:[SY_Change getWholeUrl] param:dictionary success:^(id responseObject) {
-        
-        NSLog(@"%@",responseObject);
-            //先替换数据…………
+            //先替换数据……......
         if (self.refush) {
             //去通知刷新。。。。。
             self.refush();
         }
-        
     } error:^(NSString *error) {
         
     }];

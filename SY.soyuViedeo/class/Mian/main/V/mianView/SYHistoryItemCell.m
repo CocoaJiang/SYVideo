@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.VideoName.font = self.progress.font = [UIFont systemFontOfSize:13];
 }
 
 @end

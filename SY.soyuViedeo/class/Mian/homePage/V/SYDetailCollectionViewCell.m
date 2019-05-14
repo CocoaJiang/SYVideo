@@ -35,7 +35,7 @@
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat width = [Tools XJCalculateTheSizeWithFont:[UIFont systemFontOfSize:14] andWithText:self.dataArray[indexPath.row] andWithWidthMAX:CGFLOAT_MAX].width;
-    return CGSizeMake(width+15, self.bounds.size.height-3);    
+    return CGSizeMake(width+20, self.bounds.size.height-3);    
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //搞定单选

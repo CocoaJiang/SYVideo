@@ -9,7 +9,8 @@
 #import "headerView.h"
 #import "SearView.h"
 #import "SYseachViewController.h"
-
+#import "HistoryDetailViewController.h"
+#import "SYNewLoginViewController.h"
 
 
 
@@ -26,7 +27,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = KAPPMAINCOLOR;
         [self addSubview:self.historyButton];
-        [self addSubview:self.loadButton];
+      //  [self addSubview:self.loadButton];
         [self addSubview:self.searchView];
     }
     return self;
@@ -37,10 +38,23 @@
         _historyButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_historyButton setImage:[UIImage imageNamed:@"历史"] forState:UIControlStateNormal];
         _historyButton.titleLabel.font = [UIFont systemFontOfSize:13];
-        [_historyButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [_historyButton sizeToFit];
         _historyButton.frame = CGRectMake(SCREEN_WIDTH-20-_historyButton.width,(self.height-_historyButton.height)/2,_historyButton.width, _historyButton.height);
          _historyButton.centerY= self.centerY;
+        __weak typeof(self)weakSelf = self;
+        _historyButton.clickAction = ^(UIButton *button) {
+            if ([Tools isNeedLogin]) {
+                [[Tools viewController:weakSelf].navigationController pushViewController:[SYNewLoginViewController new] animated:YES];
+                return ;
+            }
+            if ([weakSelf.historyButton.imageView.image isEqual:[UIImage imageNamed:@"历史"]]) {
+                [[Tools viewController:weakSelf].navigationController pushViewController:[HistoryDetailViewController new] animated:YES];
+            }else{
+                if (weakSelf.chose) {
+                    weakSelf.chose();
+                }
+            }
+        };
     }
     return _historyButton;
 }
@@ -72,7 +86,7 @@
             [weakSelf searchClick];
         };
         
-          _searchView.frame = CGRectMake(10, 7.5, _loadButton.left-20, 30);
+          _searchView.frame = CGRectMake(10, 7.5, _historyButton.left-20, 30);
         _searchView.centerY= self.centerY;
     }
     return _searchView;
@@ -113,7 +127,7 @@
      _historyButton.centerY= self.centerY;
     [UIView animateWithDuration:0.3 animations:^{
         //这样就有动画了
-        self->_searchView.frame = CGRectMake(10, 7.5, self->_loadButton.left-20, 30);
+        self->_searchView.frame = CGRectMake(10, 7.5, self->_historyButton.left-20, 30);
     }];
 
 

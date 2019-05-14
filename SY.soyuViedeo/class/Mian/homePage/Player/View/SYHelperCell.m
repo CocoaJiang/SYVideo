@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+    _title.font = _conten.font = [UIFont systemFontOfSize:14];
+    _title.textColor = KAPPMAINCOLOR;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

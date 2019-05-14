@@ -22,6 +22,7 @@
 @property(strong,nonatomic)SYLoginPhoneInputView *inPutView;
 @property (weak, nonatomic) IBOutlet UILabel *titleTipLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *induces;
 
 
 @end
@@ -41,6 +42,20 @@
 }
 
 -(void)setSystem{
+    
+    self.induces.textColor = KAPPMAINCOLOR;
+    
+    self.induces.font = [UIFont systemFontOfSize:14];
+    
+    self.number.font = [UIFont systemFontOfSize:17];
+    
+    
+    self.verCode.font = self.passWordTextField.font = [UIFont systemFontOfSize:14];
+    
+    self.tipLabel.font = self.nextButtom.titleLabel.font = [UIFont systemFontOfSize:15];
+    
+    self.sendVarButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    
     NSString *numberString =self.type==2?[Tools returnBankCard:self.phone]:[Tools returnBankCard:USERREAD_object(KUSER_NAME)];
     self.number.text = [NSString stringWithFormat:@"+86  %@",numberString];
     self.sendVarButton.layer.borderColor = KAPPMAINCOLOR.CGColor;

@@ -17,6 +17,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    self.tests.titleLabel.font = self.gifts.titleLabel.font = self.addPerple.titleLabel.font = [UIFont systemFontOfSize:14];
  
     [self setUPDowdWitButton:self.tests];
     [self setUPDowdWitButton:self.gifts];

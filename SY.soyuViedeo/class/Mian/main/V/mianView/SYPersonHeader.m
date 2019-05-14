@@ -18,6 +18,7 @@
     self.lever.backgroundColor = [UIColor redColor];
     self.lever.layer.masksToBounds = YES;
     self.lever.layer.cornerRadius=3;
+    self.nickName.font = [UIFont boldSystemFontOfSize:15];
 
     
 }

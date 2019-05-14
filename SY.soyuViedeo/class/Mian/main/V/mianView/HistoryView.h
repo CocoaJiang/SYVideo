@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HistoryView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end
 

@@ -25,6 +25,7 @@
     _shareCollectionView.delegate = self;
     _shareCollectionView.dataSource = self;
      [_shareCollectionView registerNib:[UINib nibWithNibName:@"SYCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"SYCollectionViewCell"];
+    _title.font = [UIFont systemFontOfSize:17];
 
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

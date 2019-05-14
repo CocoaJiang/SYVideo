@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+    self.inducelabel.font = [UIFont systemFontOfSize:17];
+    self.content.font = [UIFont systemFontOfSize:13];
 
 }
 

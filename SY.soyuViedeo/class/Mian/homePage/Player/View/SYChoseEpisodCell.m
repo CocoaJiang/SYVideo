@@ -14,6 +14,7 @@
     [super awakeFromNib];
     self.number.layer.cornerRadius=2;
     self.number.layer.masksToBounds=YES;
+    self.number.font = [UIFont systemFontOfSize:14];
 }
 -(void)setIsOnWathch:(BOOL)isOnWathch{
     _isOnWathch = isOnWathch;

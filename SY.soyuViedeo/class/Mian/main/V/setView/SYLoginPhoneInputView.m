@@ -10,6 +10,10 @@
 
 @implementation SYLoginPhoneInputView
 
-
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    _buttton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    _textField.font = [UIFont systemFontOfSize:14];
+}
 
 @end

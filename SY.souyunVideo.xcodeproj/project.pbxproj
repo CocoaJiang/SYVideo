@@ -437,6 +437,7 @@
 		D49ADC512280470200838098 /* SYEditSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49ADC502280470200838098 /* SYEditSexViewController.m */; };
 		D49ADC54228047E200838098 /* SYEditSexViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = D49ADC53228047E200838098 /* SYEditSexViewView.m */; };
 		D49ADC56228047EE00838098 /* SYEditSexViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49ADC55228047EE00838098 /* SYEditSexViewView.xib */; };
+		D49BB715228967B700473699 /* UIFont+runTimeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BB714228967B700473699 /* UIFont+runTimeFont.m */; };
 		D49F3904223761D300B686AB /* addOrCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = D49F3903223761D300B686AB /* addOrCountView.m */; };
 		D49F3906223761E400B686AB /* addOrCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49F3905223761E400B686AB /* addOrCountView.xib */; };
 		D49F390922377C8E00B686AB /* systemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D49F390822377C8E00B686AB /* systemModel.m */; };
@@ -1364,6 +1365,8 @@
 		D49ADC52228047E200838098 /* SYEditSexViewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYEditSexViewView.h; sourceTree = "<group>"; };
 		D49ADC53228047E200838098 /* SYEditSexViewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYEditSexViewView.m; sourceTree = "<group>"; };
 		D49ADC55228047EE00838098 /* SYEditSexViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYEditSexViewView.xib; sourceTree = "<group>"; };
+		D49BB713228967B700473699 /* UIFont+runTimeFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+runTimeFont.h"; sourceTree = "<group>"; };
+		D49BB714228967B700473699 /* UIFont+runTimeFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+runTimeFont.m"; sourceTree = "<group>"; };
 		D49F3902223761D300B686AB /* addOrCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addOrCountView.h; sourceTree = "<group>"; };
 		D49F3903223761D300B686AB /* addOrCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addOrCountView.m; sourceTree = "<group>"; };
 		D49F3905223761E400B686AB /* addOrCountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addOrCountView.xib; sourceTree = "<group>"; };
@@ -3216,6 +3219,8 @@
 				D4BB3E7E2245036F001B41FF /* UIColor+DD.m */,
 				D4BB3E8E22450D51001B41FF /* UILabel+HuaZhi.h */,
 				D4BB3E8F22450D51001B41FF /* UILabel+HuaZhi.m */,
+				D49BB713228967B700473699 /* UIFont+runTimeFont.h */,
+				D49BB714228967B700473699 /* UIFont+runTimeFont.m */,
 			);
 			path = cargate;
 			sourceTree = "<group>";
@@ -4418,6 +4423,7 @@
 				D475DAE32230DD66002695E7 /* MASConstraint.m in Sources */,
 				D4BA50AA223286C6004CEE28 /* AFNetworkReachabilityManager.m in Sources */,
 				D43172A82235FF8700EF8D69 /* LoginHeaderView.m in Sources */,
+				D49BB715228967B700473699 /* UIFont+runTimeFont.m in Sources */,
 				D42426C6226D92F300C6C756 /* SYlivePlayer.m in Sources */,
 				D42859ED226741F800425097 /* SYLiveController.m in Sources */,
 				D4A6669A223119D00044018B /* CollectionReusableView.m in Sources */,

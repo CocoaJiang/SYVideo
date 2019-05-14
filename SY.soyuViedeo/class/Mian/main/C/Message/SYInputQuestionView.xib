@@ -79,6 +79,8 @@
             <connections>
                 <outlet property="QQtextField" destination="1Rm-i4-0a6" id="oiN-Ur-jsP"/>
                 <outlet property="emailTextField" destination="cod-Ap-K20" id="xwL-cX-qxM"/>
+                <outlet property="induceOne" destination="iPd-PY-RkK" id="yul-gn-tPL"/>
+                <outlet property="induceTwo" destination="6m4-ob-Nk9" id="lnp-4J-qLN"/>
                 <outlet property="textView" destination="Cef-6e-RJZ" id="PAv-GF-gCY"/>
             </connections>
             <point key="canvasLocation" x="138.40000000000001" y="-6.746626686656672"/>

@@ -26,6 +26,9 @@
     [_progress setProgress:0.34 animated:YES];
     _bootomView.backgroundColor = RGBA(250, 250, 250, 10);
     [_icon XJ_setImageWithURLString:[SYUSERINFO info].userInfo.user_portrait andWithImageName:@"touxiang"];
+    self.nickName.font = [UIFont boldSystemFontOfSize:17];
+    self.level.font = [UIFont systemFontOfSize:13];
+    self.disLabel.font = [UIFont systemFontOfSize:13];
 }
 
 

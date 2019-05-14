@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.name.font  = [UIFont systemFontOfSize:14];
+     self.disLanel.font = [UIFont systemFontOfSize:13];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

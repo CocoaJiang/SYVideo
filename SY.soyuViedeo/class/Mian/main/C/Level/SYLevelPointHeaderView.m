@@ -13,6 +13,8 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.title.textColor = RGBA(201, 16, 61, 1);
+    self.title.font = [UIFont boldSystemFontOfSize:15];
+  
 }
 
 @end

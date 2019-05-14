@@ -16,6 +16,8 @@
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.score.layer.cornerRadius=2;
     self.score.layer.masksToBounds=YES;
+    self.score.font = self.time.font = self.playtimes.font = [UIFont systemFontOfSize:12];
+    self.title.font = [UIFont systemFontOfSize:15];
     
 }
 

@@ -17,6 +17,10 @@
     self.orderButton.layer.masksToBounds = YES;
     [self.orderButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.orderButton setBackgroundColor:KAPPMAINCOLOR];
+    _order.font  = [UIFont systemFontOfSize:17];
+    _number.font= [UIFont boldSystemFontOfSize:26];
+    _person.font = [UIFont systemFontOfSize:14];
+    _orderButton.titleLabel.font = [UIFont systemFontOfSize:15];
 }
 
 @end

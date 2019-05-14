@@ -14,6 +14,7 @@
     [super awakeFromNib];
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius  = 20;
+    self.clearButton.titleLabel.font = self.exitButton.titleLabel.font = self.changDevicesButton.titleLabel.font = [UIFont systemFontOfSize:15];
 }
 
 

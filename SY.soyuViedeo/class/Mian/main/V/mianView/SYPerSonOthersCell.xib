@@ -20,7 +20,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-bh-2mZ">
-                        <rect key="frame" x="298" y="20.5" width="6" height="13"/>
+                        <rect key="frame" x="289" y="17" width="15" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="U0E-uV-17H"/>
+                            <constraint firstAttribute="width" constant="15" id="uea-4f-sxv"/>
+                        </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQI-r1-RSe">
                         <rect key="frame" x="0.0" y="53" width="320" height="0.5"/>
@@ -38,12 +42,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="bQI-r1-RSe" secondAttribute="trailing" id="5rd-vt-K0h"/>
+                    <constraint firstItem="hVn-bh-2mZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AaZ-Kf-CAq"/>
                     <constraint firstItem="oWm-Xe-cYs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GVG-kY-0tb"/>
-                    <constraint firstItem="hVn-bh-2mZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nfg-Ud-f4x"/>
                     <constraint firstItem="bQI-r1-RSe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Olf-cv-FoP"/>
                     <constraint firstItem="oWm-Xe-cYs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eva-hw-ZN5"/>
-                    <constraint firstItem="hVn-bh-2mZ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="naJ-fb-ITg"/>
                     <constraint firstAttribute="bottom" secondItem="bQI-r1-RSe" secondAttribute="bottom" id="tpf-5L-9dR"/>
+                    <constraint firstItem="hVn-bh-2mZ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yw8-OR-G8X"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -54,6 +58,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="右箭头" width="6" height="13.5"/>
+        <image name="右箭头" width="32" height="32"/>
     </resources>
 </document>

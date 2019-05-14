@@ -30,6 +30,10 @@
     self.finshLabel.backgroundColor = KAPPMAINCOLOR;
     self.finshLabel.layer.masksToBounds = YES;
     self.finshLabel.layer.cornerRadius =5;
+    _title.font = [UIFont systemFontOfSize:14];
+    _maflowerlabel.font = _dislabel.font = [UIFont systemFontOfSize:11];
+    _button.titleLabel.font = [UIFont systemFontOfSize:13];
+    _finshLabel.font = [UIFont systemFontOfSize:9];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{{

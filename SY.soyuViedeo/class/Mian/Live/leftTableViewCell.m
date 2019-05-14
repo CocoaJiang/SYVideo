@@ -14,6 +14,7 @@
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.lineView.backgroundColor = KAPPMAINCOLOR;
+    self.title.font = [UIFont systemFontOfSize:15];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

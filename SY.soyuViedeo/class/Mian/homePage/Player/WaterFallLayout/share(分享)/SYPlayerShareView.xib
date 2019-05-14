@@ -48,6 +48,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="shareCollectionView" destination="04T-sF-Eas" id="4WW-fM-Klk"/>
+                <outlet property="title" destination="XJP-Jn-Z44" id="lL0-of-IqY"/>
             </connections>
             <point key="canvasLocation" x="348.80000000000001" y="-23.838080959520241"/>
         </view>

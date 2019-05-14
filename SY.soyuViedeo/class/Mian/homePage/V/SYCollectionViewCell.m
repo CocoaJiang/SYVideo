@@ -15,6 +15,7 @@
     self.imageview.contentMode = UIViewContentModeScaleToFill;
     self.imageview.layer.masksToBounds=YES;
     self.imageview.layer.cornerRadius=50/2;
+    self.title.font = [UIFont systemFontOfSize:12];
     
 }
 

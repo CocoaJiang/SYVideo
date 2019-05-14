@@ -17,6 +17,7 @@
 -(void)setSystem{
     _topLanel.backgroundColor = RGBA(218, 183, 112, 1);
     _bottomLabel.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    _topLanel.font = _bottomLabel.font = [UIFont systemFontOfSize:13];
 }
 
 @end

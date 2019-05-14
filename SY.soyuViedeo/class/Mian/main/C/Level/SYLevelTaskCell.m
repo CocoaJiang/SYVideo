@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.text.font = [UIFont systemFontOfSize:14];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

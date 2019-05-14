@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SYLoginPhoneInputView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *buttton;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
 

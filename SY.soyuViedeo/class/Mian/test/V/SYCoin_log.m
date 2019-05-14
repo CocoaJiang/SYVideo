@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+    _titleLanel.font = [UIFont systemFontOfSize:14];
+    _timeLabel.font = [UIFont systemFontOfSize:11];
+    _coinLabel.font  = [UIFont systemFontOfSize:15];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

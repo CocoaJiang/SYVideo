@@ -17,6 +17,8 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    self.induce.font = [UIFont systemFontOfSize:14];
+    
     NSArray *array = @[@"无法投屏",@"无法播放",@"播放卡顿",@"标签错误",@"分类错误",@"搜索不准",@"推荐不准",@"无法下载",@"其他"];
     ///先定义button的宽 为90
     CGFloat buttonWidth = 90;

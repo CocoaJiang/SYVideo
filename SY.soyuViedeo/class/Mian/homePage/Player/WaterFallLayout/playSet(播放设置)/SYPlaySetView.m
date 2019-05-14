@@ -26,6 +26,10 @@
 ///画面尺寸
 @property(strong,nonatomic)NSMutableArray *playerSize;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeClose;
+@property (weak, nonatomic) IBOutlet UILabel *videoSize;
+@property (weak, nonatomic) IBOutlet UILabel *tiao;
+@property (weak, nonatomic) IBOutlet UILabel *lian;
 
 @end
 
@@ -34,6 +38,9 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    
+    self.likeButton.titleLabel.font = _timeClose.font = _videoSize.font = _tiao.font = _lian.font = [UIFont systemFontOfSize:14];
+    
     [self.likeButton setUpImageAndDownLableWithSpace:10];
     self.tinmerCloseCollectionView.delegate = self;
     self.playSizeSetCollectionView.delegate = self;

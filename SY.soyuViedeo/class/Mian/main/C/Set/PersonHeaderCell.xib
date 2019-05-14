@@ -27,10 +27,10 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-tK-La1">
-                        <rect key="frame" x="294" y="33.5" width="6" height="13"/>
+                        <rect key="frame" x="285" y="30" width="15" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="13" id="71q-ie-d6d"/>
-                            <constraint firstAttribute="width" constant="6" id="ReT-Bn-hZq"/>
+                            <constraint firstAttribute="height" constant="20" id="Bou-xX-blr"/>
+                            <constraint firstAttribute="width" constant="15" id="cFi-Zf-viY"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xV3-PG-ijZ">
@@ -49,13 +49,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ex2-ZW-n38" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="3Mk-B3-46D"/>
-                    <constraint firstItem="pZp-4s-Z6E" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="K1W-c0-hGI"/>
-                    <constraint firstItem="TpF-tK-La1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TUj-d2-7Rf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pZp-4s-Z6E" secondAttribute="trailing" constant="18" id="Fee-Gh-zZ0"/>
                     <constraint firstItem="Ex2-ZW-n38" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Umn-mY-HtZ"/>
+                    <constraint firstItem="TpF-tK-La1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ys7-65-ynE"/>
                     <constraint firstAttribute="trailing" secondItem="xV3-PG-ijZ" secondAttribute="trailing" id="Z0a-KF-Rjf"/>
                     <constraint firstItem="xV3-PG-ijZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aLf-cj-aUD"/>
-                    <constraint firstItem="TpF-tK-La1" firstAttribute="leading" secondItem="pZp-4s-Z6E" secondAttribute="trailing" constant="8" id="i7k-nQ-7RX"/>
-                    <constraint firstAttribute="trailing" secondItem="TpF-tK-La1" secondAttribute="trailing" constant="20" id="iu9-fY-GqX"/>
+                    <constraint firstItem="pZp-4s-Z6E" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eOf-bp-KcJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TpF-tK-La1" secondAttribute="trailing" constant="4" id="fYA-dU-f3z"/>
                     <constraint firstAttribute="bottom" secondItem="xV3-PG-ijZ" secondAttribute="bottom" id="zNB-mQ-wVB"/>
                 </constraints>
             </tableViewCellContentView>
@@ -70,6 +70,6 @@
     </objects>
     <resources>
         <image name="touxiang" width="51" height="51"/>
-        <image name="右箭头" width="6" height="13.5"/>
+        <image name="右箭头" width="32" height="32"/>
     </resources>
 </document>

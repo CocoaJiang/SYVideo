@@ -11,6 +11,10 @@
 
 @implementation HistoryView
 
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    _title.font = [UIFont systemFontOfSize:14];
+}
 
 
 @end

@@ -23,7 +23,12 @@
     [self.choseButton addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
     
 }
-
+-(void)fontsystem{
+    _title.font = [UIFont boldSystemFontOfSize:16];
+    _tipLanel.font = [UIFont systemFontOfSize:12];
+    _inducebutton.titleLabel.font =self.playtimes.font=self.CollectionsLabl.font =self.feedBackButton.titleLabel.font = self.shareButton.titleLabel.font =self.comments.font= [UIFont systemFontOfSize:12];
+    _choseButton.titleLabel.font = [UIFont systemFontOfSize:13];
+}
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"selected"]) {
         if (self.choseButton.selected) {

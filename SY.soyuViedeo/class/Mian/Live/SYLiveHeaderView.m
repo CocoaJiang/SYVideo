@@ -13,6 +13,10 @@
 - (IBAction)buttonClick:(UIButton *)sender {
     sender.selected = !sender.selected;
 }
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.title.font = [UIFont systemFontOfSize:14];
+}
 
 
 @end

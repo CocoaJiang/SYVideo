@@ -20,7 +20,7 @@
     [self.contentView insertSubview:effectView atIndex:0];
     //把控件添加在子试图上！！！！
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-  
+    _title.font = [UIFont systemFontOfSize:16];
     
     
     

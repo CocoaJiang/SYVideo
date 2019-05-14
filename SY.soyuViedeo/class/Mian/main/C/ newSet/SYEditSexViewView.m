@@ -9,6 +9,8 @@
 #import "SYEditSexViewView.h"
 
 @implementation SYEditSexViewView
-
-
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.sexLabel.font = [UIFont systemFontOfSize:14];
+}
 @end

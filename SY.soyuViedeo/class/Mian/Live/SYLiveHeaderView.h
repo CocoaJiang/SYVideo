@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SYLiveHeaderView : UIView
 
 @property (weak, nonatomic) IBOutlet UIButton *like;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 @end
 
 NS_ASSUME_NONNULL_END

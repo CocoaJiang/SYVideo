@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SYInduceCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *content;
+@property (weak, nonatomic) IBOutlet UILabel *inducelabel;
 
 @end
 

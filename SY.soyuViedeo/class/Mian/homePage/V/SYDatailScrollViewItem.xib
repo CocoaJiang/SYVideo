@@ -29,10 +29,10 @@
             </view>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="1me-9h-sfH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="0ow-Ku-253"/>
-                <constraint firstItem="1me-9h-sfH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="FG8-AH-o0v"/>
-                <constraint firstAttribute="bottom" secondItem="1me-9h-sfH" secondAttribute="bottom" constant="5" id="J8y-q6-mb3"/>
-                <constraint firstAttribute="trailing" secondItem="1me-9h-sfH" secondAttribute="trailing" constant="5" id="blc-6B-exl"/>
+                <constraint firstAttribute="trailing" secondItem="1me-9h-sfH" secondAttribute="trailing" constant="5" id="YXl-mb-0lA"/>
+                <constraint firstItem="1me-9h-sfH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="dqZ-m9-sgE"/>
+                <constraint firstItem="1me-9h-sfH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="gp1-H9-0Qd"/>
+                <constraint firstAttribute="bottom" secondItem="1me-9h-sfH" secondAttribute="bottom" constant="5" id="kEY-XL-9nf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="93" height="38"/>

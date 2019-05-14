@@ -23,6 +23,8 @@
     [self.exchangeButton setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.exchangeButton setBackgroundColor:seletedColor forState:UIControlStateSelected];
     [self.exchangeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    _monkeyLbal.font = _timeLanel.font = _exchangeButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    _title.font = [UIFont systemFontOfSize:14];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

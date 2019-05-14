@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ChoseHeaderCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *header;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end
 

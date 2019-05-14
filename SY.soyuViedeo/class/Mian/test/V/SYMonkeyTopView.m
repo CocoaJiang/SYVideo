@@ -28,6 +28,9 @@
     self.makeMonkeyButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.makeMonkeyButton.layer.borderWidth = 0.5f;
     
+    _disLanel.font = [UIFont systemFontOfSize:12];
+    _makeMonkeyButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    
 }
 - (IBAction)makeMonkey:(UIButton *)sender {
     [[Tools viewController:self].navigationController popViewControllerAnimated:YES];

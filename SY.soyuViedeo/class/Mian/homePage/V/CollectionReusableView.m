@@ -17,6 +17,12 @@
     UITapGestureRecognizer *zer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(coverClick)];
     _iconImageView.userInteractionEnabled=YES;
     [self.iconImageView addGestureRecognizer:zer];
+    _title.font = [UIFont boldSystemFontOfSize:16];
+    _morebutton.titleLabel.font = [UIFont systemFontOfSize:13];
+    _name.font = [UIFont systemFontOfSize:15];
+    _subName.font = [UIFont systemFontOfSize:13];
+    
+    
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     SYMoreVideos *videos = [[SYMoreVideos alloc]init];

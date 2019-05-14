@@ -19,6 +19,8 @@
     self.share.clickAction = ^(UIButton *button) {
         [SYShareObject shareWithController:[Tools viewController:weakSelf] andWithImage:nil andWithUrl:[SYUSERINFO info].systemModel.shareURL andWithArray:SHAREARRAY andBlock:nil];
     };
+    _title.font = [UIFont systemFontOfSize:15];
+    _time.font = [UIFont systemFontOfSize:13];
     
 }
 

@@ -13,6 +13,7 @@
     [super awakeFromNib];
     self.delegateAll.titleLabel.alpha=0.4;
     self.delegateAll.userInteractionEnabled = NO;
+    self.choseAll.titleLabel.font = self.delegateAll.titleLabel.font = [UIFont systemFontOfSize:13];
 }
 -(void)setCountWithIndex:(NSInteger)count{
     if (count==0) {

@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(copy,nonatomic)dispatch_block_t removerAllHistory;
 
+@property (weak, nonatomic) IBOutlet UILabel *tip;
 
+@property (weak, nonatomic) IBOutlet UIButton *clearbtn;
 
 @end
 

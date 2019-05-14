@@ -14,6 +14,8 @@
     [super awakeFromNib];
     [self.PJButton makeYuanWithScle:4];
     [self.PJButton setBackgroundColor:KAPPMAINCOLOR];
+    self.textField.font = [UIFont systemFontOfSize:12];
+    self.PJButton.titleLabel.font = [UIFont systemFontOfSize:12];
    self.autoresizingMask = UIViewAutoresizingNone;
     
     

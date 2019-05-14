@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SYChangePassWorld2Controller">
             <connections>
                 <outlet property="bootomLine" destination="Ekb-R6-tG2" id="z0E-RA-gPA"/>
+                <outlet property="induces" destination="yE2-Cp-fp7" id="T9g-h6-rDQ"/>
                 <outlet property="nextButtom" destination="PYG-ov-lvB" id="l2r-4C-L7K"/>
                 <outlet property="number" destination="dws-OQ-QVJ" id="th5-i2-BCd"/>
                 <outlet property="passWordTextField" destination="qdS-6u-EtZ" id="l2Z-SM-QVL"/>
@@ -104,7 +105,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYG-ov-lvB">
-                    <rect key="frame" x="30" y="390" width="315" height="46"/>
+                    <rect key="frame" x="30" y="389.5" width="315" height="46"/>
                     <color key="backgroundColor" red="0.20103411909999999" green="0.71201960310000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="ND2-74-f2S"/>

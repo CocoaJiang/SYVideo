@@ -19,6 +19,7 @@
     self.vercodeButton.layer.borderWidth = 0.5f;
     [self.vercodeButton setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
     self.textField.secureTextEntry=YES;
+    self.textField.font = [UIFont systemFontOfSize:14];
 }
 
 -(void)setType:(SYInputType)type{

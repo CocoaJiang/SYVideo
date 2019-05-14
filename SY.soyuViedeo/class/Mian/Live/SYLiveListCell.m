@@ -23,6 +23,8 @@
     self.icon.layer.cornerRadius  = 5;
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.deleteButton.hidden = YES;
+    self.title.font = [UIFont systemFontOfSize:15];
+    self.subTitle.font = [UIFont systemFontOfSize:12];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -15,6 +15,7 @@
     [super awakeFromNib];
     self.icon.layer.masksToBounds = YES;
     self.icon.layer.cornerRadius = 30;
+    self.loginButton.titleLabel.font = self.resgstButton.titleLabel.font = [UIFont systemFontOfSize:15];
 }
 
 

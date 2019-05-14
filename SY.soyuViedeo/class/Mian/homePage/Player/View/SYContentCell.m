@@ -16,6 +16,14 @@
     _douban_sources.backgroundColor = KAPPMAINCOLOR;
     _douban_sources.layer.cornerRadius=2;
     _douban_sources.layer.masksToBounds=YES;
+    
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            UILabel *label = (UILabel *)view;
+            label.font = [UIFont systemFontOfSize:13];
+        }
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

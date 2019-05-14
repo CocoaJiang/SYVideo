@@ -15,6 +15,7 @@
     self.backgroundColor = RGBA(0, 0, 0, 0.4);
     [self.leftbutton setImage:[UIImage imageNamed:@"白色右边箭头"] forState:UIControlStateNormal];
     [self.rightButton setImage:[UIImage imageNamed:@"白色左边箭头"] forState:UIControlStateNormal];
+    _title.font = [UIFont systemFontOfSize:14];
     
     
 }

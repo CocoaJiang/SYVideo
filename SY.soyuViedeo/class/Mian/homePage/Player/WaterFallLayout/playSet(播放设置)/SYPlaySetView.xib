@@ -106,9 +106,13 @@
             <connections>
                 <outlet property="deleteHeaderAndFoot" destination="jOl-8G-4dR" id="fLZ-MC-YPM"/>
                 <outlet property="goonPlayerback" destination="zXA-A9-fEK" id="woE-rD-x1I"/>
+                <outlet property="lian" destination="Dhd-35-WSh" id="Lnn-Gl-AnM"/>
                 <outlet property="likeButton" destination="Xlt-Ws-JDQ" id="rcm-Cz-33Q"/>
                 <outlet property="playSizeSetCollectionView" destination="RNV-cd-kqN" id="U6n-uD-IW1"/>
+                <outlet property="tiao" destination="Uce-ER-akh" id="B89-vS-A2A"/>
+                <outlet property="timeClose" destination="ie1-lg-xe2" id="4fv-DB-qzP"/>
                 <outlet property="tinmerCloseCollectionView" destination="Web-u4-2kU" id="uVZ-1c-A4z"/>
+                <outlet property="videoSize" destination="rIO-mH-KaU" id="Jr8-nM-Mlw"/>
             </connections>
             <point key="canvasLocation" x="155.19999999999999" y="-39.580209895052477"/>
         </view>

@@ -19,6 +19,8 @@
     [self.redPoint setHidden:YES];
     [self.SYswitch setOnTintColor:KAPPMAINCOLOR];
     [self.SYswitch addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
+    _title.font = [UIFont systemFontOfSize:13];
+    _text.font = [UIFont systemFontOfSize:11];
 
     
     

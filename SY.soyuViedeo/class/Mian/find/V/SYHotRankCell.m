@@ -56,6 +56,12 @@
     self.showNow.layer.borderColor = KAPPMAINCOLOR.CGColor;
     self.showNow.layer.borderWidth = 1.0f;
     [self.showNow setTitleColor:KAPPMAINCOLOR forState:UIControlStateNormal];
+    _rankLabel.font = _showNow.titleLabel.font = [UIFont systemFontOfSize:14];
+    _title.font = [UIFont boldSystemFontOfSize:15];
+    _cillection.font = [UIFont systemFontOfSize:13];
+    _jianjie.font = [UIFont systemFontOfSize:12];
+    
+    
 
 }
 

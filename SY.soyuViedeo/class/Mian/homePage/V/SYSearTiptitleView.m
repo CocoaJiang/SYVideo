@@ -16,5 +16,12 @@
     }
 }
 
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.tip.font = [UIFont systemFontOfSize:14];
+    self.clearbtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    
+}
+
 
 @end

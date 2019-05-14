@@ -15,6 +15,7 @@
     self.header.layer.masksToBounds=YES;
     self.header.layer.cornerRadius=25.0f;
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+    self.title.font = [UIFont systemFontOfSize:15];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

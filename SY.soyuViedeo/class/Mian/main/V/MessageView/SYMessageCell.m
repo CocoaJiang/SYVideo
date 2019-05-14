@@ -22,6 +22,12 @@
     self.countent.showsVerticalScrollIndicator = self.countent.showsHorizontalScrollIndicator = NO;
     self.answer.hidden=self.zanButton.hidden=YES;
     [self.zanButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    _answer.titleLabel.font = _zanButton.titleLabel.font = [UIFont systemFontOfSize:11];
+    _titile.font = [UIFont systemFontOfSize:15];
+    _time.font = [UIFont systemFontOfSize:12];
+    _countent.font = [UIFont systemFontOfSize:13];
+    
+    
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

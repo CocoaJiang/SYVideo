@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MyOrderView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *number;
 @property (weak, nonatomic) IBOutlet UIButton *orderButton;
+@property (weak, nonatomic) IBOutlet UILabel *order;
+@property (weak, nonatomic) IBOutlet UILabel *person;
 
 @end
 

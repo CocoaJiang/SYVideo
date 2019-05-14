@@ -12,17 +12,18 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.contentView.layer.cornerRadius=2;
-    self.contentView.layer.masksToBounds=YES;
+    self.title.layer.cornerRadius=2;
+    self.title.layer.masksToBounds=YES;
+    self.title.font = [UIFont systemFontOfSize:14];
 }
 
 -(void)settitle:(NSString *)title andSeleted:(BOOL)isseleted{
     _title.text =title;
     if (isseleted) {
-        self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        self.title.backgroundColor = [UIColor groupTableViewBackgroundColor];
         self.title.textColor = KAPPMAINCOLOR;
     }else{
-        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.title.backgroundColor = [UIColor whiteColor];
         self.title.textColor = [UIColor darkGrayColor];
     }
 }

@@ -78,7 +78,7 @@
     if (indexPath.section==0) {
         return CGSizeMake(SCREEN_WIDTH, 40);
     }else{
-          return CGSizeMake((SCREEN_WIDTH-4)/3,(SCREEN_WIDTH-4)/3/0.62);
+          return CGSizeMake((SCREEN_WIDTH-4)/3,(SCREEN_WIDTH-4)/3/0.57);
     }
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -181,7 +181,12 @@
     
 }
 
-
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    if (section==0) {
+        return CGFLOAT_MIN;
+    }
+    return 20;
+}
 
 
 

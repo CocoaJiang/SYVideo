@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    _title.font = [UIFont systemFontOfSize:15];
 }
 
 @end

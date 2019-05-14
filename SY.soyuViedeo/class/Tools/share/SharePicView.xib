@@ -110,7 +110,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="codeImage" destination="ktd-WH-IF9" id="UBk-0o-Qkp"/>
+                <outlet property="free" destination="qtC-V5-yb4" id="iXC-9F-0V6"/>
                 <outlet property="fromLabel" destination="Nxy-a6-arr" id="dVp-rI-3lw"/>
+                <outlet property="log" destination="fgr-ke-Zb8" id="8zx-qU-wa5"/>
                 <outlet property="name" destination="jMd-GC-VFu" id="0In-9x-7zi"/>
                 <outlet property="pic" destination="GIB-3X-kva" id="Qqb-Zm-vyG"/>
                 <outlet property="videoClass" destination="HOL-te-DcX" id="eBK-Ps-ZlL"/>

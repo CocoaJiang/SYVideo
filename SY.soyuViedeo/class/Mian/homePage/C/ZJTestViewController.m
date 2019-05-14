@@ -107,8 +107,10 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         if (indexPath.section==0) {
             UICollectionReusableView *section1View = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"section1" forIndexPath:indexPath];
-            self.cycleScrollView.bounds = section1View.bounds;
             [section1View addSubview:self.cycleScrollView];
+            [self.cycleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.mas_equalTo(section1View);
+            }];
             self.cycleScrollView.array = (NSMutableArray *)self.model.slide;
             return section1View;
         }else{
@@ -134,10 +136,10 @@
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if (section==0) {
-         return CGSizeMake(SCREEN_WIDTH, 230);
+         return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH*9/16);
     }else{
         if (self.model.data[section-1].isHaveCover) {
-            return CGSizeMake(SCREEN_WIDTH, 300);
+            return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH *9/16+50);
         }else{
             return  CGSizeMake(SCREEN_WIDTH, 50);
         }
@@ -175,7 +177,7 @@
 
 -(SYScrollView *)cycleScrollView{
     if (!_cycleScrollView) {
-        _cycleScrollView = [[SYScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 230)];
+        _cycleScrollView = [[SYScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, SCREEN_WIDTH*16/9)];
     }
     return _cycleScrollView;
 }

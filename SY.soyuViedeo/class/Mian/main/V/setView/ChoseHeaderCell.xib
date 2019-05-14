@@ -33,10 +33,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="FMH-tn-gdT">
-                        <rect key="frame" x="298" y="33.5" width="6" height="13"/>
+                        <rect key="frame" x="272" y="24" width="32" height="32"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-l1-hI0">
-                        <rect key="frame" x="238" y="15" width="50" height="50"/>
+                        <rect key="frame" x="212" y="15" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="DZC-8a-WmJ"/>
                             <constraint firstAttribute="width" constant="50" id="I7v-2z-5mO"/>
@@ -58,12 +58,13 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="header" destination="z6L-l1-hI0" id="mKw-zC-W9m"/>
+                <outlet property="title" destination="0Tu-9U-K23" id="t8P-UW-Acw"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="nodata" width="200" height="200"/>
-        <image name="右箭头" width="6" height="13.5"/>
+        <image name="右箭头" width="32" height="32"/>
     </resources>
 </document>

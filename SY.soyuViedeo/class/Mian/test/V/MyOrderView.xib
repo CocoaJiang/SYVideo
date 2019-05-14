@@ -68,7 +68,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="number" destination="1Mp-RH-vlP" id="mZK-sC-RLj"/>
+                <outlet property="order" destination="Zje-02-cb8" id="a72-gP-xWZ"/>
                 <outlet property="orderButton" destination="Ijj-Dl-atX" id="JXe-9e-HQs"/>
+                <outlet property="person" destination="iK1-WH-jsz" id="5ni-Az-8VI"/>
             </connections>
             <point key="canvasLocation" x="44" y="35.082458770614693"/>
         </view>

@@ -50,12 +50,10 @@
     [self getmessage];
     self.tableView.backgroundColor = [UIColor whiteColor];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getmessage) name:@"MoneyRush" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(resush) name:@"loginSuccess" object:nil];
     self.textController = [[SYTextCenterController alloc]init];
     self.historyController = [[SYmonkeyHistory alloc]init];
 }
-
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     testCell *cell = [tableView dequeueReusableCellWithIdentifier:@"testCell"];
     __weak typeof(self)weakSelf = self;
@@ -65,9 +63,6 @@
     cell.model  = self.dataSorces[indexPath.row];
     return cell;
 }
-
-
-
 -(void)getmessage{
     [HttpTool POST:[SY_testList getWholeUrl] param:nil success:^(id responseObject) {
         self.textModel = [textModel mj_objectWithKeyValues:[responseObject objectForKey:@"data"]];
@@ -124,6 +119,12 @@
     return _threeItem;
 }
 
+-(void)resush{
+    [self getmessage];
+}
 
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
