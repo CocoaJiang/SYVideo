@@ -35,7 +35,7 @@
         make.edges.mas_equalTo(self.view);
     }];
     [self.tableView registerNib:[UINib nibWithNibName:@"historyDetailCell" bundle:nil] forCellReuseIdentifier:@"historyDetailCell"];
-    self.tableView.rowHeight=100;
+    self.tableView.rowHeight=SCREEN_WIDTH/3.3;
     [self.view addSubview:self.bootomView];
     [self addRefush];
     

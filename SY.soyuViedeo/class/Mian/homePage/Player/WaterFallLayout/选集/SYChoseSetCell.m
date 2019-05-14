@@ -13,7 +13,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _title.font = [UIFont systemFontOfSize:14];
 }
 
 -(void)setType:(choseCellType)type{
@@ -21,7 +20,7 @@
     if (type==1) {
      self.contentView.layer.borderWidth=CGFLOAT_MIN;
     }else{
-        self.contentView.layer.borderWidth = 0.4f;
+        self.contentView.layer.borderWidth = 0.8f;
         self.contentView.layer.borderColor = [UIColor whiteColor].CGColor;
     }
 }

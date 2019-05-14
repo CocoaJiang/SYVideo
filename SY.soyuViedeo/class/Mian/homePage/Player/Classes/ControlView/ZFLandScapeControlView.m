@@ -156,7 +156,7 @@
     min_w = 62;
     min_h = 30;
     self.currentTimeLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    min_w = 62;
+    min_w = 70;
     min_x = self.bottomToolView.zf_width - min_w - ((iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: min_margin);
     min_y = 0;
     min_h = 30;

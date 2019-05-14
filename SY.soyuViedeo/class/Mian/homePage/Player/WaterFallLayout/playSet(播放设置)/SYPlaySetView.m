@@ -12,67 +12,41 @@
 
 @interface SYPlaySetView()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 ///收藏按钮
-@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (strong, nonatomic)  UIButton *likeButton;
 ///定时关闭选择器
-@property (weak, nonatomic) IBOutlet UICollectionView *tinmerCloseCollectionView;
+@property (strong, nonatomic)  UICollectionView *tinmerCloseCollectionView;
 ///画面尺寸选择器
-@property (weak, nonatomic) IBOutlet UICollectionView *playSizeSetCollectionView;
-///跳过片头片尾
-@property (weak, nonatomic) IBOutlet UISwitch *deleteHeaderAndFoot;
-///连续播放
-@property (weak, nonatomic) IBOutlet UISwitch *goonPlayerback;
-///数据源相关只定时关闭
-@property(strong,nonatomic)NSMutableArray *timeCloseTitle;
+@property (strong, nonatomic)  UICollectionView *playSizeSetCollectionView;
+@property (strong, nonatomic)  NSMutableArray *timeCloseTitle;
 ///画面尺寸
-@property(strong,nonatomic)NSMutableArray *playerSize;
-
-@property (weak, nonatomic) IBOutlet UILabel *timeClose;
-@property (weak, nonatomic) IBOutlet UILabel *videoSize;
-@property (weak, nonatomic) IBOutlet UILabel *tiao;
-@property (weak, nonatomic) IBOutlet UILabel *lian;
-
+@property (strong, nonatomic)  NSMutableArray *playerSize;
+@property (strong, nonatomic)  UILabel *timeClose;
+@property (strong, nonatomic)  UILabel *videoSize;
+@property (strong, nonatomic)  UILabel *tiao;
+@property (strong, nonatomic)  UILabel *lian;
 @end
-
-
 @implementation SYPlaySetView
-
--(void)awakeFromNib{
-    [super awakeFromNib];
+-(instancetype)initWithFrame:(CGRect)frame{
     
-    self.likeButton.titleLabel.font = _timeClose.font = _videoSize.font = _tiao.font = _lian.font = [UIFont systemFontOfSize:14];
-    
-    [self.likeButton setUpImageAndDownLableWithSpace:10];
-    self.tinmerCloseCollectionView.delegate = self;
-    self.playSizeSetCollectionView.delegate = self;
-    self.tinmerCloseCollectionView.dataSource = self;
-    self.playSizeSetCollectionView.dataSource = self;
-     [self.playSizeSetCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
-     [self.tinmerCloseCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
-    self.deleteHeaderAndFoot.onTintColor = KAPPMAINCOLOR;
-    self.goonPlayerback.onTintColor = KAPPMAINCOLOR;
-    [self.deleteHeaderAndFoot addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
-    [self.goonPlayerback addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
-    BOOL autoPlay = [[SYUSERINFO info].userInfo.setting.autoPlay boolValue];
-    BOOL continuity = [[SYUSERINFO info].userInfo.setting.continuity boolValue];
-    [self.deleteHeaderAndFoot setOn:autoPlay animated:NO];
-    [self.goonPlayerback setOn:continuity animated:NO];
-    
-}
--(void)switchChange:(UISwitch*)swithch{
-    swithch.on  = !swithch.on;
-    if (swithch==self.deleteHeaderAndFoot) {
-        [SYUSERINFO info].userInfo.setting.autoPlay = [NSString stringWithFormat:@"%d",swithch.on];
-    }else{
-        [SYUSERINFO info].userInfo.setting.continuity = [NSString stringWithFormat:@"%d",swithch.on];
+    if (self = [super initWithFrame:frame]) {
+        [self addUI];
+        self.likeButton.titleLabel.font = self.timeClose.font = self.videoSize.font = self.tiao.font = self.lian.font = [UIFont systemFontOfSize:14];
+        [self.playSizeSetCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
+        [self.tinmerCloseCollectionView registerNib:[UINib nibWithNibName:@"SYChoseSetCell" bundle:nil] forCellWithReuseIdentifier:@"SYChoseSetCell"];
+        __weak typeof(self)weakSefl = self;
+        _likeButton.clickAction = ^(UIButton *button) {
+            weakSefl.likeButton.selected = !button.selected;
+        };
     }
+    return self;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return collectionView==_tinmerCloseCollectionView?[self.timeCloseTitle count]:[self.playerSize count];
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-     SYChoseSetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SYChoseSetCell" forIndexPath:indexPath];
+    SYChoseSetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SYChoseSetCell" forIndexPath:indexPath];
+
     cell.type = NOhasBorldColor;
     if (collectionView==_tinmerCloseCollectionView) {
         cell.text = _timeCloseTitle[indexPath.row];
@@ -93,37 +67,30 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (collectionView == _tinmerCloseCollectionView) {
-        int i = 0;
         for (NSString *string in self.timeCloseTitle) {
-            string.isSeleted = i==indexPath.row?YES:NO;
-            i++;
+            string.isSeleted =NO;
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tinmerCloseCollectionView reloadData];
-        });
+        NSString *string_seleted = self.timeCloseTitle[indexPath.row];
+        string_seleted.isSeleted = YES;
+        [self reloadData];
         if (self.closeVideoPlayer) {
             self.closeVideoPlayer(self.timeCloseTitle [indexPath.row]);
         }
     }else{
         if (collectionView == _playSizeSetCollectionView) {
-            int i = 0;
             for (NSString *string in self.playerSize) {
-                string.isSeleted = i==indexPath.row?YES:NO;
-                i++;
+                string.isSeleted =NO;
             }
-            
-                [self.playSizeSetCollectionView reloadData];
-
+            NSString *string_seleted = self.playerSize[indexPath.row];
+            string_seleted.isSeleted = YES;
+            [self reloadData];
             NSString *sting = self.playerSize[indexPath.row];
             
             if (self.changVideoViewType) {
                 self.changVideoViewType([sting isEqualToString:@"适应"]);
             }
-            
     }
-    
-    
-    }
+}
     
 }
 
@@ -139,17 +106,120 @@
 -(NSMutableArray *)timeCloseTitle{
     if (!_timeCloseTitle) {
         _timeCloseTitle  = [[NSMutableArray alloc]initWithObjects:@"不开启",@"播完当前",@"15分钟",@"30分钟",@"60分钟",nil];
-        NSString *string = _timeCloseTitle.firstObject;
+        NSString * string = _timeCloseTitle.firstObject;
         string.isSeleted =YES;
     }
     return _timeCloseTitle;
 }
+#pragma mark - laz。。
+
+-(UICollectionView *)tinmerCloseCollectionView{
+    if (!_tinmerCloseCollectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        _tinmerCloseCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+        _tinmerCloseCollectionView.delegate = self;
+        _tinmerCloseCollectionView.dataSource = self;
+        _tinmerCloseCollectionView.backgroundColor = [UIColor clearColor];
+    }
+    return _tinmerCloseCollectionView;
+}
 
 
+-(UICollectionView *)playSizeSetCollectionView{
+    if (!_playSizeSetCollectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        _playSizeSetCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+        _playSizeSetCollectionView.delegate = self;
+        _playSizeSetCollectionView.dataSource = self;
+        _playSizeSetCollectionView.backgroundColor = [UIColor clearColor];
+    }
+    return _playSizeSetCollectionView;
+}
+-(UIButton *)likeButton{
+    if (!_likeButton) {
+        _likeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_likeButton setTitle:@"收  藏" forState:UIControlStateNormal];
+        [_likeButton setTitle:@"已收藏" forState:UIControlStateSelected];
+        [_likeButton setImage:[UIImage imageNamed:@"收藏"] forState:UIControlStateNormal];
+        [_likeButton setImage:[UIImage imageNamed:@"收藏_选中"] forState:UIControlStateSelected];
+        [_likeButton sizeToFit];
+    }
+    return _likeButton;
+}
 
+-(UILabel *)timeClose{
+    if (!_timeClose) {
+        _timeClose = [[UILabel alloc]init];
+        _timeClose.text = @"定时关闭";
+        _timeClose.textColor = [UIColor whiteColor];
+        [_timeClose sizeToFit];
+    }
+    return _timeClose;
+}
+-(UILabel *)videoSize{
+    if (!_videoSize) {
+        _videoSize = [[UILabel alloc]init];
+        _videoSize.text = @"画面尺寸";
+        [_videoSize sizeToFit];
+        _videoSize.textColor = [UIColor whiteColor];
+    }
+    return _videoSize;
+}
 
+#pragma mark -  自动布局。。。
 
+-(void)addUI{
+    [self addSubview:self.likeButton];
+    [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).offset(70);
+       make.top.mas_equalTo(self).offset(50);
+    }];
+    [self addSubview:self.timeClose];
+    [self.timeClose mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).offset(70);
+        make.top.mas_equalTo(self.likeButton.mas_bottom).offset(50);
+    }];
+    [self addSubview:self.videoSize];
+    [self.videoSize mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).offset(70);
+        make.top.mas_equalTo(self.timeClose.mas_bottom).offset(50);
+    }];
+    [self addSubview:self.tinmerCloseCollectionView];
+    [self.tinmerCloseCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.timeClose.mas_centerY);
+        make.height.mas_equalTo(@40);
+        make.left.mas_equalTo(self.timeClose.mas_right).offset(40);
+        make.right.mas_equalTo(self.mas_right).offset(-40);
+    }];
+    [self addSubview:self.playSizeSetCollectionView];
+    [self.playSizeSetCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.videoSize.mas_centerY);
+        make.height.mas_equalTo(@40);
+        make.left.mas_equalTo(self.videoSize.mas_right).offset(40);
+        make.right.mas_equalTo(self.mas_right).offset(-40);
+    }];
+}
 
+-(void)reloadData{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tinmerCloseCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.timeClose.mas_centerY);
+            make.height.mas_equalTo(@40);
+            make.left.mas_equalTo(self.timeClose.mas_right).offset(40);
+            make.right.mas_equalTo(self.mas_right).offset(-40);
+        }];
+        [self.playSizeSetCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.videoSize.mas_centerY);
+            make.height.mas_equalTo(@40);
+            make.left.mas_equalTo(self.videoSize.mas_right).offset(40);
+            make.right.mas_equalTo(self.mas_right).offset(-40);
+        }];
+        [self.tinmerCloseCollectionView reloadData];
+        [self.playSizeSetCollectionView reloadData];
+    });
+}
 
 
 @end

@@ -107,6 +107,9 @@ typedef NS_ENUM(NSUInteger,controllerType){
 @property(copy,nonatomic)dispatch_block_t changChoseIndex;
 ///定义控制器的type实现直播与播放的区别
 @property(assign,nonatomic)controllerType type;
+///到了定时关闭的时间了。。。。
+@property(copy,nonatomic)dispatch_block_t clost;
+
 
 ///初始化 byself
 -(instancetype)initWithFrame:(CGRect)frame andWithType:(controllerType)type;

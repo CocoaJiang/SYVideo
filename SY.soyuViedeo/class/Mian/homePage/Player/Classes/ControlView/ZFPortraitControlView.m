@@ -199,7 +199,7 @@
     self.fullScreenBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.fullScreenBtn.zf_centerY = self.currentTimeLabel.zf_centerY;
     
-    min_w = 62;
+    min_w = 70;
     min_h = 28;
     min_x = self.fullScreenBtn.zf_left - min_w - 4;
     min_y = 0;

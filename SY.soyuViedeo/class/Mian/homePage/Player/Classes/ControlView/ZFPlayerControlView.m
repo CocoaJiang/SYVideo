@@ -787,7 +787,7 @@
         [_failBtn setTitle:@"加载失败请切换播放源" forState:UIControlStateNormal];
         [_failBtn addTarget:self action:@selector(failBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_failBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _failBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        _failBtn.titleLabel.font = [UIFont systemFontOfSize:13.0];
         _failBtn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
         _failBtn.hidden = YES;
     }
@@ -860,23 +860,31 @@
             [weakSelf viewdismissForClearFloat];
         };
         
-        ///修改填充方式
+        ///修改填充方式。。。。
+        
         _controller.changVideoPlayerSizeType = ^(BOOL isFullScreen) {
             weakSelf.player.currentPlayerManager.scalingMode = isFullScreen? ZFPlayerScalingModeAspectFit :ZFPlayerScalingModeAspectFill;
         };
         
         ///设置自动关闭
         _controller.timerClosePlayerWtihTime = ^(NSString * _Nonnull timeString) {
-            NSString *time_String = [timeString substringToIndex:timeString.length-2];
-            float float_timer = [time_String integerValue];
-            if (float_timer<1) {
-                float_timer = [[ZFUtilities convertTimeSecond:self.player.totalTime] floatValue]- [[ZFUtilities convertTimeSecond:self.player.currentTime] floatValue] *60 ;
+            
+            //分情况而定。。。。。
+
+           /* @"不开启",@"播完当前",@"15分钟",@"30分钟",@"60分钟" */
+            if ([timeString isEqualToString:@"不开启"]) {
+                [NSObject cancelPreviousPerformRequestsWithTarget:weakSelf selector:@selector(close) object:nil];
+            }else if ([timeString isEqualToString:@"播完当前"]){
+                [NSObject cancelPreviousPerformRequestsWithTarget:weakSelf selector:@selector(close) object:nil];
+                weakSelf.player.playerDidToEnd = ^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
+                    [weakSelf performSelector:@selector(close) withObject:nil afterDelay:2];
+                };
+            }else{
+                [NSObject cancelPreviousPerformRequestsWithTarget:weakSelf selector:@selector(close) object:nil];
+                 NSString *time_String = [timeString substringToIndex:timeString.length-2];
+                float float_timer = [time_String floatValue];
+                [weakSelf performSelector:@selector(close) withObject:nil afterDelay:float_timer*60];
             }
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(float_timer*60 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [Tools showErrorWithString:@"即将退出播放"];
-                [weakSelf.player stop];
-                
-            });
         };
     }
     return _controller;
@@ -904,7 +912,6 @@
         return;
     }
     if (weakSelf.choseAnyWithIndexAndStringAndType) {
-       
         if (weakSelf.controller.type==choseClear) {
             [weakSelf.landScapeControlView.clearfloat setTitle:content forState:UIControlStateNormal];
         }
@@ -946,6 +953,29 @@
         self.liveController.frame = CGRectMake(self.width, 0, self.width, self.height);
     }];
 }
+
+
+-(void)close{
+    if (self.clost) {
+        self.clost();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

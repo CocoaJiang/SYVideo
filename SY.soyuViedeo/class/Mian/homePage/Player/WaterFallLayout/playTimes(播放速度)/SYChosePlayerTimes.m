@@ -28,6 +28,7 @@
     SYChoseSetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SYChoseSetCell" forIndexPath:indexPath];
     cell.type=hasBorldColor;
     cell.text =self.palyTimes[indexPath.row];
+    cell.contentView.layer.borderWidth = 0.8f;
     return cell;
     
 }

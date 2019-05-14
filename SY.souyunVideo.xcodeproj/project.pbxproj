@@ -111,7 +111,6 @@
 		D425B3E022646B0200F18AD6 /* C_SYcollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D425B3DE22646B0200F18AD6 /* C_SYcollectionViewCell.xib */; };
 		D425B3E32264A26800F18AD6 /* SY_exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = D425B3E22264A26800F18AD6 /* SY_exchange.m */; };
 		D425C02522544363009CDE98 /* SYPlaySetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D425C02422544363009CDE98 /* SYPlaySetView.m */; };
-		D425C027225444AA009CDE98 /* SYPlaySetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D425C026225444AA009CDE98 /* SYPlaySetView.xib */; };
 		D425C02B225459D3009CDE98 /* SYPlayerShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = D425C02A225459D3009CDE98 /* SYPlayerShareView.m */; };
 		D425C02D22545A2A009CDE98 /* SYPlayerShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D425C02C22545A2A009CDE98 /* SYPlayerShareView.xib */; };
 		D425C0312254849E009CDE98 /* SYChoseClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = D425C0302254849E009CDE98 /* SYChoseClearView.m */; };
@@ -749,7 +748,6 @@
 		D425B3E22264A26800F18AD6 /* SY_exchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SY_exchange.m; sourceTree = "<group>"; };
 		D425C02322544363009CDE98 /* SYPlaySetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPlaySetView.h; sourceTree = "<group>"; };
 		D425C02422544363009CDE98 /* SYPlaySetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPlaySetView.m; sourceTree = "<group>"; };
-		D425C026225444AA009CDE98 /* SYPlaySetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYPlaySetView.xib; sourceTree = "<group>"; };
 		D425C029225459D3009CDE98 /* SYPlayerShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPlayerShareView.h; sourceTree = "<group>"; };
 		D425C02A225459D3009CDE98 /* SYPlayerShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPlayerShareView.m; sourceTree = "<group>"; };
 		D425C02C22545A2A009CDE98 /* SYPlayerShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYPlayerShareView.xib; sourceTree = "<group>"; };
@@ -2025,7 +2023,6 @@
 			children = (
 				D425C02322544363009CDE98 /* SYPlaySetView.h */,
 				D425C02422544363009CDE98 /* SYPlaySetView.m */,
-				D425C026225444AA009CDE98 /* SYPlaySetView.xib */,
 			);
 			path = "playSet(播放设置)";
 			sourceTree = "<group>";
@@ -3975,7 +3972,6 @@
 				D46D467E2231349A00BC8357 /* SVProgressHUD.bundle in Resources */,
 				D428965C2266C7BC00E2879C /* SYChangePassWorld2Controller.xib in Resources */,
 				D4271F872248822F00C7996B /* SYHotSearchCell.xib in Resources */,
-				D425C027225444AA009CDE98 /* SYPlaySetView.xib in Resources */,
 				D46D46B6223213BC00BC8357 /* ChoseHeaderCell.xib in Resources */,
 				D46D468822313A5300BC8357 /* SYPersonItemCell.xib in Resources */,
 				D4246F0A226810AD003C580C /* SYEXPCollectionViewCell.xib in Resources */,

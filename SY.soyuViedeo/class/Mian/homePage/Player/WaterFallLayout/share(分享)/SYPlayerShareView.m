@@ -41,7 +41,7 @@
 }
 
 -(CGSize )collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(88, 80);
+    return CGSizeMake(80, 88);
 }
 -(NSMutableArray *)infoArray{
     if (!_infoArray) {

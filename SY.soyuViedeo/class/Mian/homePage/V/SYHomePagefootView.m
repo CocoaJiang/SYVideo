@@ -10,11 +10,13 @@
 #import "SYMoreVideos.h"
 
 @implementation SYHomePagefootView
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.lookMore makeYuanWithScle:5];
-    [self.Change makeYuanWithScle:5];
+    self.lookMore.layer.cornerRadius = 5;
+    self.lookMore.layer.masksToBounds = YES;
+    self.Change.layer.masksToBounds =  YES;
+    self.Change.layer.cornerRadius = 5;
     [self.lookMore setLeftTitleAndRightImageWithSpace:5];
     [self.Change setLeftTitleAndRightImageWithSpace:6];
     self.lookMore.titleLabel.font = self.Change.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -40,23 +42,12 @@
     [dictionary setObject:self.type_id forKey:@"id"];
     [dictionary setObject:@(6) forKey:@"pageSize"];
     [HttpTool POST:[SY_Change getWholeUrl] param:dictionary success:^(id responseObject) {
-            //先替换数据……......
         if (self.refush) {
             //去通知刷新。。。。。
             self.refush();
         }
     } error:^(NSString *error) {
-        
+
     }];
-    
-    
 }
-
-
-
-
-
-
-
-
 @end

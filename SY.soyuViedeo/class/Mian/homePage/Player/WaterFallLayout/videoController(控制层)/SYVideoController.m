@@ -122,8 +122,7 @@
 //播放设置视图
 -(SYPlaySetView *)playsetView{
     if (!_playsetView) {
-        _playsetView = [Tools XJ_XibWithName:@"SYPlaySetView"];
-        
+        _playsetView = [[SYPlaySetView alloc]initWithFrame:CGRectZero];
         __weak typeof(self)weakSelf = self;
         _playsetView.changVideoViewType = ^(BOOL isFuScreen) {
             if (weakSelf.changVideoPlayerSizeType) {

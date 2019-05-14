@@ -297,8 +297,20 @@
         _controlView.portraitControlView.forScreen = ^{
             [weakSelf searchTVWithModel:weakSelf.palyModel andWithURL:weakSelf.url];
         };
+#pragma mark - 到了定时关闭的时候了
+        _controlView.clost = ^{
+            
+            if (weakSelf.player.isFullScreen) {
+                [weakSelf.player enterFullScreen:NO animated:YES];
+                [weakSelf close];
+            }
+            
+            
+            
+        };
      }
     return _controlView;
+    
 }
 #pragma mark - 播放器背景的图
 - (UIView *)containerView {
@@ -757,6 +769,16 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
+-(void)close{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        __weak typeof(self)weakSelf   =  self;
+        [self showAlrertWithTitle:@"定时关闭时间已到" andWithMessage:@"是否要关闭播放器？" andWithCancelButtonTitle:@"取消" andWithOKButtonTitle:@"关闭" andWithOKBlock:^{
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        }];
+        
+    });
+}
 
 
 
