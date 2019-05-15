@@ -89,6 +89,7 @@
         [self resetControlView];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layOutControllerViews) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(afNetworkStatusChanged:) name:KVEYSTRING object:nil];
+        self.danSettingBtn.hidden = self.textField.hidden = self.danShowOrHindeBtn.hidden = YES;
 
         
     }

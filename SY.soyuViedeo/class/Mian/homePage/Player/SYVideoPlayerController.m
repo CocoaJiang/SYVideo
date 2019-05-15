@@ -720,7 +720,7 @@
     [dict setObject:@(self.clear) forKey:@"hd"];
     SYUSERINFO *system = [SYUSERINFO info];
     __weak typeof(self)weakSelf = self;
-    [HttpTool POST:system.systemModel.vod_parse_url[0] param:dict success:^(id responseObject) {
+    [HttpTool NOACtionPOST:system.systemModel.vod_parse_url[0] param:dict success:^(id responseObject) {
         NSString *url = [[responseObject objectForKey:@"data"] objectForKey:@"url"];
         NSString *URLString = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         self.url = URLString;
@@ -731,10 +731,10 @@
             weakSelf.isbeging = NO;
             [weakSelf.player.currentPlayerManager play];
         }
-
     } error:^(NSString *error) {
-      
+        
     }];
+
 }
 -(void)upDataCache{
     VideoPlayInfo *playInfo = [self getCache];

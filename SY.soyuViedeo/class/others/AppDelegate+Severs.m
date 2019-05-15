@@ -58,9 +58,9 @@
 
 - (void)confitUShareSettings
 {
-    [[UMSocialManager defaultManager] setUmSocialAppkey:@"5bab731ab465f50f16000115"];
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"5cda8a550cafb2916b000267"];
     [[UMSocialManager defaultManager] openLog:YES];
-    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+    [UMSocialGlobal shareInstance].isUsingWaterMark = NO;
     [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
 }
 - (void)configUSharePlatforms

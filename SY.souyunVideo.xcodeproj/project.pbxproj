@@ -506,6 +506,7 @@
 		D4BB3E8B22450633001B41FF /* SYSearTiptitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BB3E8A22450633001B41FF /* SYSearTiptitleView.m */; };
 		D4BB3E8D2245063E001B41FF /* SYSearTiptitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BB3E8C2245063E001B41FF /* SYSearTiptitleView.xib */; };
 		D4BB3E9022450D51001B41FF /* UILabel+HuaZhi.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BB3E8F22450D51001B41FF /* UILabel+HuaZhi.m */; };
+		D4C27472228AC7DC0000BF78 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C27471228AC7DC0000BF78 /* UserNotifications.framework */; };
 		D4C3D12D228518A5006BE6D4 /* MyOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C3D12C228518A5006BE6D4 /* MyOrderView.m */; };
 		D4C3D12F228518E9006BE6D4 /* MyOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C3D12E228518E9006BE6D4 /* MyOrderView.xib */; };
 		D4C3D13222854042006BE6D4 /* SYOrderSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C3D13122854042006BE6D4 /* SYOrderSectionHeader.m */; };
@@ -1496,6 +1497,7 @@
 		D4BB3E8C2245063E001B41FF /* SYSearTiptitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYSearTiptitleView.xib; sourceTree = "<group>"; };
 		D4BB3E8E22450D51001B41FF /* UILabel+HuaZhi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+HuaZhi.h"; sourceTree = "<group>"; };
 		D4BB3E8F22450D51001B41FF /* UILabel+HuaZhi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HuaZhi.m"; sourceTree = "<group>"; };
+		D4C27471228AC7DC0000BF78 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		D4C3D12B228518A5006BE6D4 /* MyOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyOrderView.h; sourceTree = "<group>"; };
 		D4C3D12C228518A5006BE6D4 /* MyOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOrderView.m; sourceTree = "<group>"; };
 		D4C3D12E228518E9006BE6D4 /* MyOrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderView.xib; sourceTree = "<group>"; };
@@ -1574,6 +1576,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C27472228AC7DC0000BF78 /* UserNotifications.framework in Frameworks */,
 				D4146FDF225EE19E0050C669 /* libz.tbd in Frameworks */,
 				D4146FDD225EE1870050C669 /* libc++.tbd in Frameworks */,
 				D4146FDB225EE1750050C669 /* CoreTelephony.framework in Frameworks */,
@@ -1646,6 +1649,7 @@
 		BD3C30B655CA7A329A96CA37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4C27471228AC7DC0000BF78 /* UserNotifications.framework */,
 				D4146FDE225EE19E0050C669 /* libz.tbd */,
 				D4146FDC225EE1870050C669 /* libc++.tbd */,
 				D4146FDA225EE1750050C669 /* CoreTelephony.framework */,
@@ -3883,6 +3887,9 @@
 					D475DA342230BC0A002695E7 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
