@@ -59,7 +59,7 @@
 }
 -(SYHotRankTitle *)hotRanktitle{
     if (!_hotRanktitle) {
-        _hotRanktitle = [[SYHotRankTitle alloc]initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 50) andWithArray:@[@"电影",@"电视剧",@"动漫",@"综艺"]];
+        _hotRanktitle = [[SYHotRankTitle alloc]initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 70) andWithArray:@[@"电影",@"电视剧",@"动漫",@"综艺"]];
         __weak typeof(self)weakSelf = self;
         _hotRanktitle.buttonClick = ^(NSString * _Nonnull title, NSInteger index) {
             weakSelf.index = index;
@@ -87,7 +87,7 @@
 }
 -(SYhotDayView *)dayView{
     if (!_dayView) {
-        _dayView = [[SYhotDayView alloc]initWithFrame:CGRectMake(10, self.hotRanktitle.bottom+10, SCREEN_WIDTH-20, 40)];
+        _dayView = [[SYhotDayView alloc]initWithFrame:CGRectMake(10, self.hotRanktitle.bottom+30, SCREEN_WIDTH-20, 40)];
         _dayView.backgroundColor = [UIColor whiteColor];
         [_dayView makeYuanWithScle:10 andWithToplef:YES andWithTopRight:YES andWithBootomLeft:NO andWithBootomRight:NO];
         __weak typeof(self)weakSelf = self;

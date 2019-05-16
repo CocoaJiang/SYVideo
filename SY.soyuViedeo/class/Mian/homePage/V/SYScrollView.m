@@ -31,7 +31,8 @@
         _cycleScrollView =[SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"矩形 8 拷贝 2"]];
         _cycleScrollView.showPageControl=YES;
         _cycleScrollView.pageControlAliment=SDCycleScrollViewPageContolAlimentRight;
-        _cycleScrollView.pageControlStyle  = SDCycleScrollViewPageContolStyleClassic;
+        _cycleScrollView.pageControlStyle  = SDCycleScrollViewPageContolStyleNone;
+        _cycleScrollView.titleLabelTextFont = [UIFont systemFontOfSize:12];
         _cycleScrollView.currentPageDotColor =KAPPMAINCOLOR;
         _cycleScrollView.clipsToBounds = YES;
     }

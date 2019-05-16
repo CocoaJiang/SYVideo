@@ -262,6 +262,8 @@
 		D4349EAA2244920B0007DF48 /* SYHotRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4349EA82244920B0007DF48 /* SYHotRankCell.m */; };
 		D4349EAB2244920B0007DF48 /* SYHotRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4349EA92244920B0007DF48 /* SYHotRankCell.xib */; };
 		D4349EAE2244AE980007DF48 /* SYhotDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4349EAD2244AE980007DF48 /* SYhotDayView.m */; };
+		D46B8E02228D27BD0010D0C6 /* SYMainBootomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46B8E00228D27BD0010D0C6 /* SYMainBootomCell.m */; };
+		D46B8E03228D27BD0010D0C6 /* SYMainBootomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46B8E01228D27BD0010D0C6 /* SYMainBootomCell.xib */; };
 		D46D463322312EA000BC8357 /* SYPersonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D463222312EA000BC8357 /* SYPersonHeader.m */; };
 		D46D463522312EAE00BC8357 /* SYPersonHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46D463422312EAE00BC8357 /* SYPersonHeader.xib */; };
 		D46D4639223132EF00BC8357 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D4637223132EF00BC8357 /* Tools.m */; };
@@ -546,6 +548,7 @@
 		D4DC72432237D4D000231652 /* SeachView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DC72422237D4D000231652 /* SeachView.xib */; };
 		D4F656112242200600B99F11 /* SYExchangeCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F6560F2242200600B99F11 /* SYExchangeCenter.m */; };
 		D4F656122242200600B99F11 /* SYExchangeCenter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F656102242200600B99F11 /* SYExchangeCenter.xib */; };
+		D4FAEEC8228C13110033349C /* SYHotHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FAEEC7228C13110033349C /* SYHotHeaderView.m */; };
 		DFD07B55C1D3F789F9393FC8 /* libPods-SY.soyuViedeoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943EC917A65E99DCDC35B07C /* libPods-SY.soyuViedeoUITests.a */; };
 		E0C2097CF3E36E429F2BF3A7 /* libPods-SY.soyuViedeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F9DD26783B9D9F4990E216 /* libPods-SY.soyuViedeo.a */; };
 /* End PBXBuildFile section */
@@ -1021,6 +1024,9 @@
 		D4349EA92244920B0007DF48 /* SYHotRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYHotRankCell.xib; sourceTree = "<group>"; };
 		D4349EAC2244AE980007DF48 /* SYhotDayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYhotDayView.h; sourceTree = "<group>"; };
 		D4349EAD2244AE980007DF48 /* SYhotDayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYhotDayView.m; sourceTree = "<group>"; };
+		D46B8DFF228D27BD0010D0C6 /* SYMainBootomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainBootomCell.h; sourceTree = "<group>"; };
+		D46B8E00228D27BD0010D0C6 /* SYMainBootomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainBootomCell.m; sourceTree = "<group>"; };
+		D46B8E01228D27BD0010D0C6 /* SYMainBootomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYMainBootomCell.xib; sourceTree = "<group>"; };
 		D46D463122312EA000BC8357 /* SYPersonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPersonHeader.h; sourceTree = "<group>"; };
 		D46D463222312EA000BC8357 /* SYPersonHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPersonHeader.m; sourceTree = "<group>"; };
 		D46D463422312EAE00BC8357 /* SYPersonHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYPersonHeader.xib; sourceTree = "<group>"; };
@@ -1567,6 +1573,8 @@
 		D4F6560E2242200600B99F11 /* SYExchangeCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYExchangeCenter.h; sourceTree = "<group>"; };
 		D4F6560F2242200600B99F11 /* SYExchangeCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYExchangeCenter.m; sourceTree = "<group>"; };
 		D4F656102242200600B99F11 /* SYExchangeCenter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYExchangeCenter.xib; sourceTree = "<group>"; };
+		D4FAEEC6228C13110033349C /* SYHotHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYHotHeaderView.h; sourceTree = "<group>"; };
+		D4FAEEC7228C13110033349C /* SYHotHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYHotHeaderView.m; sourceTree = "<group>"; };
 		E02144CE1ADDC0EF6C14D1BA /* Pods-SY.soyuViedeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SY.soyuViedeo.release.xcconfig"; path = "Target Support Files/Pods-SY.soyuViedeo/Pods-SY.soyuViedeo.release.xcconfig"; sourceTree = "<group>"; };
 		F3130FE6B0AEE088595BDD3A /* libPods-SY.soyuViedeoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SY.soyuViedeoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2546,6 +2554,9 @@
 				D428965D2266DB1200E2879C /* SYLoginPhoneInputView.h */,
 				D428965E2266DB1200E2879C /* SYLoginPhoneInputView.m */,
 				D42896602266DB2300E2879C /* SYLoginPhoneInputView.xib */,
+				D46B8DFF228D27BD0010D0C6 /* SYMainBootomCell.h */,
+				D46B8E00228D27BD0010D0C6 /* SYMainBootomCell.m */,
+				D46B8E01228D27BD0010D0C6 /* SYMainBootomCell.xib */,
 			);
 			path = setView;
 			sourceTree = "<group>";
@@ -2638,7 +2649,6 @@
 			isa = PBXGroup;
 			children = (
 				D475DA372230BC0A002695E7 /* SY.soyuViedeo */,
-				D475DA502230BC0A002695E7 /* SY.soyuViedeoTests */,
 				D475DA5B2230BC0A002695E7 /* SY.soyuViedeoUITests */,
 				D475DA362230BC0A002695E7 /* Products */,
 				991F3B1D0F74301D32CB019F /* Pods */,
@@ -2659,6 +2669,7 @@
 		D475DA372230BC0A002695E7 /* SY.soyuViedeo */ = {
 			isa = PBXGroup;
 			children = (
+				D475DA502230BC0A002695E7 /* SY.soyuViedeoTests */,
 				D4C3D133228594B0006BE6D4 /* SY.soyuViedeo.entitlements */,
 				D475DA6A2230BC46002695E7 /* class */,
 				D475DA3E2230BC0A002695E7 /* Main.storyboard */,
@@ -2810,6 +2821,8 @@
 				D4349EAD2244AE980007DF48 /* SYhotDayView.m */,
 				D4C8B771224A3EDC005E327A /* SYHeaderWebView.h */,
 				D4C8B772224A3EDC005E327A /* SYHeaderWebView.m */,
+				D4FAEEC6228C13110033349C /* SYHotHeaderView.h */,
+				D4FAEEC7228C13110033349C /* SYHotHeaderView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -3992,6 +4005,7 @@
 				D4BB3E8D2245063E001B41FF /* SYSearTiptitleView.xib in Resources */,
 				D4D04E28223FB91B0067C362 /* SYEvaluationCell.xib in Resources */,
 				D49F390E2237823F00B686AB /* testHeader.xib in Resources */,
+				D46B8E03228D27BD0010D0C6 /* SYMainBootomCell.xib in Resources */,
 				D49410A42237DBCE00CB6C14 /* historyDetailCell.xib in Resources */,
 				D420EA96223BA5E8006955F7 /* SYhotViedeCell.xib in Resources */,
 				D42B9D3C223A3DF8004B7880 /* SYNavCollectionViewCell.xib in Resources */,
@@ -4194,6 +4208,7 @@
 				D42B9D21223A1FEE004B7880 /* UIScrollView+MJRefresh.m in Sources */,
 				D428722E2269E63900DE3AFD /* LiveModel.m in Sources */,
 				D42B9D25223A1FEE004B7880 /* NSBundle+MJRefresh.m in Sources */,
+				D46B8E02228D27BD0010D0C6 /* SYMainBootomCell.m in Sources */,
 				D4BA502C2232463E004CEE28 /* SYMessageCell.m in Sources */,
 				D42FB4EB2252F9E000D1C6CB /* SYChoseSetCell.m in Sources */,
 				D4BA505C22326386004CEE28 /* UIView+SDAutoLayout.m in Sources */,
@@ -4293,6 +4308,7 @@
 				D431728E2235EAB200EF8D69 /* NSString+MD5String.m in Sources */,
 				D475DB5D2230FA8C002695E7 /* SDWebImageGIFCoder.m in Sources */,
 				D425B3E32264A26800F18AD6 /* SY_exchange.m in Sources */,
+				D4FAEEC8228C13110033349C /* SYHotHeaderView.m in Sources */,
 				D41E74562238F23E0005B64F /* NSSet+HYBUnicodeReadable.m in Sources */,
 				D4BA50A7223286C6004CEE28 /* AFHTTPSessionManager.m in Sources */,
 				D475DB122230F8AD002695E7 /* SDCollectionViewCell.m in Sources */,

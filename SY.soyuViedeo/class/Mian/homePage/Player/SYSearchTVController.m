@@ -26,7 +26,10 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.dlnaManager startSearch];
+    if (!self.isForSeenTtype) {
+       [self.dlnaManager startSearch];
+    }
+    
 }
 
 - (void)searchDLNAResult:(NSArray *)devicesArray{
@@ -39,7 +42,14 @@
     [self.tableView reloadData];
 }
 - (void)viewDidLoad {
-    self.title = @"选择设备投屏";
+    if (!self.isForSeenTtype) {
+        self.title = @"选择设备投屏";
+    }else
+    {
+        self.title = @"投屏助手";
+        
+    }
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -55,7 +65,11 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
-        return [self.deviceArr count]<=4? 200: [self.deviceArr count]*45+10;
+        if (!self.isForSeenTtype) {
+            return [self.deviceArr count]<=4? 200: [self.deviceArr count]*45+10;
+        }else{
+            return CGFLOAT_MIN;
+        }
     }else{
         return self.imageView.size.height;
     }

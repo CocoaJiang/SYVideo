@@ -39,32 +39,25 @@
                     @"综艺"
                     ];
     ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
-    //显示遮盖
     style.showCover = NO;
-    // 颜色渐变
     style.contentViewBounces = NO;
-
-    
     style.gradualChangeTitleColor = YES;
     style.scaleTitle = YES;
+    style.segmentViewBounces=YES;
     style.normalTitleColor = RGBA(255, 255, 255, 1);
     style.selectedTitleColor = RGBA(255, 255, 255, 1);
-    style.titleBigScale = 1.4;
-    style.titleFont = [UIFont systemFontOfSize:16];
-    style.showLine=YES;
+    style.titleBigScale = 1.2;
+    style.titleFont = [UIFont boldSystemFontOfSize:16];
+    style.showLine=NO;
     style.scrollLineColor = RGBA(255, 255, 255, 1);
-    ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc]initWithFrame:CGRectMake(0, 45, self.view.width, SCREENH_HEIGHT-kTopHeight-kTabBarHeight) segmentStyle:style titles:self.titles parentViewController:self andMath:SCREEN_WIDTH-50 delegate:self];
+    ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc]initWithFrame:CGRectMake(0, 45, self.view.width, SCREENH_HEIGHT-kTopHeight-kTabBarHeight) segmentStyle:style titles:self.titles parentViewController:self delegate: self];
     self.scrollPageView = scrollPageView;
     [self.scrollPageView setSelectedIndex:0 animated:NO];
     [self.view addSubview:self.headerView];
     [self.view addSubview:self.scrollPageView];
-    UIImageView *imageView= [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
-    [imageView sizeToFit];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:imageView];
-    self.navigationItem.leftBarButtonItem = item;
     self.scrollPageView.segmentView.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = self.scrollPageView.segmentView;
-    self.navigationItem.titleView.bounds  = self.scrollPageView.segmentView.bounds;
+    self.navigationItem.titleView.bounds  = CGRectMake(0, -5, SCREENH_HEIGHT, 40);
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     
 }

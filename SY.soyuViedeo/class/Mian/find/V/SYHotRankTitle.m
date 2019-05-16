@@ -21,7 +21,7 @@
         CGFloat buttonWidth  = (frame.size.width-([array count]+1) *20)/[array count];
         for (int i = 0; i<[self.array count]; i++) {
             UIButton *button  = [UIButton buttonWithType:UIButtonTypeCustom];
-            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
             [button setBackgroundColor:RGBA(0, 0, 0, 0.4) forState:UIControlStateSelected];
             [button setBackgroundColor:[UIColor clearColor] forState:UIControlStateNormal];

@@ -15,7 +15,7 @@
 #define kNavBarHeight 44.0
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 #define kTopHeight (kStatusBarHeight + kNavBarHeight)
-#define KAPPMAINCOLOR RGBA(190, 39, 62, 1)
+#define KAPPMAINCOLOR RGBA(203, 61, 77, 1) //203,61,77
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREENH_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ((NSInteger)(([[UIScreen mainScreen] currentMode].size.height/[[UIScreen mainScreen] currentMode].size.width)*100) == 216) : NO)
@@ -24,7 +24,8 @@
 #define KUSER_NAME @"name_login"
 #define KUSER_CODE  @"user_code"
 #define KDefaultImage [UIImage imageNamed:@"nodata"]
-//存取值
+//输入框的背景颜色
+#define KTEXTFIELDBACKGROUNDCOLOR RGBA(187,54,75,1)
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define USERDEFAULT_SET_value(_value_,_key_) [[NSUserDefaults standardUserDefaults] setValue:_value_ forKey:_key_];\
 [[NSUserDefaults standardUserDefaults] synchronize]

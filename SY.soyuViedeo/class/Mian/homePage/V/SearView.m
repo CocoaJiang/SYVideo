@@ -22,7 +22,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = RGBA(172, 34, 55, 1);
+        self.backgroundColor = KTEXTFIELDBACKGROUNDCOLOR;
         [self addSubview:self.searButton];
         [self addSubview:self.listenButton];
         self.layer.masksToBounds =YES;

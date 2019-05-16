@@ -28,7 +28,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:array[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [button setBackgroundColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateNormal];
+        [button setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor ] forState:UIControlStateSelected];
         [button setBackgroundColor:KAPPMAINCOLOR forState:UIControlStateSelected];
         button.layer.masksToBounds = YES;

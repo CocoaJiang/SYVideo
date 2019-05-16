@@ -73,7 +73,7 @@
     self.navigationItem.titleView.bounds  = self.searBar.bounds;
     UITextField *textField = [self.searBar valueForKey:@"_searchField"];
     textField.font = [UIFont systemFontOfSize:13];
-    textField.backgroundColor = RGBA(172, 34, 55, 1);
+    textField.backgroundColor = KTEXTFIELDBACKGROUNDCOLOR;
     UIImage *image = [UIImage imageNamed:@"搜索2"];
     UIImageView *iView = [[UIImageView alloc] initWithImage:image];
     iView.frame = CGRectMake(0, 0, image.size.width , image.size.height);

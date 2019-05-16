@@ -21,6 +21,8 @@
     };
     _title.font = [UIFont systemFontOfSize:15];
     _time.font = [UIFont systemFontOfSize:13];
+    self.icon.layer.masksToBounds = YES;
+    self.icon.layer.cornerRadius =  5;
     
 }
 

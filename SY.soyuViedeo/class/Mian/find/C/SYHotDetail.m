@@ -23,6 +23,7 @@
 #import "IQKeyboardManager.h"
 #import "SYVideoPlayerController.h"
 #import "SYShareObject.h"
+#import "SYHotHeaderView.h"
 @interface SYHotDetail ()<LKPagerViewDataSource,LKPagerViewDelegate>
 @property(strong,nonatomic)SYHotTableViewHeader *header;
 @property(strong,nonatomic)WKWebView *wkWebView;
@@ -35,10 +36,12 @@
 @property(strong,nonatomic)JhtHorizontalMarquee *quee;
 @property(strong,nonatomic)SYBootonInPutView *inPutView;
 @property(strong,nonatomic)SYKeyBordInPutView *keyBordInPutView;
-
+///算一次高度 节省内存
+@property(assign,nonatomic)CGFloat titleStringHeightAndSpeaceHeight;
+///容器View
+@property(strong,nonatomic)SYHotHeaderView *headerView;
 
 @end
-
 @implementation SYHotDetail
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -94,6 +97,7 @@
     quee.textColor = [UIColor whiteColor];
     quee.text = self.titleString;
     self.quee =  quee;
+    [self.quee setHidden:YES];
     UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonBack setImage:[UIImage imageNamed:@"ico_nav_back"] forState:UIControlStateNormal];
     buttonBack.size = CGSizeMake(30, 50);
@@ -101,8 +105,6 @@
     self.navigationItem.leftBarButtonItem = tem;
     buttonBack.tag = 100;
     [buttonBack addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-
-    
     UIButton *rightbutton = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightbutton setImage:[UIImage imageNamed:@"icon_video_share"] forState:UIControlStateNormal];
     rightbutton.tag = 101;
@@ -126,7 +128,9 @@
 //#pragma mark - 隐藏相关！！！
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBarTintColor:RGBA(43, 55, 76, 1)];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    [self.navigationController.navigationBar setBarTintColor:RGBA(75, 82, 101, 1)];
+    self.navigationController.navigationBar.translucent = NO;
     [self.quee marqueeOfSettingWithState:MarqueeStart_H];
     [IQKeyboardManager sharedManager].enable=NO;
 }
@@ -135,6 +139,8 @@
     [self.navigationController.navigationBar setBarTintColor:KAPPMAINCOLOR];
     [self.quee marqueeOfSettingWithState:MarqueeShutDown_H];
     [IQKeyboardManager sharedManager].enable = YES;
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.shadowImage = nil;
 
 }
 #pragma mark - 控件相关……………………
@@ -149,22 +155,28 @@
         }
         make.height.mas_equalTo(@40);
     }];
-    
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.inPutView.mas_top);
     }];
     [self.view addSubview:self.keyBordInPutView];
-    
-    self.view.backgroundColor =RGBA(43, 55, 76, 1);
+    self.view.backgroundColor =RGBA(75, 82, 101, 1);
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView XJRegisCellWithNibWithName:@"SYHotPlayerCell"];
     [self.tableView XJRegisCellWithNibWithName:@"SYMessageCell"];
     [self.tableView XJRegisHeaderOrFooterforNibWithName:@"SYTableViewHeader"];
     [self.tableView XJRegisHeadeORfootWithClass:@"SYHotPJTHeader"];
     self.wkWebView.frame = CGRectMake(0, 0, SCREEN_WIDTH, CGFLOAT_MIN);
-    self.tableView.tableHeaderView = self.wkWebView;
+    self.tableView.tableHeaderView = self.headerView;
+    CGFloat height = [Tools XJCalculateTheSizeWithFont:[UIFont boldSystemFontOfSize:25] andWithText:self.titleString andWithWidthMAX:SCREEN_WIDTH-10].height;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, height+40)];
+    [view addSubview:self.headerView];
+    [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(view);
+    }];
+    self.titleStringHeightAndSpeaceHeight = height+40;
+    
     
 }
 
@@ -357,10 +369,13 @@
         if (self.webViewHeight==_wkWebView.scrollView.contentSize.height) {
             return;
         }else{
-            self.webViewHeight = _wkWebView.scrollView.contentSize.height;
-            UIView *headerview = self.tableView.tableHeaderView;
-            headerview.height = self.webViewHeight;
-            self.tableView.tableHeaderView = headerview;
+            UIView *view = [[UIView alloc]init];
+            view.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.webViewHeight+self.titleStringHeightAndSpeaceHeight);
+            [view addSubview:self.headerView];
+            [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.mas_equalTo(view);
+            }];
+            self.tableView.tableHeaderView = view;
         }
     }
 }
@@ -398,8 +413,6 @@
         _pagerView.transformer = [[LKPagerViewTransformer alloc] initWithType:LKPagerViewTransformerTypeCoverFlow ];
         _pagerView.itemSize = CGSizeMake(160, 220);
         _pagerView.currentIndex=0;
-     
-        
     }
     return _pagerView;
 }
@@ -505,4 +518,31 @@
         
     }];
 }
+
+
+#pragma mark  -  隐藏逻辑 问题。。。
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat y = scrollView.contentOffset.y;
+    if (y>kTopHeight) {
+        [self.quee setHidden:NO];
+    }else{
+        [self.quee setHidden:YES];
+    }
+}
+
+
+#pragma mark - headerView。。。。。。。。。。。。。。。
+-(SYHotHeaderView *)headerView{
+    if (!_headerView) {
+        _headerView = [[SYHotHeaderView alloc]initWithFrame:CGRectZero andWithTitle:self.titleString andWithContentView:self.wkWebView];
+    }
+    return _headerView;
+}
+
+
+
+
+
+
 @end

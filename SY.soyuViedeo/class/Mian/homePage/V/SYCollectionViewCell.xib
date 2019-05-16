@@ -20,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="矩形 8 拷贝 66" translatesAutoresizingMaskIntoConstraints="NO" id="iEA-t4-Nyi">
-                        <rect key="frame" x="34.5" y="23" width="50" height="50"/>
+                        <rect key="frame" x="34.5" y="13" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="wY3-1L-vf3"/>
-                            <constraint firstAttribute="height" constant="50" id="yDc-eW-gYs"/>
+                            <constraint firstAttribute="width" constant="50" id="OzL-7S-Wyv"/>
+                            <constraint firstAttribute="height" constant="50" id="VWJ-Bc-3Xs"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="后台返回的数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-wO-u0E">
-                        <rect key="frame" x="5" y="76" width="109" height="15"/>
+                        <rect key="frame" x="5" y="69" width="109" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -35,10 +35,10 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="iEA-t4-Nyi" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-10" id="0m0-v8-f3Z"/>
+                <constraint firstItem="Noc-wO-u0E" firstAttribute="top" secondItem="iEA-t4-Nyi" secondAttribute="bottom" constant="6" id="DpU-Ra-JVA"/>
                 <constraint firstAttribute="trailing" secondItem="Noc-wO-u0E" secondAttribute="trailing" constant="5" id="TFw-EJ-A4e"/>
-                <constraint firstItem="Noc-wO-u0E" firstAttribute="top" secondItem="iEA-t4-Nyi" secondAttribute="bottom" constant="3" id="UeW-QZ-0F5"/>
-                <constraint firstItem="iEA-t4-Nyi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="iCq-gD-TPA"/>
-                <constraint firstItem="iEA-t4-Nyi" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="o6N-IJ-LLd"/>
+                <constraint firstItem="iEA-t4-Nyi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mCQ-hJ-cgu"/>
                 <constraint firstItem="Noc-wO-u0E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ysZ-nD-t0z"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>

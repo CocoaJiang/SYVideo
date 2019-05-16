@@ -11,18 +11,12 @@
 #import "SYseachViewController.h"
 #import "HistoryDetailViewController.h"
 #import "SYNewLoginViewController.h"
-
-
-
 @interface headerView ()
 @property(strong,nonatomic)UIButton *historyButton;
 @property(strong,nonatomic)UIButton *loadButton;
 @property(strong,nonatomic)SearView *searchView;
 @end
-
-
 @implementation headerView
-
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = KAPPMAINCOLOR;

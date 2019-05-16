@@ -13,10 +13,7 @@
 #import <UMCommon/UMCommon.h>
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 @end
-
 @implementation AppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self netWorkStart];
     [self initAnything];
@@ -26,13 +23,9 @@
           [weakSelf initSystem];
     });
     [UMConfigure initWithAppkey:@"5cda8a550cafb2916b000267" channel:@"App Store"];
-
     [self confitUShareSettings];
     [self configUSharePlatforms];
-    
-    // Push组件基本功能配置
     UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
-    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
     entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionSound|UMessageAuthorizationOptionAlert;
     [UNUserNotificationCenter currentNotificationCenter].delegate=self;
     [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity     completionHandler:^(BOOL granted, NSError * _Nullable error) {
@@ -43,30 +36,17 @@
     
     return YES;
 }
-
-
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
-
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
 }
-
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 }
-
-
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 }
-
-
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-
-///UM 回调
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
@@ -113,10 +93,14 @@
     }else{
     }
 }
-
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"this devicesToken is = %@", deviceToken.description);
 }
+
+
+/*
+ 89e89abca03944b82a55ddc915b6874fc5811f3d3b71fb026b23a7b5ff2e2cd3
+ */
 
 @end

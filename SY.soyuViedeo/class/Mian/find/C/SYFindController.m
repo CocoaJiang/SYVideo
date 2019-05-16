@@ -60,7 +60,7 @@
     }];
     segmentedControl.selectionIndicatorHeight = 4.0f;
     segmentedControl.backgroundColor = [UIColor clearColor];
-    segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor lightGrayColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:16]};
+    segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor darkGrayColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
     segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : KAPPMAINCOLOR,NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
     segmentedControl.selectionIndicatorColor = [UIColor clearColor];
     segmentedControl.selectionIndicatorBoxColor = [UIColor clearColor];
@@ -72,7 +72,8 @@
     segmentedControl.shouldAnimateUserSelection = YES;
     self.navigationController.navigationItem.titleView = segmentedControl;
     self.navigationItem.titleView = segmentedControl;
-    self.navigationController.navigationItem.titleView.bounds = segmentedControl.bounds;
+   // self.navigationController.navigationItem.titleView.bounds = segmentedControl.bounds;
+    self.navigationController.navigationItem.titleView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 45);
     [segmentedControl setSelectedSegmentIndex:0 animated:YES];
     self.segmentedControl = segmentedControl;
 }

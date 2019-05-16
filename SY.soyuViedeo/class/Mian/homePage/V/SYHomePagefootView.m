@@ -19,6 +19,7 @@
     self.Change.layer.cornerRadius = 5;
     [self.lookMore setLeftTitleAndRightImageWithSpace:5];
     [self.Change setLeftTitleAndRightImageWithSpace:6];
+    self.lookMore.backgroundColor = self.Change.backgroundColor = RGBA(242, 242, 242, 1);
     self.lookMore.titleLabel.font = self.Change.titleLabel.font = [UIFont systemFontOfSize:12];
 }
 -(void)setData:(data *)data{

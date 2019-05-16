@@ -20,29 +20,29 @@
                     <rect key="frame" x="0.0" y="0.0" width="403" height="75"/>
                     <subviews>
                         <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThJ-2q-ics">
-                            <rect key="frame" x="30" y="17.5" width="141.5" height="40"/>
+                            <rect key="frame" x="15" y="12.5" width="179" height="50"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="oEl-1d-rLG"/>
+                                <constraint firstAttribute="height" constant="50" id="n0D-WG-nFr"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="查看更多" image="右箭头">
-                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="lookMore:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="fiF-om-qrh"/>
                             </connections>
                         </button>
                         <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-68-d08">
-                            <rect key="frame" x="231.5" y="17.5" width="141.5" height="40"/>
+                            <rect key="frame" x="209" y="12.5" width="179" height="50"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="nVl-fD-AtS"/>
+                                <constraint firstAttribute="height" constant="50" id="qlN-b7-EFc"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="换一批" image="换一批">
-                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="change:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="gWD-Vh-Bdy"/>
@@ -59,15 +59,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="iAy-wc-WdS" firstAttribute="top" secondItem="Hs0-67-iC8" secondAttribute="top" constant="10" id="9LP-3u-7m2"/>
-                        <constraint firstItem="ezW-68-d08" firstAttribute="leading" secondItem="iAy-wc-WdS" secondAttribute="trailing" constant="29.5" id="D1x-7J-kqQ"/>
                         <constraint firstAttribute="height" constant="75" id="DEi-tD-gkZ"/>
+                        <constraint firstItem="ThJ-2q-ics" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="Daj-2B-SpM"/>
                         <constraint firstItem="iAy-wc-WdS" firstAttribute="centerX" secondItem="Hs0-67-iC8" secondAttribute="centerX" id="FKI-pm-6b3"/>
+                        <constraint firstItem="ezW-68-d08" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="VeD-io-gtA"/>
                         <constraint firstAttribute="bottom" secondItem="iAy-wc-WdS" secondAttribute="bottom" constant="10" id="X0a-93-2xN"/>
-                        <constraint firstAttribute="trailing" secondItem="ezW-68-d08" secondAttribute="trailing" constant="30" id="aUY-pL-LzX"/>
-                        <constraint firstItem="ezW-68-d08" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="bd8-T3-c1a"/>
-                        <constraint firstItem="iAy-wc-WdS" firstAttribute="leading" secondItem="ThJ-2q-ics" secondAttribute="trailing" constant="29.5" id="rrn-TY-FFM"/>
-                        <constraint firstItem="ThJ-2q-ics" firstAttribute="leading" secondItem="Hs0-67-iC8" secondAttribute="leading" constant="30" id="tNh-Re-OpP"/>
-                        <constraint firstItem="ThJ-2q-ics" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="zOu-9e-jgF"/>
+                        <constraint firstAttribute="trailing" secondItem="ezW-68-d08" secondAttribute="trailing" constant="15" id="ccx-PX-BZM"/>
+                        <constraint firstItem="ezW-68-d08" firstAttribute="leading" secondItem="iAy-wc-WdS" secondAttribute="trailing" constant="7" id="dif-DK-fh0"/>
+                        <constraint firstItem="ezW-68-d08" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="igG-WJ-Q5o"/>
+                        <constraint firstItem="ThJ-2q-ics" firstAttribute="leading" secondItem="Hs0-67-iC8" secondAttribute="leading" constant="15" id="nhp-px-475"/>
+                        <constraint firstItem="iAy-wc-WdS" firstAttribute="leading" secondItem="ThJ-2q-ics" secondAttribute="trailing" constant="7" id="wau-F4-AeL"/>
+                        <constraint firstItem="ThJ-2q-ics" firstAttribute="centerY" secondItem="Hs0-67-iC8" secondAttribute="centerY" id="z0Q-uS-IHe"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3B-CN-r1I">

@@ -32,6 +32,9 @@
 #import "SYNewLoginViewController.h"
 ///新注册页面
 #import "SYnewRegisController.h"
+///最下面新添加的页面。。
+#import "SYMainBootomCell.h"
+
 @interface SYMaincontroller ()
 @property(strong,nonatomic)SYPersonHeader *personHeader;
 @property(strong,nonatomic)NSMutableArray *itemArray;
@@ -59,6 +62,7 @@
     self.tableView.tableHeaderView = view_x;
     [self.tableView registerNib:[UINib nibWithNibName:@"SYPersonItemCell" bundle:nil] forCellReuseIdentifier:@"SYPersonItemCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"SYPerSonOthersCell" bundle:nil] forCellReuseIdentifier:@"SYPerSonOthersCell"];
+    [self.tableView XJRegisCellWithNibWithName:@"SYMainBootomCell"];
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
@@ -75,6 +79,7 @@
     button_left.titleLabel.font = [UIFont systemFontOfSize:12];
     [button_left sizeToFit];
     button_left.tag=99;
+    [button_left setHidden:YES];
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:button_left];
     [button_left addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = item;
@@ -165,7 +170,7 @@
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section==0||section==1) {
@@ -193,7 +198,8 @@
         cell.dataSources = self.dataSorces;
         return cell;
     }else{
-        return nil;
+        SYMainBootomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SYMainBootomCell"];
+        return cell;
     }
 }
 
@@ -222,14 +228,16 @@
     }else if (indexPath.section==1){
         CGFloat height = SCREEN_WIDTH/3/0.67+50;
         return [self.dataSorces count]>0?height:50;
-    }else{
+    }else if (indexPath.section==2){
         return 55;
+    }else{
+        return 105;
     }
 }
 
 -(NSMutableArray *)itemArray{
     if (!_itemArray) {
-        _itemArray = (NSMutableArray *)@[@"离线缓存",@"我的收藏",@"兑换码"];
+        _itemArray = (NSMutableArray *)@[/*@"离线缓存",*/@"我的收藏"/*,@"兑换码"*/];
     }
     return _itemArray;
 }

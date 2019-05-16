@@ -90,7 +90,7 @@
 -(CGSize )collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         if ([self.model.recommend count]>0) {
-            return CGSizeMake(SCREEN_WIDTH, 100);
+            return CGSizeMake(SCREEN_WIDTH, 120);
         }else{
             return CGSizeZero;
         }
@@ -98,7 +98,7 @@
         if ([self.model.data[indexPath.section-1].composing integerValue]==1) {
             return CGSizeMake((SCREEN_WIDTH)/2,((SCREEN_WIDTH/2)*0.7)+20);
         }else{
-            return CGSizeMake(SCREEN_WIDTH/3,SCREEN_WIDTH/3/0.57);
+            return CGSizeMake(SCREEN_WIDTH/3,SCREEN_WIDTH/3/0.52 );
         }
     }
 }
@@ -139,9 +139,9 @@
          return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH*9/16);
     }else{
         if (self.model.data[section-1].isHaveCover) {
-            return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH *9/16+50);
+            return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH *9/16+60+20);
         }else{
-            return  CGSizeMake(SCREEN_WIDTH, 50);
+            return  CGSizeMake(SCREEN_WIDTH, 60);
         }
     }
 }
