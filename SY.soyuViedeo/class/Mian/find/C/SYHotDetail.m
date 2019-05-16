@@ -41,20 +41,23 @@
 ///容器View
 @property(strong,nonatomic)SYHotHeaderView *headerView;
 
+#define DETAILCOLOR RGBA(144,152,184,1)
+
 @end
+
+
 @implementation SYHotDetail
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGFloat height = [Tools XJCalculateTheSizeWithFont:[UIFont boldSystemFontOfSize:25] andWithText:self.titleString andWithWidthMAX:SCREEN_WIDTH-20].height;
+    self.titleStringHeightAndSpeaceHeight = height+40;
     [self setNAV];
     self.index = 0;
     [self getMessage];
     [self addUI];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-
-    
-    
+   
 }
 
 #pragma mark - 键盘弹上弹下的动作
@@ -94,7 +97,7 @@
     quee.font =[UIFont systemFontOfSize:16];
     self.navigationItem.titleView = quee;
     self.navigationItem.titleView.bounds  = quee.bounds;
-    quee.textColor = [UIColor whiteColor];
+    quee.textColor = DETAILCOLOR;
     quee.text = self.titleString;
     self.quee =  quee;
     [self.quee setHidden:YES];
@@ -167,17 +170,20 @@
     [self.tableView XJRegisCellWithNibWithName:@"SYMessageCell"];
     [self.tableView XJRegisHeaderOrFooterforNibWithName:@"SYTableViewHeader"];
     [self.tableView XJRegisHeadeORfootWithClass:@"SYHotPJTHeader"];
-    self.wkWebView.frame = CGRectMake(0, 0, SCREEN_WIDTH, CGFLOAT_MIN);
-    self.tableView.tableHeaderView = self.headerView;
-    CGFloat height = [Tools XJCalculateTheSizeWithFont:[UIFont boldSystemFontOfSize:25] andWithText:self.titleString andWithWidthMAX:SCREEN_WIDTH-10].height;
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, height+40)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.titleStringHeightAndSpeaceHeight)];
+    self.tableView.tableHeaderView = view;
     [view addSubview:self.headerView];
+    [_headerView sizeToFit];
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(view);
+        make.left.right.top.mas_equalTo(view);
+        make.height.mas_equalTo(@(self.titleStringHeightAndSpeaceHeight-1));
     }];
-    self.titleStringHeightAndSpeaceHeight = height+40;
-    
-    
+    [view addSubview:self.wkWebView];
+    [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(view);
+        make.top.mas_equalTo(self.headerView.mas_bottom);
+    }];
+
 }
 
 
@@ -206,7 +212,7 @@
         SYTableViewHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"SYTableViewHeader"];
         [header.button setHidden:YES];
         header.contentView.backgroundColor=[UIColor clearColor];
-        header.title.textColor =[UIColor whiteColor];
+        header.title.textColor =DETAILCOLOR;
         header.title.text = @"相关推荐";
         if ([self.model.info.vedio count]>=self.index+1) {
             videoDetail *model  = self.model.info.vedio[self.index];
@@ -325,8 +331,9 @@
         SYMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SYMessageCell"];
         cell.model = self.model.comment.list[indexPath.row];
         cell.contentView.backgroundColor=cell.backgroundColor =cell.countent.backgroundColor= [UIColor clearColor];
-        cell.countent.textColor = cell.lineView.backgroundColor = cell.titile.textColor = cell.time.textColor = [UIColor whiteColor];
+        cell.countent.textColor = cell.lineView.backgroundColor = cell.titile.textColor = cell.time.textColor = DETAILCOLOR;
         cell.cellType = PJHotCell;
+        cell.lineView.backgroundColor = DETAILCOLOR;
         return cell;
     }
 }
@@ -346,7 +353,9 @@
 #pragma mark - 懒加载
 -(WKWebView *)wkWebView{
     if (!_wkWebView) {
-        NSString *jScript = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta); var imgs = document.getElementsByTagName('img');for (var i in imgs){imgs[i].style.maxWidth='100%';imgs[i].style.height='auto';}";
+        //[ webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#9098b8'" completionHandler:nil];
+        
+        NSString *jScript = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta) ;document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#9098b8'; var imgs = document.getElementsByTagName('img');for (var i in imgs){imgs[i].style.maxWidth='100%';imgs[i].style.height='auto';}";
         WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
         WKUserContentController *wkUController = [[WKUserContentController alloc] init];
         [wkUController addUserScript:wkUScript];
@@ -362,23 +371,25 @@
     }
     return _wkWebView;
 }
-//监听加载完成的函数！！
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"contentSize"]) {
-        //执行
-        if (self.webViewHeight==_wkWebView.scrollView.contentSize.height) {
+        NSLog(@"==================================================%f================================",_wkWebView.scrollView.contentSize.height);
+        
+        if (self.webViewHeight==_wkWebView.scrollView.contentSize.height ||  _wkWebView.scrollView.contentSize.height-self.webViewHeight ==2) {
             return;
         }else{
-            UIView *view = [[UIView alloc]init];
-            view.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.webViewHeight+self.titleStringHeightAndSpeaceHeight);
-            [view addSubview:self.headerView];
-            [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.mas_equalTo(view);
-            }];
-            self.tableView.tableHeaderView = view;
+           UIView *view = self.tableView.tableHeaderView;
+          self.webViewHeight = _wkWebView.scrollView.contentSize.height;
+           view.height = self.webViewHeight+100;
+           self.tableView.tableHeaderView = view;
+            self.tableView.tableHeaderView.height = _webViewHeight+100;
+            
         }
     }
 }
+
+
+
 - (NSInteger)numberOfItemsInPagerView:(LKPagerView *)pagerView
 {
     return self.imageArray.count;
@@ -535,7 +546,11 @@
 #pragma mark - headerView。。。。。。。。。。。。。。。
 -(SYHotHeaderView *)headerView{
     if (!_headerView) {
-        _headerView = [[SYHotHeaderView alloc]initWithFrame:CGRectZero andWithTitle:self.titleString andWithContentView:self.wkWebView];
+        _headerView = [[SYHotHeaderView alloc]initWithFrame:CGRectZero];
+        _headerView.title.text = self.titleString;
+        _headerView.title.textColor = _headerView.timeLanel.textColor = DETAILCOLOR;
+        _headerView.timeLanel.text = @"2010.20.90";
+        [_headerView.title sizeToFit];
     }
     return _headerView;
 }

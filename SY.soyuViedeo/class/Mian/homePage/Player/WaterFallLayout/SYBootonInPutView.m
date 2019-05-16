@@ -121,8 +121,8 @@
             make.height.mas_equalTo(@35);
             make.bottom.mas_equalTo(self.mas_bottom).offset(-2);
         }];
-        _bgView.layer.cornerRadius = 10;
-        _placeLabel.textColor = [UIColor whiteColor];
+        _bgView.layer.cornerRadius = 4;
+        _placeLabel.textColor = RGBA(144,152,184,1);
         _placeLabel.text = @"发表点我的感想吧";
     }
 

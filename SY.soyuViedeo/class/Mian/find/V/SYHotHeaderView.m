@@ -18,30 +18,50 @@
 @implementation SYHotHeaderView
 
 
--(instancetype)initWithFrame:(CGRect)frame andWithTitle:(NSString *)title andWithContentView:(UIView *)view{
+
+
+////自己写
+-(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        UILabel *label = [[UILabel alloc]init];
-        label.textColor = [UIColor whiteColor];
-        UIFont *font = [UIFont boldSystemFontOfSize:25];
-        label.font = font;
-        label.numberOfLines = 0;
-        label.text = title;
-        CGFloat height = [Tools XJCalculateTheSizeWithFont:font andWithText:title andWithWidthMAX:SCREEN_WIDTH-30].height;
-        [self addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.mas_left).offset(10);
+        
+        [self addSubview:self.title];
+        [self addSubview:self.timeLanel];
+        [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.mas_equalTo(self).offset(10);
             make.right.mas_equalTo(self.mas_right).offset(-10);
-            make.top.mas_equalTo(self.mas_top).offset(20);
-            make.height.mas_equalTo(@(height));
         }];
-        [self addSubview:view];
-        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.bottom.mas_equalTo(view);
-            make.top.mas_equalTo(label.mas_bottom).offset(10);
+        [self.timeLanel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.title.mas_left);
+            make.top.mas_equalTo(self.title.mas_bottom).offset(10);
+            
         }];
+        
     }
     return self;
 }
+
+-(UILabel *)title{
+    if (!_title) {
+        _title = [[UILabel alloc]init];
+        _title.font = [UIFont boldSystemFontOfSize:25];
+        _title.numberOfLines = 0;
+        _title.textColor = [UIColor whiteColor];
+        [_title sizeToFit];
+    }
+    return _title;
+}
+
+
+-(UILabel *)timeLanel{
+    if (!_timeLanel) {
+        _timeLanel = [[UILabel alloc]init];
+        _timeLanel.font = [UIFont systemFontOfSize:13];
+        _timeLanel.textColor = [UIColor whiteColor];
+        [_timeLanel sizeToFit];
+    }
+    return _timeLanel;
+}
+
 
 @end
 

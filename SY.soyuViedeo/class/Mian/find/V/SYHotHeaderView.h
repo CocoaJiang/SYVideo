@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SYHotHeaderView : UIView
--(instancetype)initWithFrame:(CGRect)frame andWithTitle:(NSString *)title andWithContentView:(UIView *)view;
+@property(strong,nonatomic)UILabel *title;
+@property(strong,nonatomic)UILabel *timeLanel;
 @end
 
 NS_ASSUME_NONNULL_END
