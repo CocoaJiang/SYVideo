@@ -29,15 +29,7 @@
 }
 -(void)setNAV{
     self.navigationItem.title = @"推广";
-}
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
-    
-}
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setHidden:NO];
+    self.fd_prefersNavigationBarHidden = YES;
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

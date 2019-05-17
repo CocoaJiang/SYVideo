@@ -19,23 +19,12 @@
 
 @implementation SharePicController
 
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
-}
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden =NO;
-}
-
-
 -(void)viewDidLoad{
     
     
+    self.fd_prefersNavigationBarHidden = YES;
     [self.dataSorces addObjectsFromArray:SHAREARRAY];
     [self.dataSorces removeLastObject];
-    
     UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     bgImgView.image = self.image;
     [self.view addSubview:bgImgView];

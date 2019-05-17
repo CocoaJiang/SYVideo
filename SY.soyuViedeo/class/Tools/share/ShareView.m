@@ -64,6 +64,9 @@
 -(UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.minimumLineSpacing = CGFLOAT_MIN;
+        layout.minimumInteritemSpacing = CGFLOAT_MIN;
+        layout.itemSize = CGSizeMake(SCREEN_WIDTH/4, 88);
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -87,13 +90,6 @@
     cell.title.textColor = [UIColor darkTextColor];
     cell.imageview.image = [UIImage imageNamed:self.shareArray[indexPath.row]];
     return cell;
-}
-
--(CGSize )collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(88, 88);
-}
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return CGFLOAT_MIN;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSString *idString = self.shareArray[indexPath.row];

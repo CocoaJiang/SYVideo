@@ -12,6 +12,7 @@
 #import "FPSDisplay.h"
 #import <UMShare/UMShare.h>
 #import "AFNetworking.h"
+#import "GuideView.h"
 
 @implementation AppDelegate (Severs)
 
@@ -28,9 +29,17 @@
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    self.window.rootViewController = [[SYTabBarController alloc]init];
- //   [FPSDisplay shareFPSDisplay];
     
+    if ([Tools IsFirst]) {
+        GuideView *vc = [[GuideView alloc]init];
+        vc.pageControlShow=YES;
+        vc.currentPageIndicatorColor = KAPPMAINCOLOR;
+        [vc showGuideViewWithImageArray:@[@"引导1",@"引导2",@"引导1",@"引导2"] WindowRootController:[SYTabBarController new]];
+        self.window.rootViewController = vc;
+        USERDEFAULT_SET_value(@(1), KUSER_FIRST);
+    }else{
+        self.window.rootViewController = [[SYTabBarController alloc]init];
+    }
     
 }
 -(void)setKeyBord{

@@ -20,9 +20,10 @@
 #define SCREENH_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ((NSInteger)(([[UIScreen mainScreen] currentMode].size.height/[[UIScreen mainScreen] currentMode].size.width)*100) == 216) : NO)
 #define REFUSHARRAY @[@"a7i",@"a7j",@"a7k",@"a7l",@"a7m",@"a7n",@"a7o",@"a7p",@"a7q",@"a7r",@"a7s",@"a7t",@"a7u",@"a7v",@"a7w",@"a7x",@"a7y",@"a7z"]
-#define SHAREARRAY @[@"朋友圈",@"微信",@"QQ",@"QQ空间",@"微博",@"赋值链接"]
-#define KUSER_NAME @"name_login"
+#define SHAREARRAY  @[@"朋友圈",@"微信",@"QQ",@"QQ空间",@"微博",@"赋值链接"]
+#define KUSER_NAME  @"name_login"
 #define KUSER_CODE  @"user_code"
+#define KUSER_FIRST @"FIRST"
 #define KDefaultImage [UIImage imageNamed:@"nodata"]
 //输入框的背景颜色
 #define KTEXTFIELDBACKGROUNDCOLOR RGBA(187,54,75,1)

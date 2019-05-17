@@ -36,19 +36,18 @@
 @implementation SYLivePlayerController
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
     [[IQKeyboardManager sharedManager] setEnable:NO];
     self.player.viewControllerDisappear = NO;
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden =NO;
     [[IQKeyboardManager sharedManager] setEnable:YES];
     self.player.viewControllerDisappear = YES;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fd_prefersNavigationBarHidden = YES;
     [self addView];
     [self getMessage];
     [self addPlayer];

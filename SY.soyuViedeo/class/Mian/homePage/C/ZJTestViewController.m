@@ -41,6 +41,14 @@
             [weakSelf.collectionView.mj_footer endRefreshing];
         }
     }];
+    self.collectionView.mj_header  = [SYGifHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+        });
+    }];
+    
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -163,7 +171,6 @@
 //请求数据。。。。
 -(void)setModel:(HomePageModel *)model{
     _model = model;
-  //  self.cycleScrollView.array = (NSMutableArray *)self.model.slide;
     [self.collectionView reloadData];
 }
 

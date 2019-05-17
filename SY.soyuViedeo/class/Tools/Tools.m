@@ -377,6 +377,12 @@ static Tools *tools = nil;
     }
     return NO;
 }
++(BOOL)IsFirst{
+    if (USERREAD_object(KUSER_FIRST)==NULL||(USERREAD_object(KUSER_FIRST)==nil)) {
+        return YES;
+    }
+    return NO;
+}
 
 +(void)showSuccess:(NSString *)success andWithDoEveryThingWithBlock:(Doanything)doEverything{
     

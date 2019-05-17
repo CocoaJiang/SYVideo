@@ -21,7 +21,9 @@
     self.tipLanel.layer.cornerRadius=1;
     //设置KVO
     [self.choseButton addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
-    
+    self.comments.userInteractionEnabled = YES;
+    UITapGestureRecognizer *zer  = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrollView:)];
+    [self.comments addGestureRecognizer:zer];
 }
 -(void)fontsystem{
     _title.font = [UIFont boldSystemFontOfSize:16];
@@ -151,6 +153,9 @@
 -(void)viewClicK{
     [self chosefrome:self.choseButton];
 }
-
-
+-(void)scrollView:(UILabel *)label{
+    if (self.buttonClick) {
+        self.buttonClick(@"滚动");
+    }
+}
 @end

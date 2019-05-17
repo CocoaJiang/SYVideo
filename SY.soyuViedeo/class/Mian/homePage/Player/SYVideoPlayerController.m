@@ -72,6 +72,7 @@
 @property(strong,nonatomic)NSString                         *url;
 ////领导要求的常驻返回箭头。。
 @property(strong,nonatomic)UIButton                         *backButton;
+
 @end
 
 
@@ -79,13 +80,11 @@
 #pragma mark - 处理头
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
     [[IQKeyboardManager sharedManager] setEnable:NO];
     self.player.viewControllerDisappear = NO;
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden =NO;
     [[IQKeyboardManager sharedManager] setEnable:YES];
     self.player.viewControllerDisappear = YES;
 }
@@ -112,6 +111,7 @@
 #pragma mark  - 加载部分
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fd_prefersNavigationBarHidden = YES;
     [self getMessage];
     [self gotCache];
     self.isNew=YES;
@@ -382,6 +382,8 @@
                     controller.image = self.image;
                     [weakSelf.navigationController pushViewController:controller animated:YES];
                 }];
+            }else if ([titleLabel isEqualToString:@"滚动"]){
+                [weakSelf scrollViewToContentFrame];
             }else{
                 [self.navigationController pushViewController:[SYHelperViewController new] animated:YES];
             };
@@ -413,6 +415,7 @@
             [weakSelf.tableView reloadData];
         };
         header.hidden = [self.palyModel.comment count]>0?NO:YES;
+        
         return header;
     }
     return nil;
@@ -631,7 +634,6 @@
             [weakSelf getPlayUrlWithString:weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].url];
         };
         _introductionView.backgroundColor = [UIColor whiteColor];
-        
     }
     return _introductionView;
 }
@@ -645,8 +647,6 @@
     }];
 }
 -(void)disMiss{
-    
-    
     [UIView animateWithDuration:0.3 animations:^{
         self.introductionView.frame = CGRectMake(0, SCREENH_HEIGHT, SCREEN_WIDTH, SCREENH_HEIGHT-self.containerView.bottom);
     }completion:^(BOOL finished) {
@@ -778,6 +778,14 @@
         }];
         
     });
+}
+
+-(void)scrollViewToContentFrame{
+    CGRect rect =   [self.tableView rectForHeaderInSection:2];
+    
+    [self.tableView setContentOffset:CGPointMake(0, rect.origin.y) animated:YES];
+
+    
 }
 
 

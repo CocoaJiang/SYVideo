@@ -48,7 +48,10 @@ byRoundingCorners:(UIRectCorner)corners
 +(void)writeWithTokenWithString:(NSString *)string;
 //读取token
 +(NSString*)readToken;
+///判断是否登录
 +(BOOL)isNeedLogin;
+///判断是不是第一次安装
++(BOOL)IsFirst;
 //成功回调
 +(void)showSuccess:(NSString *)success andWithDoEveryThingWithBlock:(Doanything)doEverything;
 ///失败的回调

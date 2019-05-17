@@ -536,6 +536,7 @@
 		D4D4289322772325000F17F9 /* SharePicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D4289222772325000F17F9 /* SharePicController.m */; };
 		D4D4289622772393000F17F9 /* SharePicView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D4289522772393000F17F9 /* SharePicView.m */; };
 		D4D42898227723AF000F17F9 /* SharePicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D42897227723AF000F17F9 /* SharePicView.xib */; };
+		D4D4FE30228E90EC00ECDBBD /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D4FE2F228E90EC00ECDBBD /* GuideView.m */; };
 		D4D5CB1C227E702F0023A5B2 /* SYSearchDevicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D5CB1B227E702F0023A5B2 /* SYSearchDevicesCell.m */; };
 		D4D5CB1F227E85350023A5B2 /* SY_ForScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D5CB1E227E85350023A5B2 /* SY_ForScreenController.m */; };
 		D4D5CB23227E857B0023A5B2 /* SY_ForScreenBootomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D5CB22227E857B0023A5B2 /* SY_ForScreenBootomView.m */; };
@@ -1552,6 +1553,8 @@
 		D4D4289422772393000F17F9 /* SharePicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharePicView.h; sourceTree = "<group>"; };
 		D4D4289522772393000F17F9 /* SharePicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharePicView.m; sourceTree = "<group>"; };
 		D4D42897227723AF000F17F9 /* SharePicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharePicView.xib; sourceTree = "<group>"; };
+		D4D4FE2E228E90EC00ECDBBD /* GuideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideView.h; sourceTree = "<group>"; };
+		D4D4FE2F228E90EC00ECDBBD /* GuideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideView.m; sourceTree = "<group>"; };
 		D4D5CB1A227E702F0023A5B2 /* SYSearchDevicesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSearchDevicesCell.h; sourceTree = "<group>"; };
 		D4D5CB1B227E702F0023A5B2 /* SYSearchDevicesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSearchDevicesCell.m; sourceTree = "<group>"; };
 		D4D5CB1D227E85350023A5B2 /* SY_ForScreenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY_ForScreenController.h; sourceTree = "<group>"; };
@@ -3091,6 +3094,7 @@
 		D475DA962230BC46002695E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D4D4FE2D228E90B700ECDBBD /* GuidePage */,
 				D4D4288D2277133F000F17F9 /* share */,
 				D420EA87223B58C4006955F7 /* FPSDisplay.h */,
 				D420EA85223B58C3006955F7 /* FPSDisplay.m */,
@@ -3750,6 +3754,15 @@
 			path = share;
 			sourceTree = "<group>";
 		};
+		D4D4FE2D228E90B700ECDBBD /* GuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				D4D4FE2E228E90EC00ECDBBD /* GuideView.h */,
+				D4D4FE2F228E90EC00ECDBBD /* GuideView.m */,
+			);
+			path = GuidePage;
+			sourceTree = "<group>";
+		};
 		D4D5CB20227E85530023A5B2 /* SY_ForScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -4167,6 +4180,7 @@
 				D4BA505D22326386004CEE28 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				D46D467C2231349A00BC8357 /* SVIndefiniteAnimatedView.m in Sources */,
 				D475DB592230FA8C002695E7 /* SDWebImageCompat.m in Sources */,
+				D4D4FE30228E90EC00ECDBBD /* GuideView.m in Sources */,
 				D420EA81223B40BA006955F7 /* SYSearchChlidVc.m in Sources */,
 				D43172952235F29100EF8D69 /* UIButton+VerificationCode.m in Sources */,
 				D428965F2266DB1200E2879C /* SYLoginPhoneInputView.m in Sources */,
