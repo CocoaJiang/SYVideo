@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong,nonatomic)NSMutableArray<data *> *data;//真正的数据。。。。
 @property(copy,nonatomic)NSArray<recommendModel *>*slide; //滚动图 //处理好了
 @property(copy,nonatomic)NSString *type_id;//模块的ID
-@property(copy,nonatomic)NSString *type_name;
-@property(copy,nonatomic)NSString *type_search;
+@property(copy,nonatomic)NSString *type_name;//模块名字
+@property(copy,nonatomic)NSString *type_search;//默认搜索项！
 
 
 //这是最外层最外边的分类、、、好多页面的数据

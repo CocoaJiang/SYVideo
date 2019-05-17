@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SYseachViewController : SYBaseViewController
+@property(strong,nonatomic)NSString *searchTypeString;
+
 
 @end
 

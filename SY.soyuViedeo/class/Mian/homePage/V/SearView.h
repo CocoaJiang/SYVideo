@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SearView : UIView
 @property(copy,nonatomic)dispatch_block_t listenBlock;
 @property(copy,nonatomic)dispatch_block_t searchBlock;
+@property(strong,nonatomic)UIButton *searButton;
 
 @end
 

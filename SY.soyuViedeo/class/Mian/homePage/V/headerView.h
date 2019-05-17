@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setSingeleButton;
 -(void)setTwoButton;
 @property(copy,nonatomic)dispatch_block_t chose;
+@property(strong,nonatomic)NSString *search_name;
+
 
 
 

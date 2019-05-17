@@ -75,16 +75,11 @@
         if ([self.dataSorces count]>=index+1) {
             childVc.model = self.dataSorces[index];
         }
+        childVc.refresh = ^{
+            [self.dataSorces removeAllObjects];
+            [self getMessage];
+        };
     }
-    
-    childVc.refresh = ^{
-      
-        [self.dataSorces removeAllObjects];
-        
-        [self getMessage];
-        
-    };
-    
     return childVc;
 }
 - (void)scrollPageController:(UIViewController *)scrollPageController childViewControllWillAppear:(UIViewController *)childViewController forIndex:(NSInteger)index {
@@ -98,25 +93,22 @@
     }else{
         [self.headerView setTwoButton];
     }
+    if ([self.dataSorces count]>=index+1) {
+        HomePageModel *model = self.dataSorces[index];
+        self.headerView.search_name = model.type_search;
+        NSLog(@"%@",self.headerView.search_name);
+    }
 }
-
 - (void)scrollPageController:(UIViewController *)scrollPageController childViewControllWillDisappear:(UIViewController *)childViewController forIndex:(NSInteger)index {
     NSLog(@"%ld ---将要消失",index);
-    
 }
 - (void)scrollPageController:(UIViewController *)scrollPageController childViewControllDidDisappear:(UIViewController *)childViewController forIndex:(NSInteger)index {
     NSLog(@"%ld ---已经消失",index);
-    
 }
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods {
     return NO;
 }
-
-
-
-
 //接下来自定义View
-
 -(headerView *)headerView{
     if (!_headerView) {
         _headerView = [[headerView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 45)];

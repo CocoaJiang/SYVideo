@@ -27,6 +27,12 @@
     return self;
 }
 
+-(void)setSearch_name:(NSString *)search_name{
+    _search_name = search_name;
+    [_searchView.searButton setTitle:search_name forState:UIControlStateNormal];
+}
+
+
 -(UIButton *)historyButton{
     if (!_historyButton) {
         _historyButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -37,11 +43,11 @@
          _historyButton.centerY= self.centerY;
         __weak typeof(self)weakSelf = self;
         _historyButton.clickAction = ^(UIButton *button) {
-            if ([Tools isNeedLogin]) {
-                [[Tools viewController:weakSelf].navigationController pushViewController:[SYNewLoginViewController new] animated:YES];
-                return ;
-            }
             if ([weakSelf.historyButton.imageView.image isEqual:[UIImage imageNamed:@"历史"]]) {
+                if ([Tools isNeedLogin]) {
+                    [[Tools viewController:weakSelf].navigationController pushViewController:[SYNewLoginViewController new] animated:YES];
+                    return ;
+                }
                 [[Tools viewController:weakSelf].navigationController pushViewController:[HistoryDetailViewController new] animated:YES];
             }else{
                 if (weakSelf.chose) {
@@ -87,8 +93,13 @@
 }
 
 -(void)searchClick{
-    //跳转页面的填写，，
-    [[Tools viewController:self].navigationController pushViewController:[SYseachViewController new] animated:YES];
+    //跳转页面的填写.........................................................
+    SYseachViewController *controller = [[SYseachViewController alloc]init];
+    if (self.search_name==nil || [self.search_name isEqualToString:@""]) {
+    }else{
+        controller.searchTypeString = self.search_name;
+    }
+    [[Tools viewController:self].navigationController pushViewController:controller animated:YES];
 }
 //筛选跳转
 -(void)buttonClick:(UIButton *)button{

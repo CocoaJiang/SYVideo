@@ -10,16 +10,9 @@
 
 
 @interface SearView ()
-
 @property(strong,nonatomic)UIButton *listenButton;
-
-@property(strong,nonatomic)UIButton *searButton;
-
-
 @end
-
 @implementation SearView
-
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = KTEXTFIELDBACKGROUNDCOLOR;
@@ -27,11 +20,10 @@
         [self addSubview:self.listenButton];
         self.layer.masksToBounds =YES;
         self.layer.cornerRadius = 15;
+        [self.listenButton setHidden:YES];
     }
     return self;
 }
-
-
 -(UIButton *)listenButton{
     if (!_listenButton) {
         _listenButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -41,11 +33,11 @@
     }
     return _listenButton;
 }
-
 -(UIButton *)searButton{
     if (!_searButton) {
         _searButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_searButton setTitle:@"搜索" forState:UIControlStateNormal];
+        [_searButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [_searButton setImage:[UIImage imageNamed:@"搜索2"] forState:UIControlStateNormal];
         _searButton.titleLabel.font = [UIFont systemFontOfSize:14];
         [_searButton sizeToFit];
@@ -63,15 +55,12 @@
         make.centerY.mas_equalTo(self.mas_centerY);
         make.centerX.mas_equalTo(self.mas_centerX);
     }];
-    
 }
-
 -(void)buttonClick:(UIButton *)button{
     if (self.listenButton) {
         self.listenBlock();
     }
 }
-
 -(void)search{
     if (self.searchBlock) {
         self.searchBlock();

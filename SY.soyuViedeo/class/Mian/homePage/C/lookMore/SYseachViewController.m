@@ -86,6 +86,9 @@
     textField.textAlignment = NSTextAlignmentCenter;
     textField.layer.masksToBounds=YES;
     textField.layer.cornerRadius = 18;
+    if (self.searchTypeString) {
+        textField.text = self.searchTypeString;
+    }
     [textField addTarget:self action:@selector(textFieldValueChanged:) forControlEvents:(UIControlEventEditingChanged)];
 }
 -(void)cancle{
