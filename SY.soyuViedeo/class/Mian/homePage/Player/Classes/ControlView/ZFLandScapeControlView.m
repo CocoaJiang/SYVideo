@@ -90,8 +90,6 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layOutControllerViews) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(afNetworkStatusChanged:) name:KVEYSTRING object:nil];
         self.danSettingBtn.hidden = self.textField.hidden = self.danShowOrHindeBtn.hidden = YES;
-
-        
     }
     return self;
 }
@@ -105,29 +103,23 @@
     CGFloat min_h = 0;
     CGFloat min_view_w = self.bounds.size.width;
     CGFloat min_view_h = self.bounds.size.height;
-    
-    CGFloat min_margin = 9; 
-    
-    
+    CGFloat min_margin = 9;
     //上面的按钮
     min_x = 0;
     min_y = 0;
     min_w = min_view_w;
     min_h = iPhoneX ? 110 : 80;
     self.topToolView.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    
     //上面的返回按钮
     min_x = (iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: 15;
     min_y = (iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 15: (iPhoneX ? 40 : 20);
     min_w = 40;
     min_h = 40;
     self.backBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    
     //上面三个按钮的设置
     min_x = self.topToolView.zf_width - min_w - ((iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: min_margin);
     self.playerVideoSetBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.playerVideoSetBtn.centerY = self.backBtn.centerY;
-    
     min_x = self.playerVideoSetBtn.left-min_w-5;
     self.shareButton.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.shareButton.centerY = self.backBtn.centerY;
@@ -135,8 +127,6 @@
     min_x = self.shareButton.left-min_w-5;
     self.forScreenBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.forScreenBtn.centerY = self.backBtn.centerY;
-    
-    
     //返回右边的标题
     min_x = self.backBtn.zf_right + 5;
     min_y = 0;
@@ -144,7 +134,6 @@
     min_h = 30;
     self.titleLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.titleLabel.zf_centerY = self.backBtn.zf_centerY;
-    
     min_h = 73;
     min_h = iPhoneX ? 100 : 73;
     min_x = 0;
@@ -154,10 +143,10 @@
     //分行显示
     min_x = (iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: 15;
     min_y = 5;
-    min_w = 62;
+    min_w = 50;
     min_h = 30;
     self.currentTimeLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    min_w = 70;
+    min_w = 50;
     min_x = self.bottomToolView.zf_width - min_w - ((iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: min_margin);
     min_y = 0;
     min_h = 30;
@@ -171,20 +160,26 @@
     self.slider.zf_centerY = self.currentTimeLabel.zf_centerY;
     //需要向上调整
     min_x = (iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 44: 15;
-    min_y = self.currentTimeLabel.bottom+4;
+    min_y = 40;
     min_w = 30;
     min_h = 30;
     self.playOrPauseBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     //下一集
-    min_w = 50;
+    min_w = 40;
     min_x = self.playOrPauseBtn.right+5;
     self.nextSetBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     //弹幕开关
-    min_x = self.nextSetBtn.right+5;
-    self.danShowOrHindeBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    //弹幕设置
-    min_x = self.danShowOrHindeBtn.right+5;
-    self.danSettingBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
+//    min_x = self.nextSetBtn.right+5;
+//    self.danShowOrHindeBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
+//    //弹幕设置
+//    min_x = self.danShowOrHindeBtn.right+5;
+//    self.danSettingBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
+    
+    self.currentTimeLabel.frame = CGRectMake(self.nextSetBtn.right+5, 0, 50, 30);
+    self.currentTimeLabel.centerY = self.playOrPauseBtn.centerY;
+    
+    
+    //《选集..................................................................》
     if (self.isMoive) {
         min_x = self.totalTimeLabel.right;
         self.choseSet.frame = CGRectMake(min_x, min_y, min_w, min_h);
@@ -198,29 +193,29 @@
     //倍速
     min_x = self.clearfloat.left-5-min_w;
     self.playTimes.frame = CGRectMake(min_x, min_y, min_w, min_h);
+    
+    
+    self.totalTimeLabel.frame = CGRectMake(self.playTimes.left-50-4, 0, 50, 30);
+    self.totalTimeLabel.centerY = self.playOrPauseBtn.centerY;
+    self.slider.frame = CGRectMake(self.currentTimeLabel.right+3, 0, self.totalTimeLabel.left-3-self.currentTimeLabel.right-3, 30);
+    self.slider.centerY  =  self.playOrPauseBtn.centerY;
+    
+    
     //输入框
     min_x = self.danSettingBtn.right+5;
     min_w = self.playTimes.left-5-self.danSettingBtn.right-5;
     self.textField.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    
     min_x = (iPhoneX && self.player.orientationObserver.fullScreenMode == ZFFullScreenModeLandscape) ? 50: 18;
     min_y = 0;
     min_w = 40;
     min_h = 40;
     self.lockBtn.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.lockBtn.zf_centerY = self.zf_centerY;
-    
-
     //布置这个选集的试图
     min_x = self.width;
     min_y = 0;
     min_w = self.width;
     min_h  = self.height;
- //   self.videoPlayerController.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    
-    
-    
-
     if (!self.isShow) {
         //意思就是向下移动了！
         self.topToolView.zf_y = -self.topToolView.zf_height;
@@ -234,12 +229,7 @@
             self.bottomToolView.zf_y = self.zf_height - self.bottomToolView.zf_height;
         }
     }
-    
-    
-    
-    
 }
-
 - (void)makeSubViewsAction {
     [self.backBtn addTarget:self action:@selector(backBtnClickAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.playOrPauseBtn addTarget:self action:@selector(playPauseButtonClickAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -266,14 +256,7 @@
     self.playerVideoSetBtn.tag = buttontag+2;
     self.shareButton.tag = buttontag+3;
     self.choseSet.tag = buttontag+4;
-    
-
-    
-
 }
-
-
-
 
 -(void)buttonClick:(UIButton *)button{
     if (self.type==ZFLandScapeControlViewVideo) {
@@ -413,13 +396,10 @@
         return NO;
     }
     return YES;
-
 }
-
 - (void)videoPlayer:(ZFPlayerController *)videoPlayer presentationSizeChanged:(CGSize)size {
     self.lockBtn.hidden = self.player.orientationObserver.fullScreenMode == ZFFullScreenModePortrait;
 }
-
 - (void)videoPlayer:(ZFPlayerController *)videoPlayer currentTime:(NSTimeInterval)currentTime totalTime:(NSTimeInterval)totalTime {
     if (!self.slider.isdragging) {
         NSString *currentTimeString = [ZFUtilities convertTimeSecond:currentTime];
@@ -429,7 +409,6 @@
         self.slider.value = videoPlayer.progress;
     }
 }
-
 - (void)videoPlayer:(ZFPlayerController *)videoPlayer bufferTime:(NSTimeInterval)bufferTime {
     self.slider.bufferValue = videoPlayer.bufferProgress;
 }
@@ -529,8 +508,6 @@
     }
     return _bottomToolView;
 }
-
-
 //暂停按钮
 - (UIButton *)playOrPauseBtn {
     if (!_playOrPauseBtn) {
@@ -540,20 +517,16 @@
     }
     return _playOrPauseBtn;
 }
-
-
 //当前时长
 - (UILabel *)currentTimeLabel {
     if (!_currentTimeLabel) {
         _currentTimeLabel = [[UILabel alloc] init];
         _currentTimeLabel.textColor = [UIColor whiteColor];
-        _currentTimeLabel.font = [UIFont systemFontOfSize:14.0f];
+        _currentTimeLabel.font = [UIFont systemFontOfSize:12.0f];
         _currentTimeLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _currentTimeLabel;
 }
-
-
 //滑动模块
 - (ZFSliderView *)slider {
     if (!_slider) {
@@ -567,21 +540,16 @@
     }
     return _slider;
 }
-
-
 //视频的总时长
 - (UILabel *)totalTimeLabel {
     if (!_totalTimeLabel) {
         _totalTimeLabel = [[UILabel alloc] init];
         _totalTimeLabel.textColor = [UIColor whiteColor];
-        _totalTimeLabel.font = [UIFont systemFontOfSize:14.0f];
+        _totalTimeLabel.font = [UIFont systemFontOfSize:12.0f];
         _totalTimeLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _totalTimeLabel;
 }
-
-
-
 //锁屏的锁
 - (UIButton *)lockBtn {
     if (!_lockBtn) {

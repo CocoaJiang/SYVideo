@@ -14,6 +14,8 @@
     [super awakeFromNib];
     self.title.font = [UIFont systemFontOfSize:14];
     self.dislabel.font = [UIFont systemFontOfSize:12];
+    _icon.contentMode = UIViewContentModeScaleAspectFill;
+    _icon.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

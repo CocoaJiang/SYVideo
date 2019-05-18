@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *morebutton;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 
-
 @property (weak, nonatomic) IBOutlet UIView *upBgView;
 
 @property (weak, nonatomic) IBOutlet UIView *downBgView;

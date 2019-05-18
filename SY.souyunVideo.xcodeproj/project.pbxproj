@@ -4730,7 +4730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SY.soyuViedeo/SY.soyuViedeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A4G4HGLBVM;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SY.soyuViedeo/class/Thired/UMShare/umcommonlog/umcommonlog_ios_1.0.0",
@@ -4789,7 +4789,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SY.soyuViedeo/SY.soyuViedeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A4G4HGLBVM;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SY.soyuViedeo/class/Thired/UMShare/umcommonlog/umcommonlog_ios_1.0.0",

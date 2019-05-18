@@ -226,7 +226,7 @@
     if (indexPath.section==0) {
         return 135;
     }else if (indexPath.section==1){
-        CGFloat height = SCREEN_WIDTH/3/0.67+50;
+        CGFloat height = 120+50;
         return [self.dataSorces count]>0?height:50;
     }else if (indexPath.section==2){
         return 55;

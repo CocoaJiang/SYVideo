@@ -72,13 +72,15 @@
     ZJTestViewController<ZJScrollPageViewChildVcDelegate> *childVc = reuseViewController;
     if (!childVc) {
         childVc = [[ZJTestViewController alloc] init];
-        if ([self.dataSorces count]>=index+1) {
-            childVc.model = self.dataSorces[index];
-        }
         childVc.refresh = ^{
             [self.dataSorces removeAllObjects];
             [self getMessage];
         };
+        if ([self.dataSorces count]>=index+1) {
+            childVc.model = self.dataSorces[index];
+            NSLog(@"======================================%@",childVc.model);
+            
+        }
     }
     return childVc;
 }

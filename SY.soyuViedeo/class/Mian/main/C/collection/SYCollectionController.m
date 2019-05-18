@@ -121,7 +121,7 @@
 
 -(void)getmessage{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    [dict setObject:@"20" forKey:@"pageSize"];
+    [dict setObject:@"50" forKey:@"pageSize"];
     [HttpTool POST:[SY_CollectionList getWholeUrl] param:dict success:^(id responseObject) {
         for (NSDictionary *dict in [[responseObject objectForKey:@"data"] objectForKey:@"list"]) {
             C_SYCollectionModel *model = [C_SYCollectionModel mj_objectWithKeyValues:dict];

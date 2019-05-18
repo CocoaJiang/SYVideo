@@ -15,7 +15,8 @@
     _title.font = [UIFont systemFontOfSize:15];
     _dislabel.font = [UIFont systemFontOfSize:12];
     _contentLanel.font = [UIFont systemFontOfSize:12];
-    
+    _icon.contentMode = UIViewContentModeScaleAspectFill;
+    _icon.clipsToBounds = YES;
 }
 
 -(void)setModel:(item *)model{

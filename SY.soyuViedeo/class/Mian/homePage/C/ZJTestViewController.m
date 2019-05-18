@@ -25,8 +25,10 @@
     [super viewDidLoad];
     [self.view addSubview:self.collectionView];
     self.SYindex=1;
-    self.collectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH,SCREENH_HEIGHT-kTabBarHeight-kTopHeight);
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
     [self.collectionView registerClass:[HomeGussCollectionViewCell class] forCellWithReuseIdentifier:@"HomeGussCollectionViewCell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionReusableView"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"SYHomePagefootView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"SYHomePagefootView"];
@@ -46,14 +48,10 @@
             [self.collectionView.mj_header endRefreshing];
         });
     }];
-    
-    
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
        HomeGussCollectionViewCell *cell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeGussCollectionViewCell" forIndexPath:indexPath];
@@ -79,8 +77,6 @@
     }
     return;
 }
-
-
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (section==0) {
         return 1;
@@ -92,7 +88,8 @@
     if (!self.model) {
         return 0;
     }else{
-       return [self.model.data count]+1;
+       return [self.model.data count]+1;  //第一行的那些。。。。。
+        
     }
 }
 -(CGSize )collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,7 +97,7 @@
         if ([self.model.recommend count]>0) {
             return CGSizeMake(SCREEN_WIDTH, 120);
         }else{
-            return CGSizeZero;
+            return CGSizeMake(SCREEN_WIDTH, 0.0001);
         }
     }else{
         if ([self.model.data[indexPath.section-1].composing integerValue]==1) {
@@ -144,12 +141,12 @@
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if (section==0) {
-         return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH*9/16);
+         return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH*9/16); ///宽高占比。。。。
     }else{
         if (self.model.data[section-1].isHaveCover) {
             return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH *9/16+60+20);
         }else{
-            return  CGSizeMake(SCREEN_WIDTH, 60);
+            return CGSizeMake(SCREEN_WIDTH, 60);
         }
     }
 }
@@ -164,10 +161,6 @@
         }
     }
 }
-
-
-
-
 //请求数据。。。。
 -(void)setModel:(HomePageModel *)model{
     _model = model;

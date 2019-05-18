@@ -31,8 +31,6 @@
 #define USERDEFAULT_SET_value(_value_,_key_) [[NSUserDefaults standardUserDefaults] setValue:_value_ forKey:_key_];\
 [[NSUserDefaults standardUserDefaults] synchronize]
 #define USERREAD_object(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
-
-
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "UITableView+ZXJTableviewCategory.h"

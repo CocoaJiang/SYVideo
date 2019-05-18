@@ -12,8 +12,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.name.font  = [UIFont systemFontOfSize:14];
+     self.name.font  = [UIFont systemFontOfSize:14];
      self.disLanel.font = [UIFont systemFontOfSize:13];
+    _icon.contentMode =  UIViewContentModeScaleAspectFill ;
+    _icon.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

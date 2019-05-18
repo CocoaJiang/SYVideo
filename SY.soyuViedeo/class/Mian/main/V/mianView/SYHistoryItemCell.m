@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.VideoName.font = self.progress.font = [UIFont systemFontOfSize:13];
+    _iCon.contentMode = UIViewContentModeScaleAspectFill;
+    _iCon.clipsToBounds = YES;
 }
 
 @end

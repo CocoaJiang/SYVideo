@@ -35,7 +35,7 @@
         make.edges.mas_equalTo(self.view);
     }];
     [self.tableView registerNib:[UINib nibWithNibName:@"historyDetailCell" bundle:nil] forCellReuseIdentifier:@"historyDetailCell"];
-    self.tableView.rowHeight=SCREEN_WIDTH/3.3;
+    self.tableView.rowHeight=90;
     [self.view addSubview:self.bootomView];
     [self addRefush];
     
@@ -67,6 +67,7 @@
     if ([self.dataSorces count]>=indexPath.row+1) {
         PlayInfoModel *model = self.dataSorces[indexPath.row];
         [cell.icon XJ_setImageWithURLString:model.pic];
+        
         cell.dislabel.text = [NSString stringWithFormat:@"观看至%@%%",model.playTime];
         if ([model.serlize integerValue]>0) {
             model.serlize = [NSString stringWithFormat:@"第%@集",model.serlize];
@@ -82,11 +83,13 @@
 
 -(void)gethistoryWithPage:(NSInteger)page{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    [dict setObject:@(page) forKey:@"number"];
+    [dict setObject:@(page) forKey:@"page"];
     [dict setObject:@"10" forKey:@"pageSize"];
     [HttpTool POST:[SY_PlayHistoryInfo getWholeUrl] param:dict success:^(id responseObject) {
         if ([[[responseObject objectForKey:@"data"] objectForKey:@"list"] count]<10) {
             self.isHaveNextPage=NO;
+        }else{
+            self.isHaveNextPage = YES;
         }
         for (NSDictionary *dict in [[responseObject objectForKey:@"data"] objectForKey:@"list"]) {
             PlayInfoModel *palyerInfo = [PlayInfoModel mj_objectWithKeyValues:dict];
@@ -145,6 +148,18 @@
 // 进入编辑模式，按下出现的编辑按钮后,进行删除操作
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        PlayInfoModel *model  = self.dataSorces [indexPath.row];
+        
+        model.isSeted = YES;
+        
+        [self deleted];
+        
+        [self.dataSorces removeObjectAtIndex:indexPath.row];
+        
+        [self.tableView reloadData];
+        
+        
         
     }
 }

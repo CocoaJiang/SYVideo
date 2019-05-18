@@ -24,7 +24,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
-    self.tableView.rowHeight = 100;
+    self.tableView.rowHeight = 90;
     [self.tableView XJRegisCellWithNibWithName:@"C_SYcollectionViewCell"];
     [self.view addSubview:self.bootomView];
     [self addRefush];

@@ -142,7 +142,6 @@
         }
         [self addData];
         [self.tableView reloadData];
-        NSLog(@"%@",responseObject);
     } error:^(NSString *error) {
     }];
 }
@@ -176,15 +175,6 @@
         model.data = array;
         [self.tableView reloadData];
     } error:^(NSString *error) {
-        
     }];
-    
-    
 }
-
-
-
-
-
-
 @end

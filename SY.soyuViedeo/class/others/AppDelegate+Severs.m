@@ -32,7 +32,6 @@
     
     if ([Tools IsFirst]) {
         GuideView *vc = [[GuideView alloc]init];
-        vc.pageControlShow=YES;
         vc.currentPageIndicatorColor = KAPPMAINCOLOR;
         [vc showGuideViewWithImageArray:@[@"引导1",@"引导2",@"引导1",@"引导2"] WindowRootController:[SYTabBarController new]];
         self.window.rootViewController = vc;

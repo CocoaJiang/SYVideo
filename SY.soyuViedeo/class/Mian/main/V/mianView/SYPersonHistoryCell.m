@@ -12,7 +12,7 @@
 #import "HistoryDetailViewController.h"
 #import "PlayInfoModel.h"
 #import "SYNewLoginViewController.h"
-
+#import "SYVideoPlayerController.h"
 
 @interface SYPersonHistoryCell ()
 @property(strong,nonatomic)HistoryView *historyView;
@@ -66,10 +66,11 @@
         make.height.mas_equalTo(@0.3);
     }];
 }
-
-
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-
+    SYVideoPlayerController *controller = [[SYVideoPlayerController alloc]init];
+    PlayInfoModel *model = self.dataSources[indexPath.row];
+    controller.video_id = model.id;
+    [[Tools viewController:self].navigationController pushViewController:controller animated:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -88,7 +89,7 @@
     return cell;
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake((SCREEN_WIDTH-20)/3, self.contentView.bounds.size.height-60);
+    return CGSizeMake((SCREEN_WIDTH-20)/2.5, self.contentView.bounds.size.height-60);
 }
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
     return CGFLOAT_MIN;
@@ -110,5 +111,6 @@
     _dataSources = dataSources;
     [self.collection reloadData];
 }
+
 
 @end

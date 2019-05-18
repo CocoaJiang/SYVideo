@@ -14,8 +14,10 @@
 static NSString * const KVEYSTRING =                    @"com.alamofire.networking.reachability.change";  //////接受通知的字段。。。
 ////AFNETWORKING 接受WIFI的字段。
 static NSString * const KWIFI =                         @"AFNetworkingReachabilityNotificationStatusItem";
-////项目的总地址
+////项目的总地址《内网地址》
 #define APPSevers                                       @"http://192.168.10.192:8086/"
+////项目的总地址《外网地址》
+//#define APPSevers                                       @"http://api.baimaotv.com/api/"
 ///本地存储地址
 #define LocationAddress                                 @"playAbout"
 ///操作习惯储存地址

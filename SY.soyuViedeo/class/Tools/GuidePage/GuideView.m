@@ -91,8 +91,8 @@
     _cancelButton.layer.cornerRadius = 2;
     _cancelButton.hidden = _cancelButtonShow;
     _cancelButton.titleLabel.font = [UIFont systemFontOfSize:15];
-    _cancelButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
-    [_cancelButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    _cancelButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    [_cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _cancelButton.frame = iPhoneX? CGRectMake(K_Screen_width - 70, 35, 60, 20):CGRectMake(K_Screen_width - 70, 20, 60, 20);
     [_cancelButton setTitle:@"跳过" forState:UIControlStateNormal];
     [_cancelButton addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -134,7 +134,6 @@
 {
     _imageArray = imageArray;
 }
-
 - (void)setCancelButtonShow:(BOOL)cancelButtonShow
 {
     _cancelButtonShow = cancelButtonShow;
@@ -143,7 +142,6 @@
         [self startTimer];
     }
 }
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     // pageControl 与 scrollView 联动
     CGFloat offsetWidth = scrollView.contentOffset.x;
@@ -153,13 +151,11 @@
         self.view.window.rootViewController = _rootController;
     }
 }
-
 - (void)showGuideViewWithImageArray:(NSArray *)imageArray WindowRootController:(UIViewController *)rootController
 {
     _imageArray = imageArray;
     _rootController = rootController;
 }
-
 - (void)cancelButtonAction:(UIButton *)sender
 {
     self.view.window.rootViewController = _rootController;
