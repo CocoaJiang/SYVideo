@@ -177,21 +177,7 @@
     self.player.playerDidToEnd = ^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
         @strongify(self)
         //判断有资源
-        if ([self.palyModel.info.url[self.choseIndex].list count]-1> self.choseIndex) { //
-            USERSET *set = [SYCacheOperationHabit getSetting];
-            if ([set.continuity integerValue]==1) {      //表示连续播放
-                //开启从头开始模式
-                self.isbeging = YES;
-                //取消第一个选中的状态
-                self.palyModel.info.url[self.choseIndex].list[self.setIndex].isSetseleted=NO;
-                self.setIndex++;
-                self.palyModel.info.url[self.choseIndex].list[self.setIndex].isSetseleted=YES;
-                [self.tableView reloadData];
-                [self getPlayUrlWithString:self.palyModel.info.url[self.choseIndex].list[self.setIndex].url];
-            }
-        }else{
-            [self.player stop];
-        }
+        [self nextSet];
     };
 #pragma mark - 切换视频源！！！！
     __weak typeof(self)weakSelf = self;
@@ -278,17 +264,12 @@
             }else if (type == choseSet){
                 weakSelf.setIndex = index;
                 weakSelf.isbeging=YES;
+                [weakSelf isLastOne];
                 [weakSelf getPlayUrlWithString:weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].url];
             }
         };
         _controlView.nextPlayer = ^{
-            if ([weakSelf.palyModel.info.url[weakSelf.choseIndex].list count]-1>weakSelf.setIndex) {
-                weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].isSetseleted=NO;
-                weakSelf.setIndex++;
-                weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].isSetseleted=YES;
-                [weakSelf getPlayUrlWithString:weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].url];
-                [weakSelf.tableView reloadData];
-            }
+            [weakSelf nextSet];
         };
 #pragma mark- 横竖屏的投屏
         _controlView.landScapeControlView.forsecreen = ^{
@@ -304,9 +285,6 @@
                 [weakSelf.player enterFullScreen:NO animated:YES];
                 [weakSelf close];
             }
-            
-            
-            
         };
      }
     return _controlView;
@@ -507,6 +485,7 @@
                         weakSelf.isbeging=YES;
                         weakSelf.setIndex = index;
                         [weakSelf.tableView reloadData];
+                        [self isLastOne];
                         [weakSelf getPlayUrlWithString:weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].url];
                     };
                     cell.info = self.palyModel.info;
@@ -631,6 +610,7 @@
             [weakSelf.tableView reloadData];
             weakSelf.isbeging=YES;
             weakSelf.setIndex = index;
+            [weakSelf isLastOne];
             [weakSelf getPlayUrlWithString:weakSelf.palyModel.info.url[weakSelf.choseIndex].list[weakSelf.setIndex].url];
         };
         _introductionView.backgroundColor = [UIColor whiteColor];
@@ -685,6 +665,7 @@
     self.palyModel.info.url[_choseIndex].isseleted =YES;
     self.palyModel.info.url[_choseIndex].list[_setIndex].isSetseleted = YES;
     [self.controlView.controller setSeleIndex:self.choseIndex andWithModel:self.palyModel.info];
+    [self isLastOne];
     [self getPlayUrlWithString:self.palyModel.info.url[self.choseIndex].list[self.setIndex].url];
     self.inPutView.store = self.palyModel.info.store;
     self.inPutView.videoID = self.video_id;
@@ -713,7 +694,7 @@
     }else{
         setString = self.palyModel.info.name;
     }
-    [self.controlView showTitle:setString coverImage:[UIImage imageNamed:@"bg"] fullScreenMode:ZFFullScreenModeLandscape];
+    [self.controlView showTitle:setString coverURLString:self.palyModel.info.pic fullScreenMode:ZFFullScreenModeLandscape];
     [self.player.currentPlayerManager stop];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     [dict setObject:urlString forKey:@"url"];
@@ -784,11 +765,28 @@
     CGRect rect =   [self.tableView rectForHeaderInSection:2];
     
     [self.tableView setContentOffset:CGPointMake(0, rect.origin.y) animated:YES];
-
-    
 }
 
-
-
+-(void)nextSet{
+    if ([self.palyModel.info.url[self.choseIndex].list count]-1>self.setIndex) {
+        [self isLastOne];
+        self.palyModel.info.url[self.choseIndex].list[self.setIndex].isSetseleted=NO;
+        self.setIndex++;
+        self.palyModel.info.url[self.choseIndex].list[self.setIndex].isSetseleted=YES;
+        [self.controlView.controller setSeleIndex:self.choseIndex andWithModel:self.palyModel.info];
+        [self getPlayUrlWithString:self.palyModel.info.url[self.choseIndex].list[self.setIndex].url];
+        [self isLastOne];
+        [self.tableView reloadData];
+    }else{
+        [self.player stop];
+    }
+}
+-(void)isLastOne{
+    if ([self.palyModel.info.url[self.choseIndex].list[self.setIndex] isEqual:self.palyModel.info.url[self.choseIndex].list.lastObject]) {
+        self.controlView.isLastOneSet = YES;
+    }else{
+        self.controlView.isLastOneSet = NO;
+    }
+}
 
 @end

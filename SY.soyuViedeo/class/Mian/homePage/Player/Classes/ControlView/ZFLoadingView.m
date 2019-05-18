@@ -70,7 +70,6 @@
     CGFloat width = MIN(self.bounds.size.width, self.bounds.size.height);
     CGFloat height = width;
     self.shapeLayer.frame = CGRectMake(0, 0, width, height);
-    
     CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     CGFloat radius = MIN(CGRectGetWidth(self.bounds) / 2, CGRectGetHeight(self.bounds) / 2) - self.shapeLayer.lineWidth / 2;
     CGFloat startAngle = (CGFloat)(0);

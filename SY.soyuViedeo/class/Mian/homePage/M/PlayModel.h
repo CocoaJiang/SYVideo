@@ -105,6 +105,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy,nonatomic)NSArray <videoPlayercomment *>*hot_comment;
 @property(copy,nonatomic)NSArray<item *>*recommend;
 @property(copy,nonatomic)NSString *last_play_time;
+@property(copy,nonatomic)NSString *pic;
 @end
 
 

@@ -104,6 +104,7 @@
         self.chosePlayerTimes.hidden =YES;
         self.choseSetView.hidden=NO;
         self.shareView.hidden=YES;
+        [self.choseSetView relodData];
     }else if (self.type ==chosePlaytimes){
         self.choseClearView.hidden=YES;
         self.playsetView.hidden=YES;
@@ -114,11 +115,6 @@
     
     [self layoutSubviews];
 }
-
-
-
-
-
 //播放设置视图
 -(SYPlaySetView *)playsetView{
     if (!_playsetView) {

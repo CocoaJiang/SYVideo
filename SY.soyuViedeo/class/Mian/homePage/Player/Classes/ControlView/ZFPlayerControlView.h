@@ -109,7 +109,8 @@ typedef NS_ENUM(NSUInteger,controllerType){
 @property(assign,nonatomic)controllerType type;
 ///到了定时关闭的时间了。。。。
 @property(copy,nonatomic)dispatch_block_t clost;
-
+///是否是最后一集 然后 把下一集按钮搞灰色。。。。
+@property(assign,nonatomic)BOOL isLastOneSet;
 
 ///初始化 byself
 -(instancetype)initWithFrame:(CGRect)frame andWithType:(controllerType)type;

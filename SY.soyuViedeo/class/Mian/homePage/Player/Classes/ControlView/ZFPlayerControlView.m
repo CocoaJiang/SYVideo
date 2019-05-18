@@ -19,7 +19,7 @@
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR  OTHER DEALINGS IN
 // THE SOFTWARE.
 
 #import "ZFPlayerControlView.h"
@@ -810,7 +810,9 @@
     if (!_coverImageView) {
         _coverImageView = [[UIImageView alloc] init];
         _coverImageView.userInteractionEnabled = YES;
-        _coverImageView.contentMode = UIViewContentModeScaleAspectFit;
+       // _coverImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _coverImageView.contentMode =  UIViewContentModeScaleToFill;
+        _coverImageView.clipsToBounds = YES;
     }
     return _coverImageView;
 }
@@ -953,7 +955,17 @@
         self.liveController.frame = CGRectMake(self.width, 0, self.width, self.height);
     }];
 }
-
+///处理最后一集的事件。。
+-(void)setIsLastOneSet:(BOOL)isLastOneSet{
+    _isLastOneSet = isLastOneSet;
+    if (isLastOneSet) {
+        self.landScapeControlView.nextSetBtn.userInteractionEnabled = NO;
+        self.landScapeControlView.nextSetBtn.imageView.alpha = 0.5;
+    }else{
+        self.landScapeControlView.nextSetBtn.userInteractionEnabled = YES;
+        self.landScapeControlView.nextSetBtn.imageView.alpha = 1.0f;
+    }
+}
 
 -(void)close{
     if (self.clost) {

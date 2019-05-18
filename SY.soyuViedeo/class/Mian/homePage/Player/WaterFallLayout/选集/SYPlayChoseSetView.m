@@ -87,12 +87,12 @@
 
 -(void)setInfo:(videoInfo *)info{
     _info = info;
-    [self.collectionView reloadData];
+    [self relodData];
 }
 
 -(void)setIndex:(NSInteger)index{
     _index = index;
-    [self.collectionView reloadData];
+    [self relodData];
 }
 
 
@@ -114,6 +114,9 @@
 -(void)relodData{
     __weak typeof(self)weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(self);
+        }];
         [weakSelf.collectionView reloadData];
     });
 }
