@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)saveDataWithModel:(VideoPlayInfo *)videoPlayer;
 ///调起h雷达进行搜索。。。
 -(void)searchTVWithModel:(PlayModel *)model andWithURL:(NSString *)urlString;
+
 @end
 
 NS_ASSUME_NONNULL_END

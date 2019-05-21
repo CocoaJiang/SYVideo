@@ -23,7 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.titles insertObject:@"我的频道" atIndex:0];
     [self getMessage];
+    [self addUI];
     self.scrollPageView.contentView.collectionView.emptyDataSetSource = self;
     self.scrollPageView.contentView.collectionView.emptyDataSetDelegate  = self;
     
@@ -71,7 +73,11 @@
     ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 35, self.view.frame.size.width,self.view.bounds.size.height) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
     self.scrollPageView = scrollPageView;
     [self.view addSubview:scrollPageView];
-    [self.scrollPageView setSelectedIndex:1 animated:NO];
+    if ([self.titles count]<=1) {
+        [self.scrollPageView setSelectedIndex:0 animated:YES];
+    }else{
+        [self.scrollPageView setSelectedIndex:1 animated:NO];
+    }
     self.scrollPageView.segmentView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 35);
     [self.view addSubview:self.scrollPageView.segmentView];
     
@@ -142,10 +148,9 @@
     for (LiveModel *model in self.dataSorces) {
         [array addObject:model.name];
     }
-    [array insertObject:@"我的频道" atIndex:0];
     [self.titles addObjectsFromArray:array];
     [self.scrollPageView reloadWithNewTitles:self.titles];
-    [self addUI];
+//    [self addUI];
 }
 -(NSMutableArray<NSString *> *)titles{
     if (!_titles) {
@@ -156,8 +161,9 @@
 
 -(void)reload{
     [self.dataSorces removeAllObjects];
+    [self.dataSorces insertObject:@"我的频道" atIndex:0];
     [self getMessage];
-}
+} 
 
 
 @end

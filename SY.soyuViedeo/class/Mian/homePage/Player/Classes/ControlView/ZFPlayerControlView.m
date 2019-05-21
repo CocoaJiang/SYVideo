@@ -78,13 +78,8 @@
 ///定义一个视图在播放失败的时候显示！！！
 
 @end
-
 @implementation ZFPlayerControlView
-
 @synthesize player = _player;
-
-
-
 -(instancetype)initWithFrame:(CGRect)frame andWithType:(controllerType)type{
     self.type = type;
     return [self initWithFrame:frame];
@@ -105,11 +100,7 @@
                                                      name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                    object:nil];
         self.isChange = YES;
-        ////不要介意就是为了提前加载
         self.failBtn.userInteractionEnabled=YES;
-        
-      
-        
     }
     return self;
 }
@@ -843,12 +834,10 @@
     }
     return _placeholderImage;
 }
-
 - (void)setBackBtnClickCallback:(void (^)(void))backBtnClickCallback {
     _backBtnClickCallback = [backBtnClickCallback copy];
     self.landScapeControlView.backBtnClickCallback = _backBtnClickCallback;
 }
-
 -(SYVideoController *)controller{
     if (!_controller) {
         _controller = [[SYVideoController alloc]init];
@@ -901,8 +890,6 @@
         weakSelf.isChange=YES;
     }];
 }
-
-
 ///对视频进行影响的部分
 -(void)doControllerWith:(viewType )type andWithIndex:(NSInteger)index andWithContent:(NSString *)content{
     //第一件事情弹回去
@@ -966,29 +953,11 @@
         self.landScapeControlView.nextSetBtn.imageView.alpha = 1.0f;
     }
 }
-
 -(void)close{
     if (self.clost) {
         self.clost();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @end

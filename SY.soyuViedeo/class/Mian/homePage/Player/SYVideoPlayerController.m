@@ -72,6 +72,9 @@
 @property(strong,nonatomic)NSString                         *url;
 ////领导要求的常驻返回箭头。。
 @property(strong,nonatomic)UIButton                         *backButton;
+///自己反编译web
+@property(strong,nonatomic)WKWebView                        *web;
+
 
 @end
 
@@ -156,7 +159,7 @@
     ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
     self.player = [[ZFPlayerController alloc] initWithPlayerManager:playerManager containerView:self.containerView]; //
     self.player.controlView = self.controlView;
-    self.player.pauseWhenAppResignActive = NO;
+    self.player.pauseWhenAppResignActive = YES;
     [self.controlView showTitle:@"" coverImage:[UIImage imageNamed:@"bg"] fullScreenMode:ZFFullScreenModeLandscape];
     @weakify(self)
 #pragma mark - 旋转
@@ -667,10 +670,17 @@
     [self.controlView.controller setSeleIndex:self.choseIndex andWithModel:self.palyModel.info];
     [self isLastOne];
     [self getPlayUrlWithString:self.palyModel.info.url[self.choseIndex].list[self.setIndex].url];
+    [self.web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.palyModel.info.url[self.choseIndex].list[self.setIndex].url]]];
     self.inPutView.store = self.palyModel.info.store;
     self.inPutView.videoID = self.video_id;
     self.controlView.landScapeControlView.isMoive = [self.palyModel.info.type_id intValue]!=1?NO:YES;
     [self.tableView reloadData];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSLog(@"%@",self->_web);
+        
+        
+    });
 }
 -(void)gotoPjWithContent:(NSString *)content{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -752,7 +762,6 @@
 
 -(void)close{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
         __weak typeof(self)weakSelf   =  self;
         [self showAlrertWithTitle:@"定时关闭时间已到" andWithMessage:@"是否要关闭播放器？" andWithCancelButtonTitle:@"取消" andWithOKButtonTitle:@"关闭" andWithOKBlock:^{
             [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -787,6 +796,13 @@
     }else{
         self.controlView.isLastOneSet = NO;
     }
+}
+
+-(WKWebView *)web{
+    if (!_web) {
+        _web = [[WKWebView alloc]init];
+    }
+    return _web;
 }
 
 @end

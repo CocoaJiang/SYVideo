@@ -49,8 +49,6 @@
     button.frame = CGRectMake(0, lineView.bottom, view.width, view.height-lineView.height);
     self.tableView.tableFooterView = view;
 }
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *Idstring =  @"IDString";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Idstring];
@@ -65,9 +63,8 @@
         cell.textLabel.textColor = [UIColor darkTextColor];
     }
     cell.textLabel.text = self.dataSorces[indexPath.row];
+    
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    
-    
     
     return cell;
 }
