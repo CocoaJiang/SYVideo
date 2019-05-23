@@ -18,10 +18,7 @@
 @property(strong,nonatomic)UITableView *rightTableView;
 @property(strong,nonatomic)NSMutableArray *leftArray;
 @property(strong,nonatomic)NSMutableArray *rightArray;
-
-
 @end
-
 @implementation SYliveAddressController
 
 - (void)viewDidLoad {
@@ -53,7 +50,6 @@
     }
     return _leftTableView;
 }
-
 -(UITableView *)rightTableView{
     if (!_rightTableView) {
         _rightTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -68,7 +64,6 @@
     }
     return _rightTableView;
 }
-
 ///获取地方台分类
 -(void)getMessage{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -90,10 +85,7 @@
     } error:^(NSString *error) {
         
     }];
-    
 }
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView==_leftTableView) {
         NSString *idstring  = @"leftTableViewCell";
@@ -119,7 +111,6 @@
         return cell;
     }
 }
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView==_leftTableView) {
         //去请求分类填充右边的框架
@@ -138,15 +129,12 @@
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
-
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView==_leftTableView) {
         return [self.leftArray count];
     }
     return [self.rightArray count];
 }
-
 -(void)getRightMessageWithIDString:(NSString *)idString{
     [self.rightArray removeAllObjects];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -162,17 +150,6 @@
         
     }];
 }
-
-
-
-
-
-
-
-
-
-
-
 -(NSMutableArray *)leftArray{
     if (!_leftArray) {
         _leftArray = [[NSMutableArray alloc]init];

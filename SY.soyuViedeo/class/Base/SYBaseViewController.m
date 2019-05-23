@@ -142,10 +142,6 @@
     [self reload];
 }
 -(void)reload{
-    
+    //丢给子类去实现。。
 }
-
-
-
-
 @end

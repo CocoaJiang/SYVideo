@@ -12,12 +12,9 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
     }
     return self;
 }
-
-
 -(UICollectionView *)collection{
     if (!_collection) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -38,7 +35,6 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.dataArray count];
 }
-
 -(void)setIShorizontal:(BOOL)iShorizontal{
     _iShorizontal = iShorizontal;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -50,10 +46,8 @@
     self.collection.collectionViewLayout = layout;
     [self.collection reloadData];
 }
-
 -(void)setDataArray:(NSMutableArray *)dataArray{
     _dataArray = dataArray;
     [self.collection reloadData];
 }
-
 @end

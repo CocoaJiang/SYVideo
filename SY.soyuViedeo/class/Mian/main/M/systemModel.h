@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class app_version;
+@class versionInfo;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface systemModel : NSObject
 
 
-@property(strong,nonatomic)app_version *app_version;//APP版本号
+@property(strong,nonatomic)NSDictionary *app_version;//APP版本信息
 @property(copy,nonatomic)NSString *site_name;//名称
 @property(copy,nonatomic)NSString *site_email;// 联系email
 @property(copy,nonatomic)NSString *site_status;//是否允许访问
@@ -38,12 +38,15 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface app_version : NSObject
+@interface versionInfo : NSObject
 @property(copy,nonatomic)NSString *android;
 @property(copy,nonatomic)NSString *force;
 @property(copy,nonatomic)NSString *content;
 @property(copy,nonatomic)NSString *ios;
 @property(copy,nonatomic)NSString *version;
+@property(copy,nonatomic)NSString *url;
+
+
 
 
 @end

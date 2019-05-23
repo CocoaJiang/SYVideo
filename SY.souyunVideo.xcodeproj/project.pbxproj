@@ -262,6 +262,9 @@
 		D4349EAA2244920B0007DF48 /* SYHotRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4349EA82244920B0007DF48 /* SYHotRankCell.m */; };
 		D4349EAB2244920B0007DF48 /* SYHotRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4349EA92244920B0007DF48 /* SYHotRankCell.xib */; };
 		D4349EAE2244AE980007DF48 /* SYhotDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4349EAD2244AE980007DF48 /* SYhotDayView.m */; };
+		D45693D72293C07C00090580 /* SYupdataView.m in Sources */ = {isa = PBXBuildFile; fileRef = D45693D62293C07C00090580 /* SYupdataView.m */; };
+		D45693D92293C58800090580 /* SYupdataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45693D82293C58800090580 /* SYupdataView.xib */; };
+		D45693DC2293CC1D00090580 /* SYShowAleart.m in Sources */ = {isa = PBXBuildFile; fileRef = D45693DB2293CC1D00090580 /* SYShowAleart.m */; };
 		D46B8E02228D27BD0010D0C6 /* SYMainBootomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46B8E00228D27BD0010D0C6 /* SYMainBootomCell.m */; };
 		D46B8E03228D27BD0010D0C6 /* SYMainBootomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46B8E01228D27BD0010D0C6 /* SYMainBootomCell.xib */; };
 		D46D463322312EA000BC8357 /* SYPersonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D463222312EA000BC8357 /* SYPersonHeader.m */; };
@@ -1025,6 +1028,11 @@
 		D4349EA92244920B0007DF48 /* SYHotRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYHotRankCell.xib; sourceTree = "<group>"; };
 		D4349EAC2244AE980007DF48 /* SYhotDayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYhotDayView.h; sourceTree = "<group>"; };
 		D4349EAD2244AE980007DF48 /* SYhotDayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYhotDayView.m; sourceTree = "<group>"; };
+		D45693D52293C07C00090580 /* SYupdataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYupdataView.h; sourceTree = "<group>"; };
+		D45693D62293C07C00090580 /* SYupdataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYupdataView.m; sourceTree = "<group>"; };
+		D45693D82293C58800090580 /* SYupdataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYupdataView.xib; sourceTree = "<group>"; };
+		D45693DA2293CC1D00090580 /* SYShowAleart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYShowAleart.h; sourceTree = "<group>"; };
+		D45693DB2293CC1D00090580 /* SYShowAleart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYShowAleart.m; sourceTree = "<group>"; };
 		D46B8DFF228D27BD0010D0C6 /* SYMainBootomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainBootomCell.h; sourceTree = "<group>"; };
 		D46B8E00228D27BD0010D0C6 /* SYMainBootomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainBootomCell.m; sourceTree = "<group>"; };
 		D46B8E01228D27BD0010D0C6 /* SYMainBootomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYMainBootomCell.xib; sourceTree = "<group>"; };
@@ -2455,6 +2463,18 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		D45693D42293C03B00090580 /* updata */ = {
+			isa = PBXGroup;
+			children = (
+				D45693D52293C07C00090580 /* SYupdataView.h */,
+				D45693D62293C07C00090580 /* SYupdataView.m */,
+				D45693D82293C58800090580 /* SYupdataView.xib */,
+				D45693DA2293CC1D00090580 /* SYShowAleart.h */,
+				D45693DB2293CC1D00090580 /* SYShowAleart.m */,
+			);
+			path = updata;
+			sourceTree = "<group>";
+		};
 		D46D463A2231338400BC8357 /* TZImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3094,6 +3114,7 @@
 		D475DA962230BC46002695E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D45693D42293C03B00090580 /* updata */,
 				D4D4FE2D228E90B700ECDBBD /* GuidePage */,
 				D4D4288D2277133F000F17F9 /* share */,
 				D420EA87223B58C4006955F7 /* FPSDisplay.h */,
@@ -3958,6 +3979,7 @@
 			files = (
 				D42E4B642265673B00D8E2A2 /* SYMonkeyTopView.xib in Resources */,
 				D4BA507022327118004CEE28 /* SKinReusableView.xib in Resources */,
+				D45693D92293C58800090580 /* SYupdataView.xib in Resources */,
 				D475DB7422310650002695E7 /* SYCollectionViewCell.xib in Resources */,
 				D46D469B2231471F00BC8357 /* HistoryView.xib in Resources */,
 				D425C033225484AB009CDE98 /* SYChoseClearView.xib in Resources */,
@@ -4306,6 +4328,7 @@
 				D475DA972230BC46002695E7 /* SYNavigationController.m in Sources */,
 				D4BA50A8223286C6004CEE28 /* AFURLSessionManager.m in Sources */,
 				D4DC72382237D12200231652 /* SYCollectionController.m in Sources */,
+				D45693D72293C07C00090580 /* SYupdataView.m in Sources */,
 				D46D46AC22320B4200BC8357 /* LoginOutView.m in Sources */,
 				D42896672267087500E2879C /* SYFaceToTeacherController.m in Sources */,
 				D42B9D47223A5088004B7880 /* SYDatailScrollViewItem.m in Sources */,
@@ -4315,6 +4338,7 @@
 				D4BA50A9223286C6004CEE28 /* AFURLRequestSerialization.m in Sources */,
 				D42B9D43223A4B39004B7880 /* SYDetailCollectionViewCell.m in Sources */,
 				D475DABF2230CC8F002695E7 /* ZJTestViewController.m in Sources */,
+				D45693DC2293CC1D00090580 /* SYShowAleart.m in Sources */,
 				D475DAE62230DD66002695E7 /* MASViewAttribute.m in Sources */,
 				D4246F0422680ED9003C580C /* SYEXPCell.m in Sources */,
 				D46D4683223134A300BC8357 /* JXUIKit.m in Sources */,

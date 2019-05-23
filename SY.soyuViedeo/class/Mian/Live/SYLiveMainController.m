@@ -28,9 +28,7 @@
     [self addUI];
     self.scrollPageView.contentView.collectionView.emptyDataSetSource = self;
     self.scrollPageView.contentView.collectionView.emptyDataSetDelegate  = self;
-    
 }
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.shadowImage = nil;
@@ -38,8 +36,6 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.translucent = YES;
-
-    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -49,8 +45,6 @@
     [self.navigationController.navigationBar setTintColor:KAPPMAINCOLOR];
     self.navigationController.navigationBar.translucent = YES;
 }
-
-
 -(void)addUI{
     ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
     //显示遮盖
@@ -80,10 +74,6 @@
     }
     self.scrollPageView.segmentView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 35);
     [self.view addSubview:self.scrollPageView.segmentView];
-    
-    
-
-    
 }
 
 - (NSInteger)numberOfChildViewControllers {

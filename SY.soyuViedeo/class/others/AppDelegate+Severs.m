@@ -13,23 +13,19 @@
 #import <UMShare/UMShare.h>
 #import "AFNetworking.h"
 #import "GuideView.h"
+#import "SYShowAleart.h"
+
 
 @implementation AppDelegate (Severs)
 
 -(void)initAnything{
-    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
     self.window.backgroundColor = [UIColor whiteColor];
-        
     [[UIImageView appearance]setContentMode:UIViewContentModeScaleToFill];
-    
     [self.window makeKeyAndVisible];
-    
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    
     if ([Tools IsFirst]) {
         GuideView *vc = [[GuideView alloc]init];
         vc.currentPageIndicatorColor = KAPPMAINCOLOR;
@@ -39,7 +35,6 @@
     }else{
         self.window.rootViewController = [[SYTabBarController alloc]init];
     }
-    
 }
 -(void)setKeyBord{
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
@@ -49,21 +44,24 @@
 }
 
 -(void)initSystem{
-    
-    
     NSMutableDictionary *dict= [[NSMutableDictionary alloc]init];
     [dict setObject:@"1" forKey:@"os"];
     [HttpTool POST:[SY_system getWholeUrl] param:dict success:^(id responseObject) {
         SYUSERINFO *system = [SYUSERINFO info];
         system.systemModel = [systemModel mj_objectWithKeyValues:[responseObject objectForKey:@"data"]];
+        NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey];
+        CGFloat versionText = [version floatValue];
+        if ([[system.systemModel.app_version objectForKey:@"version"]integerValue]>versionText) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self showupdata];
+            });
+        }
     } error:^(NSString *error) {
          SYUSERINFO *system = [SYUSERINFO info];
         system.systemModel.coin_name = @"金币";
     }];
     
 }
-
-
 - (void)confitUShareSettings
 {
     [[UMSocialManager defaultManager] setUmSocialAppkey:@"5cda8a550cafb2916b000267"];
@@ -78,15 +76,21 @@
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105821097"/*设置QQ平台的appID*/  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954"  appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
 }
-
-
-
 -(void)netWorkStart{
     AFNetworkReachabilityManager *afNetworkReachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [afNetworkReachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
     }];
     [afNetworkReachabilityManager startMonitoring]; 
 }
+
+
+/////处理升级。。。
+-(void)showupdata{
+    
+    SYShowAleart *alert = [[SYShowAleart alloc]initWithFrame:self.window.bounds andWithType:OKButtonAndCancelButtonType];
+    
+}
+
 
 
 @end

@@ -267,15 +267,24 @@
             if (self.buttonClick) {
                 self.buttonClick(button.tag-buttontag);
             }
+            return;
         }else if (button == _forScreenBtn){
             [self backBtnClickAction:self.backBtn];
             if (self.forsecreen) {
                 self.forsecreen();
             }
-            
+            return;
         }
     }else{
-        if (self.doController) {
+        
+        if (button == _forScreenBtn) {
+            [self backBtnClickAction:self.backBtn];
+            if (self.forsecreen) {
+                self.forsecreen();
+            }
+            return;
+            
+        }else{
             self.doController(button.titleLabel.text);
         }
     }
